@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <link rel="shortcut icon" href="res/images/favicon.ico">
+    <title>아이돌live</title>
+	<link rel="stylesheet" type="text/css" href="res/css/ui.css">
+    <link rel="stylesheet" media="(max-width: 1023px)" href="res/css/mobile.css">
+    <link rel="stylesheet" media="(min-width: 1024px)" href="res/css/desktop.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+<div id="skip_nav">
+    <a href="#header">주 메뉴 바로 가기</a>
+    <a href="#container">본문 바로 가기</a>
+</div>
+<div id="wrap">
+	<div id="header">
+        <div class="header_inner">
+            <h1 class="logo"><a href="#">아이돌live</a></h1>
+            <div class="util">
+                <!-- <a href="#" class="btn_login disabled usetap">로그인</a> -->
+                <a href="#" class="btn_logout usetap">로그아웃</a>
+            </div>            
+        </div>
+    </div>
+	<div id="container">
+		<div class="content">
+            <div class="live_wrap">
+                <div class="col_player">
+                    <div class="player_wrap extend" onclick="if (document.querySelector('.player_wrap').classList.contains('extend')) { document.querySelector('.player_wrap').classList.remove('extend'); } else { document.querySelector('.ctrl_wrap').classList.toggle('active'); }">
+                        <div class="main_video">
+                            <video id="video1" width="100%" height="100%">
+                                <source src="mov_bbb.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="member_video">
+                            <video id="video1" width="100%" height="100%">
+                                <source src="mov_bbb.mp4" type="video/mp4">
+                            </video>
+                            <button class="btn_close" type="button" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.remove('multi');">닫기</button>
+                        </div>                        
+                        <div class="member_wrap">
+                            <div class="member_list">
+                                <div class="swiper-container mySwiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
+                                                <div class="cover"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
+                                                <div class="name">화사</div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
+                                                <div class="cover"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
+                                                <div class="name">aaaaaaaaaaaaaaaaaaaaaaaaa</div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
+                                                <div class="cover"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
+                                                <div class="name">화사</div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
+                                                <div class="cover"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
+                                                <div class="name">화사</div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
+                                                <div class="cover"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
+                                                <div class="name">화사</div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
+                                                <div class="cover"></div>
+                                                <div class="name">화사</div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
+                                                <div class="cover"></div>
+                                                <div class="name">화사</div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
+                                                <div class="cover"></div>
+                                                <div class="name">화사</div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
+                                                <div class="cover"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
+                                                <div class="name">화사</div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
+                                                <div class="cover"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
+                                                <div class="name">화사</div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
+                                                <div class="cover"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
+                                                <div class="name">화사</div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
+                                                <div class="cover"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
+                                                <div class="name">화사</div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
+                                                <div class="cover"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
+                                                <div class="name">화사</div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
+                                                <div class="cover"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
+                                                <div class="name">화사</div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
+                                                <div class="cover"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
+                                                <div class="name">화사</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next" onclick="event.stopPropagation();"></div>
+                                <div class="swiper-button-prev" onclick="event.stopPropagation();"></div>
+                            </div>                            
+                        </div>
+                        <div class="ctrl_wrap" onclick="event.stopPropagation();document.querySelector('.ctrl_wrap').classList.toggle('active');">
+                            <div class="top_area">
+                                <p class="title"><span class="tg_live">Live</span>SBS 드림콘서트 2021</p>
+                                <button class="btn_set" type="button" onclick="event.stopPropagation();this.classList.toggle('on');"><i class="ic_set">설정</i></button>
+                                <ul class="set_wrap">
+                                    <li>
+                                        <a href="#" class="dropdown" onclick="event.stopPropagation();this.classList.toggle('unfold');"><span class="txt">화질 선택</span><span class="txt_current">초고화질</span></a>
+                                        <div class="list_dropdown">
+                                            <ul>
+                                                <li><a href="#" class="current">초고화질</a></li>
+                                                <li><a href="#">고화질</a></li>
+                                                <li><a href="#">일반화질</a></li>
+                                            </ul>
+                                        </div>                                        
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="center_area">
+                                <button class="btn_play" type="button" onclick="event.stopPropagation();this.classList.toggle('on');">play/pause</button>
+                            </div>
+                            <div class="bottom_area">
+                                <div class="volume_wrap">
+                                    <button class="btn_speaker active" type="button">
+                                        <!-- 음소거시 "ic_mute" 추가 -->
+                                        <i class="ic_speaker ic_mute"></i>
+                                        <div class="volumebar_wrap">
+                                            <div class="progressBar">
+                                                <div class="timeBar" style="height:40%;"><div class="timeBar_handle"></div></div>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                                <!-- <div class="playerbar_wrap">
+                                    <div class="progressBar">
+                                        <div class="timeBar" style="width:18%;"><div class="timeBar_handle"></div></div>
+                                    </div>			
+                                </div> -->
+                                <button class="btn_magnify" type="button" onclick="event.stopPropagation();document.getElementById('wrap').classList.toggle('fullplayer');changeDirection();if (!document.fullscreenElement) { document.querySelector('.player_wrap').requestFullscreen(); } else { if (document.exitFullscreen) { document.exitFullscreen(); }}">magnify</button>
+
+                                
+                                
+
+
+                            </div>
+                            <button class="btn_member" type="button" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('extend');">멤버별</button>
+                        </div>
+                        <div class="heart_wrap">
+                            <div class="ani_heart_btn" style="border: 1px solid #ff0000;"></div>
+                            <div class="ani_shortap" style="border: 1px solid #ff0000;"></div>
+                            <div class="ani_longtap" style="border: 1px solid #ff0000;"></div>
+                            <div class="ani_counting_full" style="border: 1px solid #ff0000;"></div>
+                            <div class="ani_counting" style="border: 2px dotted #000;"></div>
+                            <button class="btn_heart" type="button" onclick="event.stopPropagation();"></button>
+                            <div class="txt_hit">2,380,001</div>
+                        </div>
+                        
+                    </div>
+                    <div class="detail">
+                        <p class="title"><span class="tg_live">Live</span>SBS 드림콘서트 2021</p>
+                        <p class="time">2021.04.26 (목) 19:00</p>
+                    </div>
+                    
+                </div>
+                <div class="col_chat">
+                    <div class="chat_wrap">
+                        <div class="chat_hd">
+                            <p class="txt_number">참여자 <em>25</em></p>
+                        </div>
+                        <div class="chat_inner">
+                            <div class="scroll_bottom">
+                                <div class="msg_wrap">
+                                    <div class="welcome">라이브채팅에 입장하였습니다.</div>
+                                </div>
+                                <div class="msg_wrap left">
+                                    <div class="msg">
+                                        <div class="user">bourbon</div>
+                                        <div class="comment">머리부터 발끝까지 완벽해</div>
+                                    </div>
+                                </div>
+                                <div class="msg_wrap left">
+                                    <div class="msg">
+                                        <div class="user">3333</div>
+                                        <div class="comment">두줄aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+                                    </div>
+                                </div>
+                                <div class="msg_wrap right">
+                                    <div class="msg">
+                                        <div class="user">bourbon</div>
+                                        <div class="comment">머리부터 발끝까지 완벽해</div>
+                                    </div>
+                                </div>
+                                <div class="msg_wrap right">
+                                    <div class="msg">
+                                        <div class="user">bourbon</div>
+                                        <div class="comment">머리</div>
+                                    </div>
+                                </div>
+                                <div class="msg_wrap left">
+                                    <div class="msg">
+                                        <div class="user">bourbon</div>
+                                        <div class="comment">머리</div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <button class="btn_chat_down" type="button" onclick="document.querySelector('.chat_inner').scrollTop = (document.querySelector('.chat_inner').scrollHeight - document.querySelector('.chat_inner').offsetHeight);">최근메시지</button>
+                        <div class="chat_btm">
+                            <div class="chat_input">
+                                <div class="textarea_wrap">
+                                    <textarea rows="4" id="origin" class="textarea" placeholder="실시간 대화에 참여해보세요"></textarea>
+                                    <textarea id="dummy" class="dummy" disabled=""></textarea>
+                                </div>
+                            </div>
+                            <button class="btn_chat_send" type="button">보내기</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="artist_wrap">
+                <div class="artist_hd">
+                    <p class="tit_detail">출연자 정보</p>
+                    <button class="btn_fold_non_txt" type="button" title="접기/더보기" onclick="this.closestOne('.artist_wrap').classList.toggle('closed');"><i class="icon ic-arrow-fold"></i></button>
+                </div>
+                <div class="list_artist">
+                    <ul>
+                        <li>
+                            <div class="img_artist"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
+                            <div class="txt_artist">EXO-CBX</div>
+                            <div class="txt_song">내일만나(Sweet Dreams!)</div>
+                        </li>
+                        <li>
+                            <div class="img_artist"><img src="res/images/con_cue_img7.jpg" alt="출연자"></div>
+                            <div class="txt_artist">aaaaaaaaaaaaaaaaaaaaaaaaa</div>
+                            <div class="txt_song">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+                        </li>
+                        <li>
+                            <div class="img_artist"><img src="res/images/con_cue_img7.jpg" alt="출연자"></div>
+                            <div class="txt_artist">레드벨벳</div>
+                            <div class="txt_song">BAD BOY</div>
+                        </li>
+                        <li>
+                            <div class="img_artist"><img src="res/images/con_cue_img7.jpg" alt="출연자"></div>
+                            <div class="txt_artist">레드벨벳</div>
+                            <div class="txt_song">BAD BOY</div>
+                        </li>
+                        <li>
+                            <div class="img_artist"><img src="res/images/con_cue_img7.jpg" alt="출연자"></div>
+                            <div class="txt_artist">레드벨벳</div>
+                            <div class="txt_song">BAD BOY</div>
+                        </li>
+                        <li>
+                            <div class="img_artist"><img src="res/images/con_cue_img7.jpg" alt="출연자"></div>
+                            <div class="txt_artist">레드벨벳</div>
+                            <div class="txt_song">BAD BOY</div>
+                        </li>
+                        <li>
+                            <div class="img_artist"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
+                            <div class="txt_artist">EXO-CBX</div>
+                            <div class="txt_song">내일만나(Sweet Dreams!)</div>
+                        </li>
+                        <li>
+                            <div class="img_artist"><img src="res/images/con_cue_img7.jpg" alt="출연자"></div>
+                            <div class="txt_artist">aaaaaaaaaaaaaaaaaaaaaaaaa</div>
+                            <div class="txt_song">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+                        </li>
+                        <li>
+                            <div class="img_artist"><img src="res/images/con_cue_img7.jpg" alt="출연자"></div>
+                            <div class="txt_artist">레드벨벳</div>
+                            <div class="txt_song">BAD BOY</div>
+                        </li>
+                        <li>
+                            <div class="img_artist"><img src="res/images/con_cue_img7.jpg" alt="출연자"></div>
+                            <div class="txt_artist">레드벨벳</div>
+                            <div class="txt_song">BAD BOY</div>
+                        </li>
+                        <li>
+                            <div class="img_artist"><img src="res/images/con_cue_img7.jpg" alt="출연자"></div>
+                            <div class="txt_artist">레드벨벳</div>
+                            <div class="txt_song">BAD BOY</div>
+                        </li>
+                        <li>
+                            <div class="img_artist"><img src="res/images/con_cue_img7.jpg" alt="출연자"></div>
+                            <div class="txt_artist">레드벨벳</div>
+                            <div class="txt_song">BAD BOY</div>
+                        </li>
+                        <li>
+                            <div class="img_artist"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
+                            <div class="txt_artist">EXO-CBX</div>
+                            <div class="txt_song">내일만나(Sweet Dreams!)</div>
+                        </li>
+                        <li>
+                            <div class="img_artist"><img src="res/images/con_cue_img7.jpg" alt="출연자"></div>
+                            <div class="txt_artist">aaaaaaaaaaaaaaaaaaaaaaaaa</div>
+                            <div class="txt_song">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+                        </li>
+                        <li>
+                            <div class="img_artist"><img src="res/images/con_cue_img7.jpg" alt="출연자"></div>
+                            <div class="txt_artist">레드벨벳</div>
+                            <div class="txt_song">BAD BOY</div>
+                        </li>
+                        <li>
+                            <div class="img_artist"><img src="res/images/con_cue_img7.jpg" alt="출연자"></div>
+                            <div class="txt_artist">레드벨벳</div>
+                            <div class="txt_song">BAD BOY</div>
+                        </li>
+                        <li>
+                            <div class="img_artist"><img src="res/images/con_cue_img7.jpg" alt="출연자"></div>
+                            <div class="txt_artist">레드벨벳</div>
+                            <div class="txt_song">BAD BOY</div>
+                        </li>
+                        <li>
+                            <div class="img_artist"><img src="res/images/con_cue_img7.jpg" alt="출연자"></div>
+                            <div class="txt_artist">레드벨벳</div>
+                            <div class="txt_song">BAD BOY</div>
+                        </li>                        
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+	</div>
+	<!-- Footer -->
+    <div id="footer">
+        <div class="footer_inner">
+            <ul class="list_policy">
+                <li><a href="http://uplus.co.kr/css/rfrm/prvs/RetrieveUbDnUseTermsPop_14.hpi?popYn=Y" target="_blank" title="새창">이용약관</a></li>
+                <li><a href="http://www.uplus.co.kr/com/lins/lins/RetrieveCoUserInfo.hpi" target="_blank" title="새창">개인정보처리방침</a></li>
+            </ul>
+            <address>
+                <p><span>㈜엘지유플러스</span><span>주소 서울특별시 용산구 한강대로 32</span><span>대표이사 황현식</span><span>사업자등록번호 220-81-39938</span><span>통신판매신고 제 2015-서울용산-00481호</span></p>
+                <p><span>고객센터  휴대폰 114(무료), 1544-0010(유료)</span></p>                
+            </address>
+            <p class="copyright">Copyright © LG Uplus Corp. All Rights Reserved.</p>
+        </div>
+    </div>
+</div>
+<script src="res/js/common.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.8/lottie.min.js" integrity="sha512-w58XJ/0dVbEfZVJoJyBUOTMGBWmIW4jEYJSA0898d2L0Ghpum0FvwK7qTuHhkTctApzrchv3Neli+28ajI4+fg==" crossorigin="anonymous"></script>
+<!-- <script src="res/js/libs/lottie.min.js"></script> -->
+<script>
+var heartBtn = (function() {
+    let animation1;
+    let btn = document.querySelector('.btn_heart');
+    let elem = document.querySelector('.ani_heart_btn');
+    let elem2 = document.querySelector('.ani_shortap');
+    let elem3 = document.querySelector('.ani_longtap');
+    let elem4 = document.querySelector('.ani_counting_full');
+    let elem5 = document.querySelector('.ani_counting');
+    let cnt = 0;
+   
+    let longpress = false;
+    let startTime
+    let endTime;
+    var hasTouchEvent = "ontouchstart" in document.documentElement,
+        START_EV = hasTouchEvent ? "touchstart" : "mousedown",
+        END_EV = hasTouchEvent ? "touchend" : "mouseup";
+    return {
+        "init": function() {
+            let hit = 'btn_heart';
+            let heartPath = 'res/json/btn_heart/' + hit + '.json';
+            animation1 = lottie.loadAnimation({
+                container: elem,
+                renderer: 'svg',
+                loop: false,
+                autoplay: false,
+                prerender: true,
+                path: heartPath
+            });
+            btn.addEventListener(START_EV, function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                startTime = new Date().getTime();
+            });
+            btn.addEventListener(END_EV, () => { 
+                endTime = new Date().getTime();
+                longpress = (endTime - startTime < 200) ? false : true;
+                if (longpress){
+                    heartBtn.longtap();
+                } else {
+                    heartBtn.shortap();
+                }
+            });
+        },        
+        "longtap": function() {
+            animation1.playSegments([160,200],true);
+            animation1.onComplete = function() {
+                animation1.playSegments([2,120],true);
+            }
+            heartBtn.anilongtap();
+            cnt++;
+            heartBtn.counting();
+        },
+        "shortap": function() {
+            animation1.playSegments([125,145],true);
+            animation1.onComplete = function() {
+                animation1.playSegments([2,120],true);
+            }
+            heartBtn.anishortap();
+            cnt++;
+            heartBtn.counting();
+        },
+        "anishortap": function() {
+            var arrayShortap = ["green-1", "green-2", "green-3", "group-3", "group-5", "group-9", "purple-1", "purple-2", "purple-3", "red-1", "red-2", "red-3", "yellow-1", "yellow-2", "yellow-3"];
+            arrayShortap = arrayShortap[Math.floor(Math.random() * arrayShortap.length)];
+            let aniChild = document.createElement('div');
+            elem2.appendChild(aniChild);
+
+            let heartPath = 'res/json/short_tap/' + arrayShortap + '.json';
+            let ani = lottie.loadAnimation({
+                container: aniChild,
+                renderer: 'svg',
+                loop: false,
+                autoplay: true,
+                path: heartPath
+            });
+            ani.onComplete = function() {
+                aniChild.remove();
+            }  
+        },
+        "anilongtap": function() {
+            var arraylongtap = ["longtap"];
+            arraylongtap = arraylongtap[Math.floor(Math.random() * arraylongtap.length)];
+            let aniChild = document.createElement('div');
+            elem3.appendChild(aniChild);
+
+            let heartPath = 'res/json/long_tap/' + arraylongtap + '.json';
+            let ani = lottie.loadAnimation({
+                container: aniChild,
+                renderer: 'svg',
+                loop: false,
+                autoplay: true,
+                path: heartPath
+            });
+            ani.onComplete = function() {
+                aniChild.remove();
+            }  
+        },
+        "counting": function() {
+            var nameCounting = ["counting_10k", "counting_100k", "counting_1m", "counting_10m", "counting_100m", "counting_1b"];
+            switch (cnt) {
+                // 10000 미만
+                case 10:
+                    heartBtn.anicounting('th_100');
+                    break;
+                case 20:
+                    heartBtn.anicounting('th_200');
+                    break;
+                case 30:
+                    heartBtn.anicounting('th_9900');
+                    break;
+                // 10000 이상 
+                case 40:
+                    heartBtn.anicountingfull(nameCounting[0]);
+                    break;
+                case 50:
+                    heartBtn.anicountingfull(nameCounting[1]);
+                    break;
+                case 60:
+                    heartBtn.anicountingfull(nameCounting[2]);
+                    break;
+                case 70:
+                    heartBtn.anicountingfull(nameCounting[3]);
+                    break;
+                case 80:
+                    heartBtn.anicountingfull(nameCounting[4]);
+                    break;
+                case 90:
+                    heartBtn.anicountingfull(nameCounting[5]);
+                    break;
+                default:
+                    return;
+            }
+        },
+        "anicountingfull": function(val) {
+            let nameCounting = val;
+            let aniChild = document.createElement('div');
+            elem4.appendChild(aniChild);
+
+            let heartPath = 'res/json/counting/counting/' + nameCounting + '.json';
+            let ani = lottie.loadAnimation({
+                container: aniChild,
+                renderer: 'svg',
+                loop: false,
+                autoplay: true,
+                path: heartPath
+            });
+            ani.onComplete = function() {
+                aniChild.remove();
+            }  
+        },
+        "anicounting": function(val) {
+            let nameCounting = val;
+            let aniChild = document.createElement('div');
+            elem5.appendChild(aniChild);
+
+            let heartPath = 'res/json/100th/' + nameCounting + '.json';
+            let ani = lottie.loadAnimation({
+                container: aniChild,
+                renderer: 'svg',
+                loop: false,
+                autoplay: true,
+                path: heartPath
+            });
+            ani.onComplete = function() {
+                aniChild.remove();
+            }  
+        },
+    }
+})();
+heartBtn.init();
+</script>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+let isVertical = true,
+    direction = 'horizontal';
+    swiperHeight = null;
+
+let swiper = initSwiper(direction);
+
+function initSwiper(direction, swiperHeight) {
+  return new Swiper('.mySwiper', {
+    slidesPerView: "auto",
+    spaceBetween: 0,
+    direction: direction,
+    height: swiperHeight,
+    navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+  });
+}
+
+function changeDirection() {
+    swiperH = document.querySelector('.swiper-container').getBoundingClientRect().height;
+    isVertical = !isVertical;
+    direction = isVertical ? 'vertical' : 'horizontal';
+    swiperHeight = isVertical ? swiperH : 'horizontal';
+    let slideIndex = swiper.activeIndex;
+    swiper.destroy(true, true);
+    swiper = initSwiper(direction, swiperHeight);
+    swiper.slideTo(slideIndex,0);
+}
+function changeResize() {
+    swiperHeight = document.querySelector('.swiper-container').getBoundingClientRect().height;
+    direction = 'vertical';
+    let slideIndex = swiper.activeIndex;
+    swiper.destroy(true, true);
+    swiper = initSwiper(direction, swiperHeight);
+    swiper.slideTo(slideIndex,0);
+}
+changeDirection();
+
+/* resize event */
+var timer = null;
+window.addEventListener('resize', function(){
+	clearTimeout(timer);
+	timer = setTimeout(function(){
+        if (isVertical)
+		changeResize();
+	}, 300);
+});
+</script>
+<script>
+var chatUi = (function() {
+	let bfocusvent; 
+    return {
+		"chatlayout": function(obj) {
+			let dummy = document.getElementById('dummy');
+			let timer;
+			let container = document.getElementById('chat_wrap');
+			obj.addEventListener('focus', function(){
+				bfocusvent = true;
+				timer = setInterval(function(){
+					dummy.value = obj.value;
+					obj.style.height = (dummy.scrollHeight) + 'px';
+				}, 100);
+			});
+			obj.addEventListener('blur', function(){
+				clearInterval(timer);
+				bfocusvent = false;
+			});
+            /* 개발 수정 S */
+            obj.addEventListener('keypress', function() {
+                if (event.keyCode == 13 && !event.shiftKey) {
+                    alert("커밋");
+                }
+            });
+            /* 개발 수정 E */
+        }
+    }
+})();
+chatUi.chatlayout(document.getElementById('origin'));
+</script>
+
+
+</body>
+</html>

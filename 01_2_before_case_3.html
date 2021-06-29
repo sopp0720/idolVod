@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <link rel="shortcut icon" href="res/images/favicon.ico">
+    <title>아이돌live</title>
+	<link rel="stylesheet" type="text/css" href="res/css/ui.css">
+    <link rel="stylesheet" media="(max-width: 1023px)" href="res/css/mobile.css">
+    <link rel="stylesheet" media="(min-width: 1024px)" href="res/css/desktop.css">
+</head>
+<body>
+<div id="skip_nav">
+    <a href="#header">주 메뉴 바로 가기</a>
+    <a href="#container">본문 바로 가기</a>
+</div>
+<div id="wrap">
+	<div id="header">
+        <div class="header_inner">
+            <h1 class="logo"><a href="#">아이돌live</a></h1>
+            <div class="util">
+                <!-- <a href="#" class="btn_login disabled usetap">로그인</a> -->
+                <a href="#" class="btn_logout usetap">로그아웃</a>
+            </div>            
+        </div>
+    </div>
+	<div id="container">
+        <div class="visual_bg" style="background-image:url(res/images/con_sam_img_p13.png)"></div>
+		<div class="content">
+            <div class="title_wrap">
+                <div class="middle_inner">
+                    <h3 class="title">두 줄일때는 이렇게 표기합니다. 두 줄일때는 이렇게 표기합니다. 두 줄일때는 이렇게 표기합니다.</h3>
+                    <p class="time"><span class="tg_live">Live</span>2021.04.26 <em>(목)</em> 19:00</p>
+                </div>
+                <div class="sns_area">
+                    <!-- <a href="#" class="btn_comment usetap">댓글</a> -->
+                    <a href="#" class="btn_share usetap" onclick="document.getElementById('tooltip1').style.display='block';">공유하기</a>
+                    <div class="tooltip" id="tooltip1" style="display: none;">
+                        <div class="tooltip_inner">
+                            <p>주소가 복사되었습니다.<br>원하는 곳에 붙여넣기 해주세요.</p>
+                            <button class="btn_tooltip_close" type="button" onclick="document.getElementById('tooltip1').style.display='none';">툴팁닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col_left">
+                <div class="cover">
+                    <img src="res/images/con_sam_img_p13.png" alt="">
+                </div>
+                <div class="flex_from">
+                    <button class="btn_basic green usetap" type="button"><span class="btn_txt">33,000원 구매하기</span></button>
+                    <button class="btn_basic usetap" type="button"><span class="btn_txt">쿠폰번호 입력하기</span></button>
+                </div>
+                <div class="box_coupon">
+                    <a href="#" class="btn_link usetap"><i class="icon img_coupon"></i><span class="btn_txt">쿠폰 구매하러가기</span><i class="icon ic-arrow"></i></a>
+                    <!-- <a href="#" class="btn_link disabled usetap"><i class="icon img_coupon"></i><span class="btn_txt">쿠폰 구매하러가기</span><i class="icon ic-arrow"></i></a> -->
+                    <ul class="list_desc">
+                        <li>PC에서는 Live 중 일때만 감상이 가능합니다.</li>
+                        <li>콘서트가 끝난 후 다시 보시려면 모바일에서 감상이 가능합니다.</li>
+                        <li>구매한 내역은 모바일 앱의 구매내역 메뉴에서 확인할 수 있습니다.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col_right">
+                <div class="concert_wrap closed">
+                    <div class="concert_hd">
+                        <p class="tit_detail">콘서트 소개</p>
+                        <button class="btn_fold_non_txt sm-hidden" type="button" title="접기/더보기" onclick="this.closestOne('.concert_wrap').classList.toggle('closed');"><i class="icon ic-arrow-fold"></i></button>
+                    </div>
+                    <div class="txt_concert">1995년부터 지난 2017년까지 당대 최고의 K-POP 가수와 함께해 온 드림콘서트는 역대 누적 관객 수 126만명, 출연가수 464개팀이 참여한 대한민국의 대표적인 K-POP 스타가 뽑은 가장 영광스러운 무대로 평가되고 있으며, 신인 가수들의 등용문이 되고 있습니다 1995년부터 지난 2017년까지 당대 최고의 K-POP 가수와 함께해 온 드림콘서트는 역대 누적 관객 수 126만명, 출연가수 464개팀이 참여한 대한민국의 대표적인 K-POP 스타가 뽑은 가장 영광스러운 무대로 평가되고 있으며, 신인 가수들의 등용문이 되고 있습니다 1995년부터 지난 2017년까지 당대 최고의 K-POP 가수와 함께해 온 드림콘서트는 역대 누적 관객 수 126만명, 출연가수 464개팀이 참여한 대한민국의 대표적인 K-POP 스타가 뽑은 가장 영광스러운 무대로 평가되고 있으며, 신인 가수들의 등용문이 되고 있습니다</div>
+                    <div class="img_concert"><img src="res/images/img_concertinfo_detail_top.png" alt="콘서트"></div>
+                    <div class="btn_concert"><a href="#" class="btn_detail_link">콘서트 정보 상세보기</a></div>
+                </div>
+                <div class="info_wrap">
+                    <table class="table">
+                        <caption>공지사항</caption>
+                        <colgroup>
+                            <col width="15%">
+                            <col>
+                            <col width="15%">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                        <tr class="sm-hidden">
+                            <th><div class="cell">이용기간</div></th>
+                            <td><div class="cell">무제한</div></td>
+                            <th><div class="cell">이용기간</div></th>
+                            <td><div class="cell">무제한</div></td>
+                        </tr>
+                        <tr class="lg-hidden">
+                            <th colspan="2"><div class="cell">이용기간</div></th>
+                            <td colspan="2"><div class="cell">무제한</div></td>
+                        </tr>
+                        <tr class="lg-hidden">
+                            <th colspan="2"><div class="cell">영상 품질</div></th>
+                            <td colspan="2"><div class="cell">H.264 10Mbp</div></td>
+                        </tr>
+                        <tr>
+                            <th colspan="4"><div class="cell">시청 정책<i class="ic-arrow-contentsinfo"></i></div></th>
+                        </tr>
+                        <tr class="detail">
+                            <td colspan="4">
+                                <div class="detail_inner">
+                                    시청 정책 상세 문구 시청 정책 상세 문구 시청 정책 상세 문구 콘텐츠가 커뮤니티 가이드를 위반한다고 검토자가 판단하면 U+아이돌라이브에서 해당 콘텐츠를 삭제하고 크리에이터에게 통지합니다. 시청 가이드를 처음 위반한 경우에는 채널에 대한 시청 정책 상세 문구 시청 정책 상세 문구 시청 정책 상세 문구 콘텐츠가 커뮤니티 가이드를 위반한다고 검토자가 판단하면 U+아이돌라이브에서 해당 콘텐츠를 삭제하고 크리에이터에게 통지합니다.
+                                </div>
+                            </td>
+                        </tr>                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+	</div>
+	<!-- Footer -->
+    <div id="footer">
+        <div class="footer_inner">
+            <ul class="list_policy">
+                <li><a href="http://uplus.co.kr/css/rfrm/prvs/RetrieveUbDnUseTermsPop_14.hpi?popYn=Y" target="_blank" title="새창">이용약관</a></li>
+                <li><a href="http://www.uplus.co.kr/com/lins/lins/RetrieveCoUserInfo.hpi" target="_blank" title="새창">개인정보처리방침</a></li>
+            </ul>
+            <address>
+                <p><span>㈜엘지유플러스</span><span>주소 서울특별시 용산구 한강대로 32</span><span>대표이사 황현식</span><span>사업자등록번호 220-81-39938</span><span>통신판매신고 제 2015-서울용산-00481호</span></p>
+                <p><span>고객센터  휴대폰 114(무료), 1544-0010(유료)</span></p>                
+            </address>
+            <p class="copyright">Copyright © LG Uplus Corp. All Rights Reserved.</p>
+        </div>
+    </div>
+</div>
+<script src="res/js/common.js"></script>
+
+</body>
+</html>
