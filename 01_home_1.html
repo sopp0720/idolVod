@@ -7,8 +7,7 @@
     <link rel="shortcut icon" href="res/images/favicon.ico">
     <title>아이돌live</title>
 	<link rel="stylesheet" type="text/css" href="res/css/ui.css">
-    <link rel="stylesheet" media="(max-width: 1023px)" href="res/css/mobile.css">
-    <link rel="stylesheet" media="(min-width: 1024px)" href="res/css/desktop.css">
+    <link rel="stylesheet" type="text/css" href="res/css/desktop.css">
 </head>
 <body>
 <div id="skip_nav">
@@ -32,59 +31,51 @@
                 <li style="background-image: url(res/images/img-home-banner-bg-2.png);"></li>
                 <li style="background-image: url(res/images/img-home-banner-bg-3.png);"></li>
             </ul>
-        </div>
-        
-        <div class="content">
-            <div id="hero-slider">
-                <div id="slides-main" class="slides bn_slides">
-                    <div class="slide active" data-index="0">
-                        <div class="abs-mask">
-                            <div class="slide-image" style="background-image: url(res/images/con_sam_img_w1.jpg)"></div>
+            <div class="content">
+                <div id="hero-slider">
+                    <div id="slides-main" class="slides bn_slides">
+                        <div class="slide active" data-index="0">
+                            <div class="abs-mask">
+                                <div class="slide-image" style="background-image: url(res/images/con_sam_img_w1.jpg)"></div>
+                            </div>
+                        </div>
+                        <div class="slide" data-index="1">
+                            <div class="abs-mask">
+                                <div class="slide-image" style="background-image: url(res/images/con_sam_img_w2.jpg)"></div>
+                            </div>
+                        </div>
+                        <div class="slide prev" data-index="2">
+                            <div class="abs-mask">
+                                <div class="slide-image" style="background-image: url(res/images/con_sam_img_w3.jpg)"></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="slide" data-index="1">
-                        <div class="abs-mask">
-                            <div class="slide-image" style="background-image: url(res/images/con_sam_img_w2.jpg)"></div>
+                    <div id="slides-aux" class="slides mask">
+                        <div class="slide-title slide active" data-index="0">
+                            <p class="title">블랙핑크 제니 FIRST ‘SOLO’ ALBUM SHOWCASE</p>
+                            <p class="time"><span class="tg_live">Live</span>2021.04.26 <em>(목)</em> 19:00</p>
+                        </div>
+                        <div class="slide-title slide" data-index="1">
+                            <p class="title">두 줄일때는 이렇게 표기합니다. 두 줄일때는 이렇게 표기합니다. 두 줄일때는 이렇게 표기합니다.</p>
+                            <p class="time"><span class="tg_live">Live</span>2021.04.26 <em>(목)</em> 19:00</p>
+                        </div>
+                        <div class="slide-title slide" data-index="2">
+                            <p class="title">두 줄일때는 이렇게 표기합니다. 두 줄일때는 이렇게 표기합니다. 두 줄일때는 이렇게 표기합니다.</p>
+                            <p class="time"><span class="tg_live">Live</span>2021.04.26 <em>(목)</em> 19:00</p>
                         </div>
                     </div>
-                    <div class="slide prev" data-index="2">
-                        <div class="abs-mask">
-                            <div class="slide-image" style="background-image: url(res/images/con_sam_img_w3.jpg)"></div>
-                        </div>
+                    <button id="hero-prev" class="bn_prev" type="button">prev</button>
+                    <button id="hero-next" class="bn_next" type="button">next</button>
+                    <div id="slider-nav">
+                        <span class="current">1</span>
+                        <span class="sep"> / </span>
+                        <span class="total">3</span>
                     </div>
-                </div>
-                <div id="slides-aux" class="slides mask">
-                    <div class="slide-title slide" data-index="0">
-                        <p class="title">두 줄일때는 이렇게 표기합니다. 두 줄일때는 이렇게 표기합니다. 두 줄일때는 이렇게 표기합니다.</p>
-                        <p class="time"><span class="tg_live">Live</span>2021.04.26 <em>(목)</em> 19:00</p>
-                    </div>
-                    <div class="slide-title slide" data-index="1">
-                        <p class="title">두 줄일때는 이렇게 표기합니다. 두 줄일때는 이렇게 표기합니다. 두 줄일때는 이렇게 표기합니다.</p>
-                        <p class="time"><span class="tg_live">Live</span>2021.04.26 <em>(목)</em> 19:00</p>
-                    </div>
-                    <div class="slide-title slide" data-index="2">
-                        <p class="title">두 줄일때는 이렇게 표기합니다. 두 줄일때는 이렇게 표기합니다. 두 줄일때는 이렇게 표기합니다.</p>
-                        <p class="time"><span class="tg_live">Live</span>2021.04.26 <em>(목)</em> 19:00</p>
-                    </div>
-                </div>
-                <div id="hero-next" style="position:fixed;z-index:100;right:0; top:100px;font-size:20px;color:#000;">뒤로가기</div>
-                <div id="hero-prev" style="position:fixed;z-index:100;left:0; top:100px;font-size:20px;color:#000;">뒤로가기</div>
-                <div id="slider-nav">
-                    <span class="current">1</span>
-                    <span class="sep"></span>
-                    <span class="total">4</span>
                 </div>
             </div>
         </div>
-
-
-
-
-
-        
         
 		<div class="content">
-
         </div>
 	</div>
 	<!-- Footer -->
@@ -203,6 +194,7 @@ function heroSlider() {
         main: document.querySelector('#slides-main'),
         aux: document.querySelector('#slides-aux'),
         current: document.querySelector('#slider-nav .current'),
+        currentTotal: document.querySelector('#slider-nav .total'),
         nextEl: document.querySelector('#hero-next'),
         prevEl: document.querySelector('#hero-prev'),
         handle: null,
@@ -211,17 +203,13 @@ function heroSlider() {
         interval: 7000
     };
 
-    const setHeight = function (holder, items) {
-        const h = utils().calcMaxHeight(items);
-        holder.style.height = `${h}px`;
-    }
-
     const leadingZero = function () {
-        return arguments[1] < 10 ? '0' + arguments[1] : arguments[1];
+        return arguments[1] < 10 ? + arguments[1] : arguments[1];
     }
 
     const setCurrent = function () {
         slider.current.innerText = leadingZero `${slider.activeIndex + 1}`;
+        slider.currentTotal.innerText = slider.total;
     }
 
     const changeSlide = function (direction) {
@@ -349,22 +337,15 @@ function heroSlider() {
     }
 
     const init = function () {
-        setHeight(slider.aux, slider.aux.querySelectorAll('.slide-title'));
         loadingAnimation();
     }
 
-    const resize = function () {
-        setHeight(slider.aux, slider.aux.querySelectorAll('.slide-title'));
-    }
-
     return {
-        init,
-        resize
+        init
     }
 }
 
 window.addEventListener('load', heroSlider().init);
-window.addEventListener("resize", heroSlider().resize);
 </script>
 
 </body>
