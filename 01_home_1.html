@@ -26,13 +26,13 @@
     </div>
 	<div id="container">
         <div class="home_banner">
-            <ul class="bn_bg">
-                <li style="background-image: url(res/images/img-home-banner-bg.png);"></li>
-                <li style="background-image: url(res/images/img-home-banner-bg-2.png);"></li>
-                <li style="background-image: url(res/images/img-home-banner-bg-3.png);"></li>
+            <ul class="bn_bg" id="bn_bg">
+                <li class="item-bg current" style="background-image: url(res/images/img-home-banner-bg.png);" data-index="0"></li>
+                <li class="item-bg" style="background-image: url(res/images/img-home-banner-bg-2.png);" data-index="1"></li>
+                <li class="item-bg" style="background-image: url(res/images/img-home-banner-bg-3.png);" data-index="2"></li>
             </ul>
             <div class="content">
-                <div id="hero-slider">
+                <div id="slides-wrap">
                     <div id="slides-main" class="slides bn_slides">
                         <div class="slide active" data-index="0">
                             <div class="abs-mask">
@@ -50,7 +50,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="slides-aux" class="slides mask">
+                    <div id="slides-aux" class="slides">
                         <div class="slide-title slide active" data-index="0">
                             <p class="title">블랙핑크 제니 FIRST ‘SOLO’ ALBUM SHOWCASE</p>
                             <p class="time"><span class="tg_live">Live</span>2021.04.26 <em>(목)</em> 19:00</p>
@@ -95,51 +95,20 @@
 </div>
 <script src="res/js/common.js"></script>
 <script>
-/**
- *  Utility functions
- */
 function utils() {
-    /**
-     * Returns max height value for a nodelist
-     * @param {NodeList} nodeList The node list to calculate max height of
-     */
-    const calcMaxHeight = function (items) {
-        let maxHeight = 0;
 
-        items.forEach(item => {
-            const h = item.clientHeight;
-            maxHeight = h > maxHeight ? h : maxHeight;
-        });
-        return maxHeight;
-    }
-
-    /**
-     * Removes Classes from NodeList
-     * @param {NodeList} nodeList The node list to remove classes from
-     * @param {Array} cssClasses Array of CSS classes to be removed
-     */
     function removeClasses(nodeList, cssClasses) {
         for (let i = 0; i < nodeList.length; i++) {
             nodeList[i].classList.remove(...cssClasses);
         }
     }
 
-    /**
-     * Adds Classes from NodeList
-     * @param {NodeList} nodeList The node list to add classes to
-     * @param {Array} cssClasses Array of CSS classes to be added
-     */
     function addClasses(nodeList, cssClasses) {
         for (let i = 0; i < nodeList.length; i++) {
             nodeList[i].classList.add(...cssClasses);
         }
     }
 
-    /**
-     * Behaves the same as setInterval except uses requestAnimationFrame() where possible for better performance
-     * @param {function} fn The callback function
-     * @param {int} delay The delay in milliseconds
-     */
     const requestInterval = function (fn, delay) {
         const requestAnimFrame = (function () {
             return window.requestAnimationFrame || function (callback, element) {
@@ -166,17 +135,12 @@ function utils() {
         return handle;
     };
 
-    /**
-     * Behaves the same as clearInterval except uses cancelRequestAnimationFrame() where possible for better performance
-     * @param {int|object} handle The callback function
-     */
     const clearRequestInterval = function (handle) {
         window.cancelAnimationFrame ? window.cancelAnimationFrame(handle.value) :
             clearInterval(handle);
     };
 
     return {
-        calcMaxHeight,
         removeClasses,
         addClasses,
         requestInterval,
@@ -184,14 +148,12 @@ function utils() {
     }
 }
 
-
-/**
- *  Main Slider function
- */
+/* 홈배너 스크립트 */
 function heroSlider() {
     const slider = {
-        hero: document.querySelector('#hero-slider'),
+        hero: document.querySelector('#slides-wrap'),
         main: document.querySelector('#slides-main'),
+        mainBg: document.querySelector('#bn_bg'),        
         aux: document.querySelector('#slides-aux'),
         current: document.querySelector('#slider-nav .current'),
         currentTotal: document.querySelector('#slider-nav .total'),
@@ -200,7 +162,8 @@ function heroSlider() {
         handle: null,
         idle: true,
         activeIndex: -1,
-        interval: 7000
+        activeIndexBg: -1,
+        interval: 7000        
     };
 
     const leadingZero = function () {
@@ -223,10 +186,8 @@ function heroSlider() {
             slider.hero.classList.add('prev');
         }
 
-        //reset classes
         utils().removeClasses(slider.items, ['prev', 'active']);
 
-        //set prev  
         const prevItems = [...slider.items]
             .filter(item => {
                 let prevIndex;
@@ -239,7 +200,6 @@ function heroSlider() {
                 return item.dataset.index == prevIndex;
             });
 
-        //set active
         const activeItems = [...slider.items]
             .filter(item => {
                 return item.dataset.index == slider.activeIndex;
@@ -281,6 +241,18 @@ function heroSlider() {
             }
         });
     }
+    
+    const changeBg = function () {
+        slider.bgs = slider.mainBg.querySelectorAll('.item-bg');
+        utils().removeClasses(slider.bgs, ['current']);
+        slider.bgtotal = slider.bgs.length;
+        slider.activeIndexBg = (slider.activeIndexBg + 1) % slider.bgtotal;
+        const activeBgItems = [...slider.bgs]
+            .filter(item => {
+                return item.dataset.index == slider.activeIndexBg;
+            });
+        utils().addClasses(activeBgItems, ['current']);
+    }
 
     const autoplay = function (initial) {
         slider.autoplay = true;
@@ -293,37 +265,20 @@ function heroSlider() {
         slider.handle = utils().requestInterval(loop, slider.interval);
     }
 
+    const autoBg = function () {
+        const loop = () => changeBg();
+        utils().requestInterval(loop, 15000);
+    }
+
     const loaded = function () {
         slider.hero.classList.add('loaded');
         slider.idle = true;
     }
 
-    const touchControl = function () {
-        const touchStart = function (e) {
-            slider.ts = parseInt(e.changedTouches[0].clientX);
-            window.scrollTop = 0;
-        }
-
-        const touchMove = function (e) {
-            slider.tm = parseInt(e.changedTouches[0].clientX);
-            const delta = slider.tm - slider.ts;
-            window.scrollTop = 0;
-
-            if (slider.idle) {
-                const direction = delta < 0 ? 'next' : 'prev';
-                stopAutoplay();
-                changeSlide(direction);
-            }
-        }
-
-        slider.hero.addEventListener('touchstart', touchStart);
-        slider.hero.addEventListener('touchmove', touchMove);
-    }
-
     const start = function () {
         autoplay(true);
+        autoBg();
         naviControl();
-        window.innerWidth <= 1024 && touchControl();
         slider.aux.addEventListener('transitionend', loaded, {
             once: true
         });
