@@ -36,6 +36,16 @@
 .btn_link:before { content: ''; position: absolute; top: 0; left: 0; bottom: 0; right: 0; border: 2px solid #e5e5e5; }
 .btn_link .btn_txt { display: block; line-height: 1.8rem; font-size: 1.3304rem; font-weight: bold; letter-spacing: -0.0391rem; color: #000000; }
 .btn_link.active .btn_txt { color: #7e65ff; }
+/* v1.8_210713_유료콘서트 */
+.btn_purchase { position: relative; display: block; width: 100%; font-size: 0; height: 4.1479rem; border-radius: 0; background-color: #eaeaea; padding: 1.1739rem 2.9739rem 1.4087rem 1.8783rem; border: 0 none; text-align: left; outline: none; }
+.btn_purchase .btn_txt { display: block; line-height: 1.5652rem; font-size: 1.1739rem; font-weight: bold; letter-spacing: -0.0337rem; color: #000000; }
+.btn_purchase.active { background-color: #917bff; }
+.btn_purchase.disabled .btn_txt { color: rgba(0,0,0,0.2); }
+.btn_ticket { position: absolute; top: 0; right: 0; width: 6.1826rem; font-size: 0; height: 4.1479rem; border-radius: 0; background-color: #000000; padding: 1.1739rem 0 1.3304rem; border: 0 none; text-align: center; outline: none; }
+.btn_ticket .btn_txt { line-height: 1.6435rem; font-size: 1.1739rem; font-weight: bold; color: #ffffff; }
+.btn_ticket.active { background-color: #917bff; }
+
+
 .btn_non_border { position: relative; margin: 0 0.6261rem; vertical-align: top; display: inline-block; width: calc(50% - 16px); font-size: 0; height: 4.3826rem; border: 0 none; border-radius: 0; background-color: #917bff; padding: 1.0174rem 1.5652rem 1.3304rem; text-align: center; outline: none; }
 .btn_non_border.active { background-color: #6b51ed; }
 .btn_non_border .btn_txt { vertical-align: top; display: inline-block; line-height: 2.0348rem; font-size: 1.4087rem; font-weight: bold; letter-spacing: -0.0391rem; text-align: center; color: #000000; }
@@ -53,6 +63,9 @@
 .btn_link.active .ic-arrow { background-position: 0 50%; }
 .btn_link.disabled .ic-arrow { background-position: 0 100%; }
 .btn_link.disabled .btn_txt { color: rgba(0, 0, 0, 0.3); }
+/* v1.8_210713_유료콘서트 */
+.btn_purchase .ic-arrow { position: absolute; top: 1.0957rem; right: 0.9391rem; width: 2.0348rem; height: 2.0348rem; background-repeat: no-repeat; background-image: url(../images/ic-arrow-nor.png); background-size: 100%; }
+.btn_purchase.disabled .ic-arrow { opacity: 0.3; }
 
 /* input_defalt */
 .input_basic { -webkit-appearance: none; appearance: none; padding: 1.1739rem 1.487rem 1.3304rem; border-radius: 0; background-color: #ffffff; border: 0.1565rem solid #000000; width: 100%; display: block; line-height: 1.6435rem; font-size: 1.1739rem; font-weight: bold; color: #000000; }
@@ -78,17 +91,28 @@
 .modal .modal_content { position: relative; overflow: hidden; background-color: #ffffff; margin: 0 auto; }
 .modal .modal_hd { padding: 1.5652rem 2.3478rem; line-height: 2.3478rem; font-size: 1.6435rem; font-weight: bold; letter-spacing: -0.0391rem; text-align: center; color: #000000; }
 .modal .modal_bd { padding: 0 2.3478rem 2.8174rem; max-height: calc(100vh - 140px); overflow-x: hidden; overflow-y: auto; }
-.modal .modal_bd .tit_sub { word-break: keep-all; word-wrap: break-word; padding-top: 0.6261rem; line-height: 2.0348rem; font-size: 1.4087rem; font-weight: bold; letter-spacing: -0.0391rem; color: #000000; }
-.modal .modal_bd .list_desc { padding-top: 0.6261rem; }
+/* v1.8_210713_유료콘서트 */
+.modal .modal_bd .tit_sub { word-break:keep-all; word-wrap:break-word; padding-top: 0.6261rem; line-height: 1.8783rem; font-size: 1.2522rem; font-weight: bold; letter-spacing: -0.0391rem; color: #000000; }
+.modal .modal_bd .tit_sub > em { font-style: normal; color: #7e65ff; font-weight: bold; }
+.modal .modal_bd .list_desc { padding-top: 0.7826rem; }
 .modal .modal_bd .list_desc li { position: relative; margin-top: 0.3913rem; padding-left: 0.5478rem; line-height: 1.5652rem; font-size: 1.0957rem; font-weight: normal; letter-spacing: -0.0391rem; color: #000000; }
 .modal .modal_bd .list_desc li:before { content: ''; position: absolute; top: 0.7044rem; left: 0; width: 0.1565rem; height: 0.1565rem; background-color: #000000; }
 .modal .modal_bd .list_desc li:first-child { margin-top: 0; }
-.modal .modal_bd .list_desc ~ .input_wrap { margin-top: 2.9739rem; }
+.modal .modal_bd .input_wrap { position: relative; margin-top: 1.4087rem; }
+.modal .modal_bd .input_wrap .input_basic { width: calc(100% - 6.7305rem); height: 4.1479rem; padding: 1.0174rem 0.9391rem 1.1739rem 1.0174rem; }
 .modal .modal_bd .txt_input_desc { position: relative; padding-left: 0.5478rem; margin-top: 0.9391rem; line-height: 1.5652rem; font-size: 1.0174rem; font-weight: normal; letter-spacing: -0.0391rem; color: #666666; margin-bottom: 0.5478rem; }
-.modal .modal_bd .txt_input_desc:before { content: '*'; position: absolute; top: 1px; left: 0; line-height: 1.2522rem; font-size: 0.9391rem; font-weight: normal; letter-spacing: -0.0391rem; color: #666666; }
-.modal .modal_bd .box_error { margin-top: 1.2522rem; padding: 0.7826rem 0 0.7044rem; background-color: rgba(255, 0, 0, 0.1); text-align: center; font-size: 0; }
-.modal .modal_bd .txt_box_error { position: relative; display: inline-block; padding-left: 1.4087rem; line-height: 1.487rem; font-size: 1.0174rem; font-weight: normal; letter-spacing: -0.0391rem; color: #ff0000; }
-.modal .modal_bd .txt_box_error:before { content: ''; position: absolute; top: 0.2348rem; left: 0; width: 1.0174rem; height: 1.0174rem; background-image: url(../images/ic-warning.png); background-size: 100%; }
+.modal .modal_bd .txt_input_desc:before { content: '*'; position: absolute; top: 0.0783rem; left: 0; line-height: 1.2522rem; font-size: 0.9391rem; font-weight: normal; letter-spacing: -0.0391rem; color: #666666; }
+.modal .modal_bd .btn_purchase { margin-top: 1.4087rem; }
+.modal .modal_bd .ticket_wrap { padding-top: 2.3478rem; margin-top: 2.9739rem; border-top: 1px solid #000000; }
+.modal .modal_bd .box_gray { margin-top: 1.4087rem; padding: 1.2522rem 1.2522rem 1.4087rem; background-color: #f7f7f7; margin-bottom: -1.4087rem; }
+.modal .modal_bd .tit_box { line-height: 1.487rem; font-size: 1.0174rem; font-weight: bold; color: #797979; }
+.modal .modal_bd .list_box_desc { padding-top: 0.1565rem; }
+.modal .modal_bd .list_box_desc li { position: relative; padding-left: 0.7044rem; margin-top: 0.1565rem; line-height: 1.3304rem; font-size: 0.9391rem; font-weight: normal; color: rgba(102,102,102,0.8); }
+.modal .modal_bd .list_box_desc li:before { content: '*'; position: absolute; top: 0.1565rem; left: 0; line-height: 1.3304rem; font-size: 0.9391rem; font-weight: normal; color: rgba(102,102,102,0.8); }
+.modal .box_error { padding: 1.0174rem 0 0.9391rem; background-color: rgba(255,0,0,0.1); text-align: center; font-size: 0; }
+.modal .txt_box_error { position: relative; display: inline-block; padding-left: 1.4087rem; line-height: 1.487rem; font-size: 1.0174rem; font-weight: normal; letter-spacing: -0.0391rem; color: #ff0000; }
+.modal .txt_box_error:before { content: ''; position: absolute; top: 0.2348rem; left: 0; width: 1.0174rem; height: 1.0174rem; background-image: url(../images/ic-warning.png); background-size: 100%; }
+
 .modal .small { max-width: 30.5219rem; }
 .modal .small .modal_bd { padding: 2.3478rem 1.5652rem; }
 .modal .modal_bd .txt_desc { padding: 0.4696rem 0; line-height: 2.3478rem; font-size: 1.6435rem; font-weight: normal; letter-spacing: -0.0391rem; text-align: center; color: #000000; }

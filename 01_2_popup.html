@@ -14,8 +14,8 @@
 <div style="position:fixed;top:0;left:0;z-index:100;">
     <button type="button" onclick="layerPopup.show('#popup_01');" style="border:1px solid #000;background-color:#fff;color:#000;">Default</button>
     <button type="button" onclick="layerPopup.show('#popup_02');" style="border:1px solid #000;background-color:#fff;color:#000;">input 입력 </button>
-    <button type="button" onclick="layerPopup.show('#popup_03');" style="border:1px solid #000;background-color:#fff;color:#000;">이미 사용한 번호 </button>
-    <button type="button" onclick="layerPopup.show('#popup_04');" style="border:1px solid #000;background-color:#fff;color:#000;">쿠폰번호 잘못 입력</button>
+    <button type="button" onclick="layerPopup.show('#popup_03');" style="border:1px solid #000;background-color:#fff;color:#000;">이미 사용한 번호 /쿠폰번호 잘못 입력</button>
+    <!-- <button type="button" onclick="layerPopup.show('#popup_04');" style="border:1px solid #000;background-color:#fff;color:#000;">쿠폰번호 잘못 입력</button> -->
     <button type="button" onclick="layerPopup.show('#popup_05');" style="border:1px solid #000;background-color:#fff;color:#000;">결제하기</button>
     <button type="button" onclick="layerPopup.show('#popup_06');" style="border:1px solid #000;background-color:#fff;color:#000;">채팅1</button>
 	<button type="button" onclick="layerPopup.show('#popup_07');" style="border:1px solid #000;background-color:#fff;color:#000;">채팅2</button>
@@ -26,32 +26,112 @@
     <button type="button" onclick="layerPopup.show('#popup_12');" style="border:1px solid #000;background-color:#fff;color:#000;">동시 접속 제한</button>
 </div>
 
-<div class="modal fadeIn" id="popup_01" style="display: none;">
+<div class="modal fadeIn visible" id="popup_01" style="display: block;">
 	<div class="dim"></div>
 	<div class="modal_inner">
 		<div class="modal_content">
 			<div class="modal_hd">티켓번호 입력하기</div>
 			<div class="modal_bd">
-				<p class="tit_sub">티켓의 번호를 입력해 주세요.</p>
+				<p class="tit_sub">티켓을 구매하지 않으셨다면?</p>
 				<ul class="list_desc">
-                    <li>영문 대/소문자를 구분하여 정확하 게 입력해 주세요.</li>
-                    <li>유효 기간이 지난 티켓은 사용할 수 없습니다.</li>
-                    <li>티켓 등록 후 콘서트 시작 시간이 되면 바로 감상할 수 있습니다.</li>
+                    <li>티켓은 외부 구매처에서 구매하거나 이벤트로 받을 수 있습니다.<br>티켓의 이용 및 취소는 외부 구매처의 정책을 따릅니다. </li>
                 </ul>
+				<a href="#" class="btn_purchase usetap"><span class="btn_txt">티켓 구매하기</span><i class="icon ic-arrow"></i></a>
+				<div class="ticket_wrap">
+					<p class="tit_sub"><em>티켓을 구매하신 분은</em><br>티켓의 번호를 입력해 주세요.</p>
+					<ul class="list_desc">
+						<li>영문 대/소문자를 구분하여 정확하게 입력해 주세요.</li>
+					</ul>
+				</div>
                 <div class="input_wrap">
                     <input class="input_basic" type="text" placeholder="티켓번호 14자리 입력">
+					<button class="btn_ticket" type="button"><span class="btn_txt">등록</span></button>
                 </div>
-				<p class="txt_input_desc">티켓은 외부 구매처에서 구매하거나 이벤트로 받을 수 있습니다. 티켓의 이용 및 취소는 외부 구매처의 정책을 따릅니다.</p>            
+				<div class="box_gray">
+					<p class="tit_box">유의사항</p>
+					<ul class="list_box_desc">
+						<li>유효 기간이 지난 티켓은 사용할 수 없습니다.</li>
+						<li>티켓 등록 후 콘서트 시작 시간이 되면 바로 감상할 수 있습니다.</li>
+					</ul>
+				</div>
 			</div>
-			<div class="modal_ft">
-				<a href="#" class="btn usetap" onclick="layerPopup.hide('#popup_01');"><span>확인</span></a>
-			</div>
+			<!-- <div class="box_error"><p class="txt_box_error">티켓번호를 정확하게 다시 입력해주세요.</p></div> -->
 		</div>
 		<button type="button" class="modal_close usetap" onclick="layerPopup.hide('#popup_01')">팝업닫기</button>
 	</div>
 </div>
 
 <div class="modal fadeIn" id="popup_02" style="display: none;">
+	<div class="dim"></div>
+	<div class="modal_inner">
+		<div class="modal_content">
+			<div class="modal_hd">티켓번호 입력하기</div>
+			<div class="modal_bd">
+				<p class="tit_sub">티켓을 구매하지 않으셨다면?</p>
+				<ul class="list_desc">
+                    <li>티켓은 외부 구매처에서 구매하거나 이벤트로 받을 수 있습니다.<br>티켓의 이용 및 취소는 외부 구매처의 정책을 따릅니다. </li>
+                </ul>
+				<a href="#" class="btn_purchase usetap"><span class="btn_txt">티켓 구매하기</span><i class="icon ic-arrow"></i></a>
+				<div class="ticket_wrap">
+					<p class="tit_sub"><em>티켓을 구매하신 분은</em><br>티켓의 번호를 입력해 주세요.</p>
+					<ul class="list_desc">
+						<li>영문 대/소문자를 구분하여 정확하게 입력해 주세요.</li>
+					</ul>
+				</div>
+                <div class="input_wrap">
+                    <input class="input_basic" type="text" value="123344555666777888" placeholder="티켓번호 14자리 입력">
+					<button class="btn_ticket" type="button"><span class="btn_txt">등록</span></button>
+                </div>
+				<div class="box_gray">
+					<p class="tit_box">유의사항</p>
+					<ul class="list_box_desc">
+						<li>유효 기간이 지난 티켓은 사용할 수 없습니다.</li>
+						<li>티켓 등록 후 콘서트 시작 시간이 되면 바로 감상할 수 있습니다.</li>
+					</ul>
+				</div>
+			</div>
+			<!-- <div class="box_error"><p class="txt_box_error">티켓번호를 정확하게 다시 입력해주세요.</p></div> -->
+		</div>
+		<button type="button" class="modal_close usetap" onclick="layerPopup.hide('#popup_02')">팝업닫기</button>
+	</div>
+</div>
+
+<div class="modal fadeIn" id="popup_03" style="display: none;">
+	<div class="dim"></div>
+	<div class="modal_inner">
+		<div class="modal_content">
+			<div class="modal_hd">티켓번호 입력하기</div>
+			<div class="modal_bd">
+				<p class="tit_sub">티켓을 구매하지 않으셨다면?</p>
+				<ul class="list_desc">
+                    <li>티켓은 외부 구매처에서 구매하거나 이벤트로 받을 수 있습니다.<br>티켓의 이용 및 취소는 외부 구매처의 정책을 따릅니다. </li>
+                </ul>
+				<a href="#" class="btn_purchase usetap"><span class="btn_txt">티켓 구매하기</span><i class="icon ic-arrow"></i></a>
+				<div class="ticket_wrap">
+					<p class="tit_sub"><em>티켓을 구매하신 분은</em><br>티켓의 번호를 입력해 주세요.</p>
+					<ul class="list_desc">
+						<li>영문 대/소문자를 구분하여 정확하게 입력해 주세요.</li>
+					</ul>
+				</div>
+                <div class="input_wrap">
+                    <input class="input_basic error" type="text" placeholder="티켓번호 14자리 입력">
+					<button class="btn_ticket" type="button"><span class="btn_txt">등록</span></button>
+                </div>
+				<div class="box_gray">
+					<p class="tit_box">유의사항</p>
+					<ul class="list_box_desc">
+						<li>유효 기간이 지난 티켓은 사용할 수 없습니다.</li>
+						<li>티켓 등록 후 콘서트 시작 시간이 되면 바로 감상할 수 있습니다.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="box_error"><p class="txt_box_error">티켓번호를 정확하게 다시 입력해주세요.</p></div>
+		</div>
+		<button type="button" class="modal_close usetap" onclick="layerPopup.hide('#popup_03')">팝업닫기</button>
+	</div>
+</div>
+
+<!-- <div class="modal fadeIn" id="popup_02" style="display: none;">
 	<div class="dim"></div>
 	<div class="modal_inner">
 		<div class="modal_content">
@@ -126,7 +206,7 @@
 		</div>
 		<button type="button" class="modal_close usetap " onclick="layerPopup.hide('#popup_04')">팝업닫기</button>
 	</div>
-</div>
+</div> -->
 
 <div class="modal fadeIn" id="popup_05" style="display: none;">
 	<div class="dim"></div>
@@ -266,7 +346,7 @@
 	</div>
 </div>
 
-<div class="modal fadeIn visible" id="popup_12" style="display: block;">
+<div class="modal fadeIn" id="popup_12" style="display: none;">
 	<div class="dim"></div>
 	<div class="modal_inner">
 		<div class="modal_content">

@@ -36,6 +36,15 @@
 .btn_link { position: relative; display: block; width: 100%; font-size: 0; height: 58px; border-radius: 0; background-color: #f5f5f5; padding: 15px 68px 17px 56px; border: 2px solid #e5e5e5; text-align: left; outline: none; }
 .btn_link .btn_txt { display: block; line-height: 22px; font-size: 17px; font-weight: bold; letter-spacing: -0.43px; color: #000000; }
 .btn_link:hover .btn_txt { color: #7e65ff; }
+/* v1.8_210713_유료콘서트 */
+.btn_purchase { position: relative; display: block; width: 100%; font-size: 0; height: 53px; border-radius: 0; background-color: #eaeaea; padding: 15px 38px 18px 24px; border: 0 none; text-align: left; outline: none; }
+.btn_purchase .btn_txt { display: block; line-height: 20px; font-size: 15px; font-weight: bold; letter-spacing: -0.43px; color: #000000; }
+.btn_purchase:hover { background-color: #917bff; }
+.btn_purchase.disabled .btn_txt { color: rgba(0,0,0,0.2); }
+.btn_ticket { position: absolute; top: 0; right: 0; width: 79px; font-size: 0; height: 53px; border-radius: 0; background-color: #000000; padding: 15px 0 17px; border: 0 none; text-align: center; outline: none; }
+.btn_ticket .btn_txt { line-height: 21px; font-size: 15px; font-weight: bold; color: #ffffff; }
+.btn_ticket:hover { background-color: #917bff; }
+
 
 .btn_non_border  { position: relative; margin: 0 8px; vertical-align: top; display: inline-block; width: 221px; font-size: 0; height: 56px; border: 0 none; border-radius: 0; background-color: #917bff; padding: 13px 20px 17px; text-align: center; outline: none; }
 .btn_non_border:hover { background-color: #6b51ed; }
@@ -54,6 +63,9 @@
 .btn_link:hover .ic-arrow { background-position: 0 50%; }
 .btn_link.disabled .ic-arrow { background-position: 0 100%; }
 .btn_link.disabled .btn_txt { color: rgba(0,0,0,0.3); }
+/* v1.8_210713_유료콘서트 */
+.btn_purchase .ic-arrow { position: absolute; top: 14px; right: 12px; width: 26px; height: 26px; background-repeat: no-repeat; background-image: url(../images/ic-arrow-nor.png); background-size: 100%; }
+.btn_purchase.disabled .ic-arrow { opacity: 0.3; }
 
 /* input_defalt */
 .input_basic { -webkit-appearance: none; appearance: none; padding: 15px 19px 17px; border-radius: 0; background-color: #ffffff; border: 2px solid #000000; width:100%; display: block; line-height: 21px; font-size: 15px; font-weight: bold; color: #000000; }
@@ -78,17 +90,28 @@
 .modal .modal_content {position: relative; overflow: hidden; width: 442px; max-width: 100%; background-color: #ffffff; margin: 0 auto; }
 .modal .modal_hd { padding: 20px 30px; line-height: 30px; font-size: 21px; font-weight: bold; letter-spacing: -0.5px; text-align: center; color: #000000; }
 .modal .modal_bd { padding: 0 30px 36px; max-height: calc(100vh - 140px); overflow-x: hidden; overflow-y: auto; }
-.modal .modal_bd .tit_sub { word-break:keep-all; word-wrap:break-word; padding-top: 8px; line-height: 26px; font-size: 18px; font-weight: bold; letter-spacing: -0.5px; color: #000000; }
-.modal .modal_bd .list_desc { padding-top: 8px; }
+/* v1.8_210713_유료콘서트 */
+.modal .modal_bd .tit_sub { word-break:keep-all; word-wrap:break-word; padding-top: 8px; line-height: 24px; font-size: 16px; font-weight: bold; letter-spacing: -0.5px; color: #000000; }
+.modal .modal_bd .tit_sub > em { font-style: normal; color: #7e65ff; font-weight: bold; }
+.modal .modal_bd .list_desc { padding-top: 10px; }
 .modal .modal_bd .list_desc li { position: relative; margin-top: 5px; padding-left: 7px; line-height: 20px; font-size: 14px; font-weight: normal; letter-spacing: -0.5px; color: #000000; }
 .modal .modal_bd .list_desc li:before { content: ''; position: absolute; top: 9px; left: 0; width: 2px; height: 2px; background-color: #000000; }
 .modal .modal_bd .list_desc li:first-child { margin-top: 0; }
-.modal .modal_bd .list_desc ~ .input_wrap { margin-top: 38px; }
+.modal .modal_bd .input_wrap { position: relative; margin-top: 18px; }
+.modal .modal_bd .input_wrap .input_basic { width: calc(100% - 86px); height: 53px; padding: 13px 12px 15px 13px; }
 .modal .modal_bd .txt_input_desc { position: relative; padding-left: 7px; margin-top: 12px; line-height: 20px; font-size: 13px; font-weight: normal; letter-spacing: -0.5px; color: #666666; margin-bottom: 7px; }
 .modal .modal_bd .txt_input_desc:before { content: '*'; position: absolute; top: 1px; left: 0; line-height: 16px; font-size: 12px; font-weight: normal; letter-spacing: -0.5px; color: #666666; }
-.modal .modal_bd .box_error { margin-top: 16px; padding: 10px 0 9px; background-color: rgba(255,0,0,0.1); text-align: center; font-size: 0; }
-.modal .modal_bd .txt_box_error { position: relative; display: inline-block; padding-left: 18px; line-height: 19px; font-size: 13px; font-weight: normal; letter-spacing: -0.5px; color: #ff0000; }
-.modal .modal_bd .txt_box_error:before { content: ''; position: absolute; top: 3px; left: 0; width: 13px; height: 13px; background-image: url(../images/ic-warning.png); background-size: 100%; }
+.modal .modal_bd .btn_purchase { margin-top: 18px; }
+.modal .modal_bd .ticket_wrap { padding-top: 30px; margin-top: 38px; border-top: 1px solid #000000; }
+.modal .modal_bd .box_gray { margin-top: 18px; padding: 16px 16px 18px; background-color: #f7f7f7; margin-bottom: -18px; }
+.modal .modal_bd .tit_box { line-height: 19px; font-size: 13px; font-weight: bold; color: #797979; }
+.modal .modal_bd .list_box_desc { padding-top: 2px; }
+.modal .modal_bd .list_box_desc li { position: relative; padding-left: 9px; margin-top: 2px; line-height: 17px; font-size: 12px; font-weight: normal; color: rgba(102,102,102,0.8); }
+.modal .modal_bd .list_box_desc li:before { content: '*'; position: absolute; top: 2px; left: 0; line-height: 17px; font-size: 12px; font-weight: normal; color: rgba(102,102,102,0.8); }
+.modal .box_error { padding: 13px 0 12px; background-color: rgba(255,0,0,0.1); text-align: center; font-size: 0; }
+.modal .txt_box_error { position: relative; display: inline-block; padding-left: 18px; line-height: 19px; font-size: 13px; font-weight: normal; letter-spacing: -0.5px; color: #ff0000; }
+.modal .txt_box_error:before { content: ''; position: absolute; top: 3px; left: 0; width: 13px; height: 13px; background-image: url(../images/ic-warning.png); background-size: 100%; }
+
 .modal .small { width: 390px; }
 .modal .small .modal_bd { padding: 30px 20px; }
 .modal .modal_bd .txt_desc { padding: 6px 0; line-height: 30px; font-size: 21px; font-weight: normal; letter-spacing: -0.5px; text-align: center; color: #000000; }
