@@ -216,6 +216,7 @@
 .visual_bg:before { content: ''; position: absolute; width: 100%; height: 260px; background-color: #000000; }
 .visual_bg:after { content: ''; position: absolute; width: 100%; height: 260px; overflow: hidden; background-image: inherit; background-position: 50% 50%; background-size: cover; opacity: 0.5; -webkit-filter: blur(20px); filter: blur(20px); }
 #container .content { position: relative; width: 1024px; margin: 0 auto; }
+#container .inner { position: relative; width: 1024px; margin: 0 auto; }
 #container .content:after { clear: both; content: ''; display: block; }
 .title_wrap { position: relative; float: right; width: 694px; height: 260px; white-space: nowrap; }
 .title_wrap:after {content: '';position: relative; display: inline-block; height: 100%; vertical-align: middle; }
@@ -589,7 +590,7 @@
 
 #slides-wrap { position: relative; overflow: hidden; }
 #slides-main { position: relative; width: 924px; height: 379px; margin: 29px auto 0; overflow: hidden; }
-#slides-main:before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; border: 3px solid #000000; z-index: 11; }
+#slides-main:before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; border: 3px solid #000000; z-index: 11; pointer-events: none; touch-action: none; }
 #slides-main .slide-image,
 #slides-main .abs-mask, 
 #slides-main .slide { position: absolute; top: 0; left: 0; height: 100%; width: 100%; }
@@ -625,20 +626,23 @@
 .bn_next { position: absolute; top: 196px; right: 0; width: 46px; height: 46px; text-indent: -999em; font-size: 0; line-height: 0; overflow: hidden; background-image: url(../images/ic-arrow-home-banner.png); background-size: 100%; }
 .bn_next:hover { background-position: 0 100%; }
 
-.list-wrapper { position: relative; width: 1032px; margin: 0 auto; }
-.list-wrapper > div[class*=list-vod-] { margin-top: 34px; padding-top: 34px; border-top: solid 1px #dddddd; }
-.list-wrapper > div[class*=list-vod-]:first-of-type { margin-top: 63px; padding-top: 0; border-top: 0 none; }
-.list-wrapper .list-hd { position: relative; height: 50px; padding: 0 220px 0 4px; }
+.list-wrapper { position: relative; width: 1024px; margin: 0 auto; }
+.list-wrapper > div[class*=list-vod-] { margin-top: 34px; padding-top: 34px; }
+.list-wrapper > div[class*=list-vod-]:before { content: ''; position: absolute; top: 0; left: 0; right: 0; width: 1024px; height: 1px; margin: 0 auto; background-color: #dddddd; }
+.list-wrapper > div[class*=list-vod-]:first-of-type { margin-top: 63px; padding-top: 0; }
+.list-wrapper > div[class*=list-vod-]:first-of-type:before { display: none; }
+.list-wrapper .list-hd { position: relative; width: 1024px; margin: 0 auto; height: 50px; padding: 0 220px 0 0; }
 .list-wrapper .list-hd .title { line-height: 34px; font-size: 23px; font-weight: bold; letter-spacing: -0.5px; color: #000000; }
 .list-wrapper .list-hd .more { position: absolute; top: 2px; right: 0; padding-right: 38px; }
 .list-wrapper .list-hd .more .txt { display: block; padding-top: 2px; line-height: 24px; font-size: 16px; font-weight: bold; letter-spacing: -0.57px; text-align: right; color: #000000; }
-.list-vod-1 { position: relative; }
+.list-vod-1 { position: relative; margin: 0 -4px; }
 .list-vod-1 .swiper-slide { padding: 4px; width: 336px; display: inline-block; margin-right: 12px; }
 .list-vod-1 .thumb { position: relative; width: 328px; height: 185px; }
 .list-vod-1 .thumb:after { content: ''; position: absolute; bottom: 0; right: 0; width: 167px; height: 82px; opacity: 0.8; background-image: linear-gradient(152deg, rgba(0, 0, 0, 0) 55%, #121212 100%); }
 .list-vod-1 .thumb > img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
 .list-vod-1 .thumb .tag_wrap { position: absolute; top: -4px; left: -4px; font-size: 0; }
-.list-vod-1 .thumb .tag_wrap > img { display: inline-block; }
+.list-vod-1 .thumb .tag_wrap > img { position: relative; display: inline-block; z-index: 2; }
+.list-vod-1 .thumb .tag_wrap > img ~ img { margin-left: -8px; z-index: 1; }
 .list-vod-1 .thumb .time { position: absolute; bottom: 10px; right: 10px; line-height: 16px; font-family: Montserrat; font-size: 16px; font-weight: normal; letter-spacing: -0.47px; text-align: right; color: #ffffff; z-index: 1; }
 .list-vod-1 .detail { margin-top: 14px; height: 71px; }
 .list-vod-1 .detail .title { line-height: 22px; font-size: 16px; font-weight: 500; color: #000000; text-overflow: ellipsis; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
@@ -647,21 +651,61 @@
 .list-vod-1 .prev:hover { background-position: 0 100%; }
 .list-vod-1 .next { position: absolute; cursor: pointer; bottom: 163px; right: -30px; width: 21px; height: 27px; text-indent: -999em; font-size: 0; line-height: 0; overflow: hidden; background-image: url(../images/ic-arrow-thumbnail.png); background-size: 100%; }
 .list-vod-1 .next:hover { background-position: 0 100%; }
-.list-vod-2 ul { margin-top: -10px; }
+.list-vod-2 { position: relative; }
+.list-vod-2 ul { margin-top: -18px; }
 .list-vod-2 ul:after { clear: both; content: ""; display: block; }
-.list-vod-2 li { width: 50%; float: left; margin-top: 10px; position: relative; height: 138px; padding: 4px 4px 4px 234px; white-space: nowrap; }
+.list-vod-2 li { width: 50%; float: left; margin-top: 18px; position: relative; height: 130px; padding: 0 20px 0 230px; white-space: nowrap; }
 .list-vod-2 li:after { content: ""; position: relative; display: inline-block; height: 100%; vertical-align: middle; }
-.list-vod-2 .thumb { position: absolute; left: 4px; top: 4px; width: 230px; height: 130px; }
+.list-vod-2 .thumb { position: absolute; left: 0; top: 0; width: 230px; height: 130px; }
 .list-vod-2 .thumb:after { content: ''; position: absolute; bottom: 0; right: 0; width: 167px; height: 82px; opacity: 0.8; background-image: linear-gradient(152deg, rgba(0, 0, 0, 0) 55%, #121212 100%); }
 .list-vod-2 .thumb > img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
 .list-vod-2 .thumb .tag_wrap { position: absolute; top: -4px; left: -4px; font-size: 0; }
-.list-vod-2 .thumb .tag_wrap > img { display: inline-block; }
+.list-vod-2 .thumb .tag_wrap > img { position: relative; display: inline-block; z-index: 2; }
+.list-vod-2 .thumb .tag_wrap > img ~ img { margin-left: -8px; z-index: 1; }
+
 .list-vod-2 .thumb .time { position: absolute; bottom: 10px; right: 10px; line-height: 16px; font-family: Montserrat; font-size: 16px; font-weight: normal; letter-spacing: -0.47px; text-align: right; color: #ffffff; z-index: 1; }
-.list-vod-2 .detail { padding: 0 23px 0 20px; position: relative; vertical-align: middle; white-space: normal; display: inline-block; width: 100%; }
+.list-vod-2 .detail { padding: 0 0 0 20px; position: relative; vertical-align: middle; white-space: normal; display: inline-block; width: 100%; }
 .list-vod-2 .detail .title { line-height: 22px; font-size: 16px; font-weight: 500; color: #000000; text-overflow: ellipsis; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
 .list-vod-2 .detail .date { margin-top: 8px; line-height: 19px; font-family: Montserrat; font-size: 15px; font-weight: normal; letter-spacing: -0.47px; color: rgba(0,0,0,0.8); }
 
-.vodlist-type4 > ul > li { width: 100%; display: block; margin: 0.9rem 0;  height: 5.9rem; padding: 0 3.8rem 0 10.4rem;  overflow: hidden; }
+.list-content-1 { position: relative; }
+.list-content-1 ul { margin-top: -41px; }
+.list-content-1 ul:after { clear: both; content: ""; display: block; }
+.list-content-1 li { width: 500px; float: left; margin-top: 41px; position: relative; height: 130px; padding: 0 48px 0 230px; white-space: nowrap; }
+.list-content-1 li:nth-child(even) { margin-left: 24px; }
+.list-content-1 li:nth-child(2n+3):before { content: ''; position: absolute; top: -21px; left: 0; width: 1024px; height: 1px; background-color: #dddddd; }
+.list-content-1 li:after { content: ""; position: relative; display: inline-block; height: 100%; vertical-align: middle; }
+.list-content-1 .thumb { position: absolute; left: 0; top: 0; width: 230px; height: 130px; }
+.list-content-1 .thumb:after { content: ''; position: absolute; bottom: 0; right: 0; width: 167px; height: 82px; opacity: 0.8; background-image: linear-gradient(152deg, rgba(0, 0, 0, 0) 55%, #121212 100%); }
+.list-content-1 .thumb > img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+.list-content-1 .thumb .tag_wrap { position: absolute; top: -4px; left: -4px; font-size: 0; }
+.list-content-1 .thumb .tag_wrap > img { position: relative; display: inline-block; z-index: 2; }
+.list-content-1 .thumb .tag_wrap > img ~ img { margin-left: -8px; z-index: 1; }
+.list-content-1 .thumb .time { position: absolute; bottom: 10px; right: 10px; line-height: 16px; font-family: Montserrat; font-size: 16px; font-weight: normal; letter-spacing: -0.47px; text-align: right; color: #ffffff; z-index: 1; }
+.list-content-1 .detail { padding: 0 0 0 20px; position: relative; vertical-align: middle; white-space: normal; display: inline-block; width: 100%; }
+.list-content-1 .detail .title { line-height: 22px; font-size: 16px; font-weight: 500; color: #000000; text-overflow: ellipsis; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.list-content-1 .detail .date { margin-top: 8px; line-height: 19px; font-family: Montserrat; font-size: 15px; font-weight: normal; letter-spacing: -0.47px; color: rgba(0,0,0,0.8); }
+.list-content-1 .btn_share { position: absolute; top: 51px; right: 0; width: 28px; height: 28px; overflow: hidden; text-indent: -9999em; background-repeat: no-repeat; background-image: url(../images/ic-vod-share.png); background-size: 100%; text-indent: -999em; }
+.list-content-1 .btn_share:hover { background-position: 0 50%; }
+.list-content-1  .btn_share.disabled { background-position: 0 100%; }
+
+
+
+
+
+.headline { width: 100%; height: 176px; background-position: 50% 50%; background-size: auto 100%; background-repeat: no-repeat; }
+.headline .inner { padding-top: 74px; }
+.headline .inner:after { content: ''; position: absolute; top: 74px; right: 0; width: 95px; height: 122px; background-image: url(../images/img-idollive-music.png); background-size: 100%; }
+.headline h2 { line-height: 40px; font-size: 33px; font-weight: bold; letter-spacing: -0.35px; text-align: center; color: #ffffff; }
+.headline h2 > em { font-style: normal; color: #52ffc4; font-weight: bold; }
+.headline ~ .list-wrapper { padding-top: 70px; }
+.list-banner-1 { margin: -30px -15px 0; }
+.list-banner-1 ul { display: -webkit-box; display: -webkit-flex; display: flex; flex-wrap: wrap; }
+.list-banner-1 li { width: 50%; padding: 30px 15px 0; }
+.list-banner-1 .cover { position: relative; display: block; width: 100%; height: 172px; background-color: #d8d8d8; }
+.list-banner-1 .cover img { position: absolute; width: 100%; height: 100%; object-fit: cover; }
+
+
 
 
 
