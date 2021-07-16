@@ -130,6 +130,29 @@ var layerPopup = (function() {
     };
 }());
 
+/* 토스트 팝업 스크립트 */
+let toastPopup = (function() {
+    return {
+		"show" : function(elem) {
+			let layer = document.querySelector(elem);
+			layer.style.display = 'block';
+			setTimeout(function() {
+				layer.classList.add('visible');
+			}, 50);
+            setTimeout(function() {
+                toastPopup.hide(layer);
+			}, 3000);
+		},
+		"hide" : function(elem) {
+            let layer = elem;
+			layer.classList.remove('visible');
+			setTimeout(function() {
+				layer.style.display = 'none';
+			}, 500);
+		}
+    };
+}());
+
 /* 터치 효과 더미 스크립트 개발시 삭제 */
 document.addEventListener("DOMContentLoaded", function() {
     var hasTouchEvent = "ontouchstart" in document.documentElement,

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+	<link rel="shortcut icon" href="res/images/favicon.ico">
+    <title>아이돌live</title>
+	<link rel="stylesheet" type="text/css" href="res/css/ui.css">
+    <link rel="stylesheet" media="(max-width: 1023px)" href="res/css/mobile.css">
+    <link rel="stylesheet" media="(min-width: 1024px)" href="res/css/desktop.css">
+</head>
+<body>
+<div style="position:fixed;top:0;left:0;z-index:100;">
+    <button type="button" onclick="layerPopup.show('#popup_01');" style="border:1px solid #000;background-color:#fff;color:#000;">공유하기</button>
+    <button type="button" onclick="layerPopup.show('#popup_02');" style="border:1px solid #000;background-color:#fff;color:#000;">투표하기</button>
+    <button type="button" onclick="layerPopup.show('#popup_03');" style="border:1px solid #000;background-color:#fff;color:#000;">투표마감 안내</button>
+    <button type="button" onclick="layerPopup.show('#popup_04');" style="border:1px solid #000;background-color:#fff;color:#000;">로그인 안내</button>
+    <button type="button" onclick="layerPopup.show('#popup_05');" style="border:1px solid #000;background-color:#fff;color:#000;">해외위치 고객 댓글 이용안내</button>
+    <button type="button" onclick="layerPopup.show('#popup_06');" style="border:1px solid #000;background-color:#fff;color:#000;">앱 이동 안내</button>
+	<button type="button" onclick="layerPopup.show('#popup_07');" style="border:1px solid #000;background-color:#fff;color:#000;">멤버별영상 안내 (Mobile Web)</button>
+    <button type="button" onclick="layerPopup.show('#popup_08');" style="border:1px solid #000;background-color:#fff;color:#000;">멤버별영상 안내 (PC Web)</button>	
+    <button type="button" onclick="layerPopup.show('#popup_09');" style="border:1px solid #000;background-color:#fff;color:#000;">멤버별영상 안내 (해외고객)</button>	
+</div>
+
+<div class="modal fadeIn visible" id="popup_01" style="display: block;">
+	<div class="dim"></div>
+	<div class="modal_inner">
+		<div class="modal_inner share">
+			<div class="modal_content">
+				<div class="modal_hd">공유하기</div>
+				<div class="modal_bd popup_share">
+					<ul class="list_sns_link">
+						<li>
+							<label class="label_radio ic_kakao">
+								<input type="radio" name="sns_link" checked>
+								<div class="txt_label">카카오톡</div>
+							</label>
+						</li>
+						<li>
+							<label class="label_radio ic_facebook">
+								<input type="radio" name="sns_link">
+								<div class="txt_label">페이스북</div>
+							</label>
+						</li>
+						<li>
+							<label class="label_radio ic_line">
+								<input type="radio" name="sns_link">
+								<div class="txt_label">라인</div>
+							</label>
+						</li>
+					</ul>
+					<div class="url_link_wrap">
+						<div class="txt_url">https://play.google.com/sdfsdfsdfsdfs/sdfd</div><a href="#" class="btn_copy" onclick="toastPopup.show('#toast1');">복사</a>
+						<div class="toast" id="toast1" style="display: none;">
+							<div class="toast_inner">URL이 복사 되었습니다.</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal_ft">
+					<a href="#" class="btn usetap active" onclick="layerPopup.hide('#popup_01');"><span>확인</span></a>
+				</div>
+				<button type="button" class="btn_share_close" onclick="layerPopup.hide('#popup_01');"></button>				
+			</div>
+		</div>
+		<button type="button" class="modal_close usetap" onclick="layerPopup.hide('#popup_01')">팝업닫기</button>
+	</div>
+</div>
+
+<div class="modal fadeIn" id="popup_02" style="display: none;">
+	<div class="dim"></div>
+	<div class="modal_inner">
+		<div class="modal_content small">
+			<div class="modal_bd">
+				<p class="txt_desc">투표를 완료한 이후에는<br>수정할 수 없습니다.<br>정말 투표하시겠습니까?</p>
+			</div>
+			<div class="modal_ft">
+				<a href="#" class="btn gray usetap" onclick="layerPopup.hide('#popup_02');"><span>취소</span></a>
+				<a href="#" class="btn usetap"><span>투표하기</span></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fadeIn" id="popup_03" style="display: none;">
+	<div class="dim"></div>
+	<div class="modal_inner">
+		<div class="modal_content small">
+			<div class="modal_bd">
+				<p class="txt_desc">투표시간이 마감되었습니다.</p>
+			</div>
+			<div class="modal_ft">
+				<a href="#" class="btn usetap" onclick="layerPopup.hide('#popup_03');"><span>확인</span></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fadeIn" id="popup_04" style="display: none;">
+	<div class="dim"></div>
+	<div class="modal_inner">
+		<div class="modal_content small">
+			<div class="modal_bd">
+				<p class="txt_desc">로그인 후 이용할 수 있습니다</p>
+			</div>
+			<div class="modal_ft">
+				<a href="#" class="btn gray usetap" onclick="layerPopup.hide('#popup_04');"><span>취소</span></a>
+				<a href="#" class="btn usetap"><span>로그인</span></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fadeIn" id="popup_05" style="display: none;">
+	<div class="dim"></div>
+	<div class="modal_inner">
+		<div class="modal_content small">
+			<div class="modal_bd">
+				<p class="txt_desc">해외 거주한 고객 대상으로<br>해당 기능을 이용할 수 있도록<br>준비 중에 있습니다.</p>
+			</div>
+			<div class="modal_ft">
+				<a href="#" class="btn usetap" onclick="layerPopup.hide('#popup_05');"><span>확인</span></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fadeIn" id="popup_06" style="display: none;">
+	<div class="dim"></div>
+	<div class="modal_inner">
+		<div class="modal_content small">
+			<div class="modal_bd">
+				<p class="txt_desc">U+아이돌 Live 앱에서 초고화질로<br>영상을 감상 할 수 있습니다.<br>U+아이돌 Live 앱 으로<br>이동하시겠습니까?</p>
+			</div>
+			<div class="modal_ft">
+				<a href="#" class="btn usetap" onclick="layerPopup.hide('#popup_06');"><span>확인</span></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fadeIn" id="popup_07" style="display: none;">
+	<div class="dim"></div>
+	<div class="modal_inner">
+		<div class="modal_content small">
+			<div class="modal_bd">
+				<p class="txt_desc">U+아이돌 Live 앱에서 멤버별<br>영상을 감상 할 수 있습니다.<br>U+아이돌 Live 앱 으로<br>이동하시겠습니까?</p>
+			</div>
+			<div class="modal_ft">
+				<a href="#" class="btn usetap" onclick="layerPopup.hide('#popup_07');"><span>확인</span></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fadeIn" id="popup_08" style="display: none;">
+	<div class="dim"></div>
+	<div class="modal_inner">
+		<div class="modal_content small">
+			<div class="modal_bd">
+				<p class="txt_desc">U+아이돌 Live 앱에서 멤버별<br>영상을 감상 할 수 있습니다.</p>
+			</div>
+			<div class="modal_ft">
+				<a href="#" class="btn usetap" onclick="layerPopup.hide('#popup_08');"><span>확인</span></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fadeIn" id="popup_09" style="display: none;">
+	<div class="dim"></div>
+	<div class="modal_inner">
+		<div class="modal_content small">
+			<div class="modal_bd">
+				<p class="txt_desc">해당 기능은 현재 준비중에<br>있습니다.</p>
+			</div>
+			<div class="modal_ft">
+				<a href="#" class="btn usetap" onclick="layerPopup.hide('#popup_09');"><span>확인</span></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<script src="res/js/common.js"></script>
+
+</body>
+</html>
