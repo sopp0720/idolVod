@@ -341,7 +341,7 @@
 .player_wrap .top_area:before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 130px; background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)); opacity: 0.6; }
 .player_wrap .center_area { position: relative; display: inline-block; vertical-align: middle; white-space: normal; }
 .player_wrap .bottom_area { position: absolute; bottom: 0; left: 0; right: 0; padding: 0 58px 18px 62px; height: 130px; }
-.player_wrap .playerbar_wrap { position: relative; width: 100%; height: 22px; padding: 9px 0; }
+.player_wrap .playerbar_wrap { position: absolute; bottom: 23px; left: 133px; right: 124px; height: 22px; padding: 9px 0; }
 .playerbar_wrap .progressBar { position: relative; width: 100%; height: 4px; background-color: rgba(255,255,255,0.5); }
 .playerbar_wrap .timeBar { position: absolute; -webkit-transform: translateZ(0); transform: translateZ(0); top: 0; left: 0; width: 0; height: 100%; background-color: #917bff; }
 .playerbar_wrap .timeBar_handle { position: absolute; right: -9px; top: -9px; width: 22px; height: 22px; cursor: pointer; }
@@ -361,7 +361,7 @@
 .player_wrap .ani_shortap > div { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 .player_wrap .ani_longtap { position: absolute; bottom: 60px; right: -51px; width: 200px; height: 333px; pointer-events: none; touch-action: none; }
 .player_wrap .ani_longtap > div { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-.player_wrap .ani_counting_full { position: absolute; top: 44px; left: 0; right: 0; width: 416px; height: 300px; margin: 0 auto; pointer-events: none; touch-action: none; }
+.player_wrap .ani_counting_full { position: absolute; top: 10%; left: 0; right: 0; width: 54.7368%; height: 70.2576%; margin: 0 auto; pointer-events: none; touch-action: none; }
 .player_wrap .ani_counting_full > div { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 .player_wrap .ani_counting { position: absolute; bottom: 60px; right: -51px; width: 200px; height: 333px; pointer-events: none; touch-action: none; }
 .player_wrap .ani_counting > div { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
@@ -751,8 +751,41 @@
 .list-banner-1 .cover { position: relative; display: block; width: 100%; height: 172px; background-color: #d8d8d8; }
 .list-banner-1 .cover img { position: absolute; width: 100%; height: 100%; object-fit: cover; }
 
+/* vod 플레이어 */
+.vod_wrap { margin-top: 30px; }
+.vod_wrap .btn_member { display: none; }
+.vod_wrap .detail { position: relative; padding-top: 30px; }
+.vod_wrap .detail .title { padding-right: 100px; }
+.vod_wrap .player_wrap.extend ~ .detail:after { right: 0; }
+.vod_wrap .detail .tag_wrap { display: inline-block; vertical-align: top; padding-top: 7px; padding-right: 6px; }
+.vod_wrap .detail .tag_wrap > img { position: relative; display: inline-block; z-index: 2; }
+.vod_wrap .detail .tag_wrap > img ~ img { margin-left: -8px; z-index: 1; }
+.vod_wrap .detail .txt_tit { display: inline-block; vertical-align: top; max-width: calc(100% - 250px); line-height: 35px; font-size: 24px; font-weight: bold; letter-spacing: -0.5px; color: #000000; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.vod_wrap .detail .btn_vod_share { display: inline-block; vertical-align: top; margin: 7px 0 0 20px; position: relative; width: 28px; height: 28px; text-indent: -999em; font-size: 0; line-height: 0; overflow: hidden; background-image: url(../images/ic-vod-share-01-nor.png); background-size: 100%; }
+.vod_wrap .detail .btn_vod_comment { display: inline-block; vertical-align: top; margin: 7px 0 0 20px; position: relative; width: 28px; height: 28px; text-indent: -999em; font-size: 0; line-height: 0; overflow: hidden; background-image: url(../images/ic-comment-01-nor.png); background-size: 100%; }
+.vod_wrap .detail .btn_vod_share + .btn_vod_comment { margin-left: 10px; }
+.vod_wrap .detail .time { line-height: 20px; margin-top: 9px; font-family: 'Montserrat'; font-size: 16px; font-weight: normal; letter-spacing: -0.47px; color: #000000; }
+
+.summary_wrap { position: relative; margin-top: 29px; padding: 0 188px 66px 0; border-bottom: 1px solid #000; }
+.summary_wrap .txt_summary { line-height: 24px; font-size: 16px; font-weight: normal; letter-spacing: -0.5px; color: #000000; }
+.summary_wrap.closed .txt_summary { height: 48px; text-overflow: ellipsis; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.summary_wrap .summary_btm { position: absolute; bottom: 0; right: 0; left: 0; height: 66px; background-color: #fff; text-align:center; padding-top: 30px; }
+.summary_wrap .summary_btm .btn_summary { display: inline-block; }
+.summary_wrap .summary_btm .btn_txt_on { display: none; vertical-align: top; line-height: 22px; font-size: 14px; font-weight: bold; letter-spacing: -0.5px; color: #000000; }
+.summary_wrap.closed .summary_btm .btn_txt_on { display: inline-block; }
+.summary_wrap .summary_btm .btn_txt_off { display: inline-block; vertical-align: top; line-height: 22px; font-size: 14px; font-weight: bold; letter-spacing: -0.5px; color: #000000; }
+.summary_wrap.closed .summary_btm .btn_txt_off { display: none; }
+.summary_wrap .summary_btm .ic-arrow-fold { margin-left: 4px; margin-top: 3px; display: inline-block; vertical-align: top; width: 16px; height: 16px; background-image: url(../images/ic-arrow-fold.png); background-size: 100%; -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+.summary_wrap.closed .summary_btm .ic-arrow-fold { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
 
 
+.vod_artist_wrap { position: relative; }
+.vod_artist_wrap ul { margin-top: -41px; }
+.vod_artist_wrap ul:after { clear: both; content: ""; display: block; }
+.vod_artist_wrap li { width: 470px; float: left; margin-top: 47px; position: relative; height: 62px; white-space: nowrap; }
+.vod_artist_wrap li:nth-child(even) { margin-left: 84px; }
+.list-content-1 li:nth-child(2n+3):before { content: ''; position: absolute; top: -24px; left: 0; width: 1024px; height: 1px; background-color: #dddddd; }
+.list-content-1 li:after { content: ""; position: relative; display: inline-block; height: 100%; vertical-align: middle; }
 
 
 
