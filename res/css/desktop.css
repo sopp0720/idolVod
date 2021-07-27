@@ -593,7 +593,25 @@
 .modal .url_link_wrap .toast.visible {opacity:1;}
 .modal .url_link_wrap .toast .toast_inner { background-color: rgba(0,0,0,0.8); padding: 10px 12px; border-radius: 6px; display: inline-block; line-height: 24px; font-size: 16px; font-weight: 500; letter-spacing: -0.5px; color: rgba(255,255,255,0.8); word-break: keep-all; word-wrap: break-word; }
 
-
+/* tab_1depth */
+.tab_1depth_wrap { position: relative; height: 40px; margin: 0 -46px; padding: 0 46px; }
+.tab_1depth {height: 40px; position: relative; overflow-x: auto; transform: translateZ(0); overflow-y: hidden; }
+.tab_1depth::-webkit-scrollbar {display:none;}
+.tab_1depth ul { min-width: 100%; height: 100%; overflow: visible; white-space: nowrap; display: inline-block; display: -webkit-inline-flex; display: inline-flex; flex-direction: row; }
+.tab_1depth .tab_item { position: relative; margin: 0 30px; }
+.tab_1depth .tab_item:first-child { margin-left: 0; }
+.tab_1depth .tab_item:last-child { margin-right: 0; }
+.tab_1depth .tab_item > a { position: relative; line-height: 40px; font-size: 24px; font-weight: normal; letter-spacing: -0.5px; color: #979797; }
+.tab_1depth .tab_item.active > a { font-weight: bold; color: #000000; }
+.tab_1depth .tab_item.active:before { content: ''; position: absolute; bottom: 5px; left: 0; right: 0; height: 10px; background-color: #917bff; }
+.tab_1depth_wrap .tab_prev { position: absolute; top: 8px; left: 0; width: 16px; height: 24px; color: transparent; font-size: 0; line-height: 0; background-image: url(../images/ic-tab-arrow.png); background-size: 100%; }
+.tab_1depth_wrap .tab_prev:before { content: ''; position: absolute; right: -79px; top: -8px; width: 50px; height: 40px; background-image: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0)); pointer-events: none; touch-action: none; }
+.tab_1depth_wrap .tab_prev.dim { background-position: 0 100%; }
+.tab_1depth_wrap .tab_prev.dim:before { display: none; }
+.tab_1depth_wrap .tab_next { position: absolute; top: 8px; right: 0; width: 16px; height: 24px; color: transparent; font-size: 0; line-height: 0; background-image: url(../images/ic-tab-arrow.png); background-size: 100%; -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+.tab_1depth_wrap .tab_next:before { content: ''; position: absolute; right: -79px; top: -8px; width: 50px; height: 40px; background-image: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0)); pointer-events: none; touch-action: none; }
+.tab_1depth_wrap .tab_next.dim { background-position: 0 100%; }
+.tab_1depth_wrap .tab_next.dim:before { display: none; }
 
 
 
@@ -727,6 +745,7 @@
 .headline h2 > em { font-style: normal; color: #52ffc4; font-weight: bold; }
 .headline ~ .list-wrapper { padding-top: 70px; }
 .list-banner-1 { margin: -30px -15px 0; }
+.tab_1depth_wrap + .list-banner-1 { margin-top: 1px; }
 .list-banner-1 ul { display: -webkit-box; display: -webkit-flex; display: flex; flex-wrap: wrap; }
 .list-banner-1 li { width: 50%; padding: 30px 15px 0; }
 .list-banner-1 .cover { position: relative; display: block; width: 100%; height: 172px; background-color: #d8d8d8; }

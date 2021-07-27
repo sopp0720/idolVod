@@ -153,6 +153,54 @@ let toastPopup = (function() {
     };
 }());
 
+/* tab 스크립트 */
+var tabUi = (function() {
+    return {
+		"initTab": function(container) {
+			let subtab = container;
+            subtab.addEventListener("click",function(e) {
+                e.preventDefault();
+                if (e.target && e.target.parentNode.matches("li")) {
+                    var indexNum = webUI.getChildIndex(e.target.parentNode);
+                    subtab.querySelector('.active').classList.remove('active');
+                    subtab.querySelectorAll('li')[indexNum].classList.add('active');
+                    webUI.animatedScrollTo(subtab, (subtab.querySelectorAll('li')[indexNum].offsetLeft + subtab.querySelectorAll('li')[indexNum].clientWidth * 0.5) - (subtab.clientWidth * 0.5), 300);
+                }
+			}, true);
+            let last_st = 0;
+			let ticking = false;
+            subtab.addEventListener('scroll', function(e) {
+                last_st = subtab.scrollLeft;
+                if (!ticking) {
+                    window.requestAnimationFrame(function() {
+                    tabUi.onScroll(last_st, subtab);
+                    ticking = false;
+                });
+                ticking = true;
+                }
+            });
+            subtab.parentNode.querySelector('.tab_prev').addEventListener("click",function(e) {
+                webUI.animatedScrollTo(subtab, (subtab.scrollLeft - subtab.clientWidth), 300);
+            }, true);
+            subtab.parentNode.querySelector('.tab_next').addEventListener("click",function(e) {
+                webUI.animatedScrollTo(subtab, (subtab.scrollLeft + subtab.clientWidth), 300);                
+            }, true);
+        },
+        "onScroll": function(st, container) {
+            let subtab = container;
+            let maxScrollLeft = subtab.scrollWidth - subtab.clientWidth;
+            if (st == 0){
+                subtab.parentNode.querySelector('.tab_prev').classList.add('dim');
+            } else if (st > 0 && st < maxScrollLeft ) {
+                subtab.parentNode.querySelector('.tab_prev').classList.remove('dim');
+                subtab.parentNode.querySelector('.tab_next').classList.remove('dim');
+            } else if (st == maxScrollLeft) {
+                subtab.parentNode.querySelector('.tab_next').classList.add('dim');
+            }
+        }
+    }
+})();
+
 /* 터치 효과 더미 스크립트 개발시 삭제 */
 document.addEventListener("DOMContentLoaded", function() {
     var hasTouchEvent = "ontouchstart" in document.documentElement,

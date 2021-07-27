@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <link rel="shortcut icon" href="res/images/favicon.ico">
+    <title>아이돌live</title>
+	<link rel="stylesheet" type="text/css" href="res/css/ui.css">
+    <link rel="stylesheet" type="text/css" href="res/css/desktop.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+<div id="skip_nav">
+    <a href="#header">주 메뉴 바로 가기</a>
+    <a href="#container">본문 바로 가기</a>
+</div>
+<div id="wrap">
+	<div id="header">
+        <div class="header_inner">
+            <h1 class="logo"><a href="#">아이돌live</a></h1>
+            <div class="util">
+                <!-- <a href="#" class="btn_login disabled usetap">로그인</a> -->
+                <a href="#" class="btn_logout usetap">로그아웃</a>
+            </div>            
+        </div>
+    </div>
+	<div id="container">
+        <div class="headline" style="background-image: url(res/images/img-title-bg.png);">
+            <div class="inner">
+                <h2><em>올바른 덕후생활 </em>U+아이돌Live</h2>
+            </div>
+        </div>
+        <div class="list-wrapper">
+            <div class="tab_1depth_wrap">
+				<div class="tab_1depth three" id="tab_1depth1">
+					<ul class="tab_link">
+						<li class="tab_item active"><a href="#" onclick="alert('#1')">오리지널</a></li>
+                        <li class="tab_item"><a href="#" onclick="alert('#2')">주간아이돌</a></li>
+                        <li class="tab_item"><a href="#" onclick="alert('#3')">쇼챔비하인드</a></li>
+                        <li class="tab_item"><a href="#" onclick="alert('#4')">배심원24</a></li>
+                        <li class="tab_item"><a href="#">아이돌집</a></li>
+                        <li class="tab_item"><a href="#">K-밥 STAR</a></li>
+                        <li class="tab_item"><a href="#">아이돌집</a></li>
+                        <li class="tab_item"><a href="#">무무트립</a></li>
+                        <li class="tab_item"><a href="#">팬찾SHO</a></li>
+                        <li class="tab_item"><a href="#">팬찾SHO2</a></li>
+                        <li class="tab_item"><a href="#">팬찾SHO3</a></li>
+                        <li class="tab_item"><a href="#">팬찾SHO4</a></li>
+                        <li class="tab_item"><a href="#">팬찾SHO5</a></li>
+                        <li class="tab_item"><a href="#">팬찾SHO6</a></li>
+                        <li class="tab_item"><a href="#">팬찾SHO7</a></li>
+                        <li class="tab_item"><a href="#">팬찾SHO8</a></li>
+                        <li class="tab_item"><a href="#">팬찾SHO9</a></li>
+                        <li class="tab_item"><a href="#">팬찾SHO10</a></li>
+					</ul>
+				</div>
+                <button class="tab_prev dim" type="button">prev</button>
+                <button class="tab_next" type="button">next</button>
+			</div>
+            <div class="list-banner-1">
+                <ul>
+                    <li>
+                        <a href="#" class="cover"><img src="res/images/con_sam_img_w1.jpg"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="cover"><img src="res/images/con_sam_img_w1.jpg"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="cover"><img src="res/images/con_sam_img_w1123.jpg"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="cover"><img src="res/images/con_sam_img_w1.jpg"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="cover"><img src="res/images/con_sam_img_w1.jpg"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="cover"><img src="res/images/con_sam_img_w1.jpg"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="cover"><img src="res/images/con_sam_img_w1.jpg"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+	</div>
+	<!-- Footer -->
+    <div id="footer">
+        <div class="footer_inner">
+            <ul class="list_policy">
+                <li><a href="http://uplus.co.kr/css/rfrm/prvs/RetrieveUbDnUseTermsPop_14.hpi?popYn=Y" target="_blank" title="새창">이용약관</a></li>
+                <li><a href="http://www.uplus.co.kr/com/lins/lins/RetrieveCoUserInfo.hpi" target="_blank" title="새창">개인정보처리방침</a></li>
+            </ul>
+            <address>
+                <p><span>㈜엘지유플러스</span><span>주소 서울특별시 용산구 한강대로 32</span><span>대표이사 황현식</span><span>사업자등록번호 220-81-39938</span><span>통신판매신고 제 2015-서울용산-00481호</span></p>
+                <p><span>고객센터  휴대폰 114(무료), 1544-0010(유료)</span></p>                
+            </address>
+            <p class="copyright">Copyright © LG Uplus Corp. All Rights Reserved.</p>
+        </div>
+    </div>
+</div>
+<script src="res/js/common.js"></script>
+<script>
+tabUi.initTab(document.getElementById('tab_1depth1'));
+</script>
+</body>
+</html>
