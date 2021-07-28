@@ -28,8 +28,8 @@
 	<div id="container">
 		<div class="content">
             <div class="vod_wrap">
-                <!-- 출연자 정보 활성화인 경우 'vod_extend' 클레스 추가 -->
-                <div class="player_wrap extend vod_extend" onclick="if (document.querySelector('.player_wrap').classList.contains('extend')) { document.querySelector('.player_wrap').classList.remove('extend'); } else { document.querySelector('.ctrl_wrap').classList.toggle('active'); }">
+                
+                <div class="player_wrap">
                     <div class="main_video">
                         <video id="video1" width="100%" height="100%">
                             <source src="mov_bbb.mp4" type="video/mp4">
@@ -41,106 +41,6 @@
                         </video>
                         <button class="btn_close" type="button" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.remove('multi');">닫기</button>
                     </div>                        
-                    <div class="member_wrap">
-                        <div class="member_list">
-                            <div class="swiper-container mySwiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
-                                            <div class="cover"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
-                                            <div class="name">화사</div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
-                                            <div class="cover"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
-                                            <div class="name">aaaaaaaaaaaaaaaaaaaaaaaaa</div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
-                                            <div class="cover"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
-                                            <div class="name">화사</div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
-                                            <div class="cover"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
-                                            <div class="name">화사</div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
-                                            <div class="cover"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
-                                            <div class="name">화사</div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
-                                            <div class="cover"></div>
-                                            <div class="name">화사</div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
-                                            <div class="cover"></div>
-                                            <div class="name">화사</div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
-                                            <div class="cover"></div>
-                                            <div class="name">화사</div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
-                                            <div class="cover"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
-                                            <div class="name">화사</div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
-                                            <div class="cover"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
-                                            <div class="name">화사</div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
-                                            <div class="cover"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
-                                            <div class="name">화사</div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
-                                            <div class="cover"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
-                                            <div class="name">화사</div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
-                                            <div class="cover"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
-                                            <div class="name">화사</div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
-                                            <div class="cover"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
-                                            <div class="name">화사</div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
-                                            <div class="cover"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
-                                            <div class="name">화사</div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-button-next" onclick="event.stopPropagation();"></div>
-                            <div class="swiper-button-prev" onclick="event.stopPropagation();"></div>
-                        </div>                            
-                    </div>
                     <div class="ctrl_wrap" onclick="event.stopPropagation();document.querySelector('.ctrl_wrap').classList.toggle('active');">
                         <div class="top_area">
                             <p class="title"><span class="tg_live">Live</span>SBS 드림콘서트 2021</p>
@@ -214,116 +114,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="vod_artist_wrap">
-                    <div class="vod_artist_hd">
-                        <p class="tit_detail">출연자 정보</p>
-                        <button class="btn_refresh" type="button">새로고침</button>                        
-                    </div>
-                    <div class="list_vod_artist">
-                        <ul>
-                            <!-- 차례가 지난 출연자 리스트 -->
-                            <li>
-                                <div class="rum">1</div>
-                                <div class="img_artist"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
-                                <div class="artist_detail">
-                                    <p class="txt_artist">방탄소년단</p>
-                                    <p class="txt_song">작은 것들을 위한 시 (Boy With Luv) (feat. Halsey)' Official MV</p>
-                                </div>
-                                <div class="txt_status">
-                                    <div class="time">00:03:05</div>
-                                    <!-- <div class="txt_playing">재생 중</div>
-                                    <div class="txt_timemachine">타임머신<br>재생 중</div> -->
-                                </div>                                
-                                <div class="btn_wrap">
-                                    <button class="btn play" type="button">play</button>
-                                    <!-- <button class="btn playing" type="button">playing</button>
-                                    <button class="btn onair" type="button">onair</button>
-                                    <button class="btn onair-dim" type="button">onair-dim</button> -->
-                                </div>
-                            </li>
-                            <!-- 차례가 지난 출연자 리스트에서 타임머신 재생할 경우 -->
-                            <li class="playing">
-                                <div class="rum">2</div>
-                                <div class="img_artist"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
-                                <div class="artist_detail">
-                                    <p class="txt_artist">방탄소년단</p>
-                                    <p class="txt_song">작은 것들을 위한 시 (Boy With Luv) (feat. Halsey)' Official MV</p>
-                                </div>
-                                <div class="txt_status">
-                                    <!-- <div class="time">00:03:05</div> -->
-                                    <div class="txt_playing">재생 중</div>
-                                    <!-- <div class="txt_timemachine">타임머신<br>재생 중</div> -->
-                                </div>                                
-                                <div class="btn_wrap">
-                                    <!-- <button class="btn play" type="button">play</button> -->
-                                    <button class="btn playing" type="button">playing</button>
-                                    <!-- <button class="btn onair" type="button">onair</button>
-                                    <button class="btn onair-dim" type="button">onair-dim</button> -->
-                                </div>
-                            </li>
-                            <!-- On Air 중인 출연자 리스트 -->
-                            <li>
-                                <div class="rum">3</div>
-                                <div class="img_artist"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
-                                <div class="artist_detail">
-                                    <p class="txt_artist">방탄소년단</p>
-                                    <p class="txt_song">작은 것들을 위한 시 (Boy With Luv) (feat. Halsey)' Official MV</p>
-                                </div>
-                                <div class="txt_status">
-                                    <!-- <div class="time">00:03:05</div>
-                                    <div class="txt_playing">재생 중</div>
-                                    <div class="txt_timemachine">타임머신<br>재생 중</div> -->
-                                </div>                                
-                                <div class="btn_wrap">
-                                    <!-- <button class="btn play" type="button">play</button>
-                                    <button class="btn playing" type="button">playing</button> -->
-                                    <button class="btn onair" type="button">onair</button>
-                                    <!-- <button class="btn onair-dim" type="button">onair-dim</button> -->
-                                </div>
-                            </li>
-                            <!-- 타임머신 재생 중인데 다음 큐시트로 넘어갔을 경우 dimmed 버튼 선택 시 왼쪽 리스트로 원복 -->
-                            <li>
-                                <div class="rum">4</div>
-                                <div class="img_artist"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
-                                <div class="artist_detail">
-                                    <p class="txt_artist">방탄소년단</p>
-                                    <p class="txt_song">작은 것들을 위한 시 (Boy With Luv) (feat. Halsey)' Official MV</p>
-                                </div>
-                                <div class="txt_status">
-                                    <!-- <div class="time">00:03:05</div>
-                                    <div class="txt_playing">재생 중</div> -->
-                                    <div class="txt_timemachine">타임머신<br>재생 중</div>
-                                </div>                                
-                                <div class="btn_wrap">
-                                    <!-- <button class="btn play" type="button">play</button>
-                                    <button class="btn playing" type="button">playing</button>
-                                    <button class="btn onair" type="button">onair</button> -->
-                                    <button class="btn onair-dim" type="button">onair-dim</button>
-                                </div>
-                            </li>
-                            <!-- 출연 전 리스트 -->
-                            <li class="casting">
-                                <div class="rum">5</div>
-                                <div class="img_artist"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
-                                <div class="artist_detail">
-                                    <p class="txt_artist">방탄소년단</p>
-                                    <p class="txt_song">작은 것들을 위한 시 (Boy With Luv) (feat. Halsey)' Official MV</p>
-                                </div>
-                                <div class="txt_status">
-                                    <!-- <div class="time">00:03:05</div>
-                                    <div class="txt_playing">재생 중</div>
-                                    <div class="txt_timemachine">타임머신<br>재생 중</div> -->
-                                </div>                                
-                                <div class="btn_wrap">
-                                    <!-- <button class="btn play" type="button">play</button>
-                                    <button class="btn playing" type="button">playing</button>
-                                    <button class="btn onair" type="button">onair</button>
-                                    <button class="btn onair-dim" type="button">onair-dim</button> -->
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                
                 <div class="banner_concert">
                     <img src="res/images/img-banner-concert.png" alt="">
                 </div>

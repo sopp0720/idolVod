@@ -305,6 +305,7 @@
 .player_wrap .txt_non_video_1 { margin-top: 20px; line-height: 27px; font-size: 19px; font-weight: bold; text-align: center; color: #ffffff; }
 .player_wrap .txt_non_video_2 { margin-top: 9px; line-height: 20px; font-size: 15px; font-weight: normal; letter-spacing: -0.5px; text-align: center; color: #eaeaea; }
 .player_wrap .link_gohome { margin-top: 22px; display: inline-block; padding: 8px 22px 11px 25px; }
+.vod_wrap .player_wrap .link_gohome { margin-top: 52px; }
 .player_wrap .link_gohome .txt { position: relative; padding-right: 13px; line-height: 21px; font-size: 15px; font-weight: bold; letter-spacing: -0.5px; color: #52ffc4; }
 .player_wrap .link_gohome:hover .txt { color: #caffed; }
 .player_wrap .link_gohome .txt:after { content: ''; position: absolute; top: 5px; right: 0; width: 10px; height: 15px; background-image: url(../images/ic-arrow-green-nor.png); background-size: 100%; }
@@ -460,6 +461,12 @@
 .fullplayer .player_wrap .btn_play { width: 140px; height: 140px; background-image: url(../images/ic_play_pause_full.png); }
 .fullplayer .player_wrap .btn_speaker .ic_speaker { width: 30px; height: 30px; background-image: url(../images/ic_speaker_full.png); }
 .fullplayer .player_wrap .btn_speaker .ic_mute { width: 30px; height: 30px; background-image: url(../images/ic_mute_full.png); }
+.fullplayer .player_wrap .playerbar_wrap { bottom: 35px; left: 151px; right: 136px; }
+.fullplayer .player_wrap .time_now { bottom: 36px; left: 86px; }
+.fullplayer .player_wrap .time_total { bottom: 36px; right: 76px; }
+
+
+
 .fullplayer .player_wrap .volume_wrap { bottom: 32px; left: 32px; width: 30px; }
 .fullplayer .player_wrap .volumebar_wrap { width: 30px; padding: 0 13px; bottom: 36px; }
 .fullplayer .player_wrap .btn_magnify { bottom: 32px; right: 26px; width: 30px; height: 30px; background-image: url(../images/ic_magnify_full.png); }
@@ -754,10 +761,16 @@
 
 /* vod 플레이어 */
 .vod_wrap { margin-top: 30px; }
-.vod_wrap .btn_member { display: none; }
+#wrap:not(.fullplayer) .vod_wrap .btn_member { display: none; }
 .vod_wrap .detail { position: relative; padding-top: 30px; }
 .vod_wrap .detail .title { padding-right: 100px; }
 .vod_wrap .player_wrap.extend ~ .detail:after { right: 0; }
+#wrap:not(.fullplayer) .vod_extend .player_wrap { margin-bottom: 117px; -webkit-transition: none; transition: none; }
+#wrap:not(.fullplayer) .vod_extend .player_wrap .member_list { -webkit-transform: translate3d(0, 100%, 0); transform: translate3d(0, 100%, 0); -webkit-transition: none; transition: none; }
+#wrap:not(.fullplayer) .vod_extend .player_wrap .btn_heart { -webkit-transform: translate3d(0, 117px, 0); transform: translate3d(0, 117px, 0); -webkit-transition: none; transition: none; }
+#wrap:not(.fullplayer) .vod_extend .player_wrap .heart_wrap .txt_hit { -webkit-transform: translate3d(0, 117px, 0); transform: translate3d(0, 117px, 0); -webkit-transition: none; transition: none; }
+#wrap:not(.fullplayer) .vod_extend .player_wrap .ani_heart_btn { -webkit-transform: translate3d(0, 117px, 0); transform: translate3d(0, 117px, 0); -webkit-transition: none; transition: none; }
+
 .vod_wrap .detail .tag_wrap { display: inline-block; vertical-align: top; padding-top: 7px; padding-right: 6px; }
 .vod_wrap .detail .tag_wrap > img { position: relative; display: inline-block; z-index: 2; }
 .vod_wrap .detail .tag_wrap > img ~ img { margin-left: -8px; z-index: 1; }
