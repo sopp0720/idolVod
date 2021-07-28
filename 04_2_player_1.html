@@ -7,8 +7,7 @@
     <link rel="shortcut icon" href="res/images/favicon.ico">
     <title>아이돌live</title>
 	<link rel="stylesheet" type="text/css" href="res/css/ui.css">
-    <link rel="stylesheet" media="(max-width: 1023px)" href="res/css/mobile.css">
-    <link rel="stylesheet" media="(min-width: 1024px)" href="res/css/desktop.css">
+    <link rel="stylesheet" type="text/css" href="res/css/desktop.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body>
@@ -174,11 +173,13 @@
                                     </div>
                                 </button>
                             </div>
+                            <div class="time_now">00:11:00</div>
                             <div class="playerbar_wrap">
                                 <div class="progressBar">
                                     <div class="timeBar" style="width:18%;"><div class="timeBar_handle"></div></div>
                                 </div>			
                             </div>
+                            <div class="time_total">01:11:00</div>
                             <button class="btn_magnify" type="button" onclick="event.stopPropagation();document.getElementById('wrap').classList.toggle('fullplayer');changeDirection();if (!document.fullscreenElement) { document.querySelector('.player_wrap').requestFullscreen(); } else { if (document.exitFullscreen) { document.exitFullscreen(); }}">magnify</button>
                         </div>
                         <button class="btn_member" type="button" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('extend');">멤버별</button>
@@ -216,39 +217,143 @@
                 <div class="vod_artist_wrap">
                     <div class="vod_artist_hd">
                         <p class="tit_detail">출연자 정보</p>
+                        <button class="btn_refresh" type="button">새로고침</button>                        
                     </div>
                     <div class="list_vod_artist">
                         <ul>
+                            <!-- 차례가 지난 출연자 리스트 -->
                             <li>
-                                <div class="inner">
-                                    <div class="rum">1</div>
-                                    <div class="img_artist"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
-                                    <div class="detail">
-                                        <p class="txt_artist">방탄소년단</p>
-                                        <p class="txt_song">작은 것들을 위한 시 (Boy With Luv) (feat. Halsey)' Official MV</p>
-                                    </div>
+                                <div class="rum">1</div>
+                                <div class="img_artist"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
+                                <div class="artist_detail">
+                                    <p class="txt_artist">방탄소년단</p>
+                                    <p class="txt_song">작은 것들을 위한 시 (Boy With Luv) (feat. Halsey)' Official MV</p>
+                                </div>
+                                <div class="txt_status">
                                     <div class="time">00:03:05</div>
-                                    <div class="btn_wrap">
-                                        <button class="btn_timemachin_play" type="button">재생</button>
-                                    </div>
+                                    <!-- <div class="txt_playing">재생 중</div>
+                                    <div class="txt_timemachine">타임머신<br>재생 중</div> -->
+                                </div>                                
+                                <div class="btn_wrap">
+                                    <button class="btn play" type="button">play</button>
+                                    <!-- <button class="btn playing" type="button">playing</button>
+                                    <button class="btn onair" type="button">onair</button>
+                                    <button class="btn onair-dim" type="button">onair-dim</button> -->
                                 </div>
                             </li>
+                            <!-- 차례가 지난 출연자 리스트에서 타임머신 재생할 경우 -->
+                            <li class="playing">
+                                <div class="rum">2</div>
+                                <div class="img_artist"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
+                                <div class="artist_detail">
+                                    <p class="txt_artist">방탄소년단</p>
+                                    <p class="txt_song">작은 것들을 위한 시 (Boy With Luv) (feat. Halsey)' Official MV</p>
+                                </div>
+                                <div class="txt_status">
+                                    <!-- <div class="time">00:03:05</div> -->
+                                    <div class="txt_playing">재생 중</div>
+                                    <!-- <div class="txt_timemachine">타임머신<br>재생 중</div> -->
+                                </div>                                
+                                <div class="btn_wrap">
+                                    <!-- <button class="btn play" type="button">play</button> -->
+                                    <button class="btn playing" type="button">playing</button>
+                                    <!-- <button class="btn onair" type="button">onair</button>
+                                    <button class="btn onair-dim" type="button">onair-dim</button> -->
+                                </div>
+                            </li>
+                            <!-- On Air 중인 출연자 리스트 -->
                             <li>
-                                <div class="inner">
-                                    <div class="rum">1</div>
-                                    <div class="img_artist"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
-                                    <div class="detail">
-                                        <p class="txt_artist">방탄소년단</p>
-                                        <p class="txt_song">작은 것들을 위한 시 (Boy With Luv) (feat. Halsey)' Official MV</p>
-                                    </div>
-                                    <div class="time">00:03:05</div>
-                                    <div class="btn_wrap">
-                                        <button class="btn_timemachin_play" type="button">재생</button>
-                                    </div>
+                                <div class="rum">3</div>
+                                <div class="img_artist"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
+                                <div class="artist_detail">
+                                    <p class="txt_artist">방탄소년단</p>
+                                    <p class="txt_song">작은 것들을 위한 시 (Boy With Luv) (feat. Halsey)' Official MV</p>
+                                </div>
+                                <div class="txt_status">
+                                    <!-- <div class="time">00:03:05</div>
+                                    <div class="txt_playing">재생 중</div>
+                                    <div class="txt_timemachine">타임머신<br>재생 중</div> -->
+                                </div>                                
+                                <div class="btn_wrap">
+                                    <!-- <button class="btn play" type="button">play</button>
+                                    <button class="btn playing" type="button">playing</button> -->
+                                    <button class="btn onair" type="button">onair</button>
+                                    <!-- <button class="btn onair-dim" type="button">onair-dim</button> -->
+                                </div>
+                            </li>
+                            <!-- 타임머신 재생 중인데 다음 큐시트로 넘어갔을 경우 dimmed 버튼 선택 시 왼쪽 리스트로 원복 -->
+                            <li>
+                                <div class="rum">4</div>
+                                <div class="img_artist"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
+                                <div class="artist_detail">
+                                    <p class="txt_artist">방탄소년단</p>
+                                    <p class="txt_song">작은 것들을 위한 시 (Boy With Luv) (feat. Halsey)' Official MV</p>
+                                </div>
+                                <div class="txt_status">
+                                    <!-- <div class="time">00:03:05</div>
+                                    <div class="txt_playing">재생 중</div> -->
+                                    <div class="txt_timemachine">타임머신<br>재생 중</div>
+                                </div>                                
+                                <div class="btn_wrap">
+                                    <!-- <button class="btn play" type="button">play</button>
+                                    <button class="btn playing" type="button">playing</button>
+                                    <button class="btn onair" type="button">onair</button> -->
+                                    <button class="btn onair-dim" type="button">onair-dim</button>
+                                </div>
+                            </li>
+                            <!-- 출연 전 리스트 -->
+                            <li class="casting">
+                                <div class="rum">5</div>
+                                <div class="img_artist"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
+                                <div class="artist_detail">
+                                    <p class="txt_artist">방탄소년단</p>
+                                    <p class="txt_song">작은 것들을 위한 시 (Boy With Luv) (feat. Halsey)' Official MV</p>
+                                </div>
+                                <div class="txt_status">
+                                    <!-- <div class="time">00:03:05</div>
+                                    <div class="txt_playing">재생 중</div>
+                                    <div class="txt_timemachine">타임머신<br>재생 중</div> -->
+                                </div>                                
+                                <div class="btn_wrap">
+                                    <!-- <button class="btn play" type="button">play</button>
+                                    <button class="btn playing" type="button">playing</button>
+                                    <button class="btn onair" type="button">onair</button>
+                                    <button class="btn onair-dim" type="button">onair-dim</button> -->
                                 </div>
                             </li>
                         </ul>
                     </div>
+                </div>
+                <div class="banner_concert">
+                    <img src="res/images/img-banner-concert.png" alt="">
+                </div>
+                <div class="comment_wrap">
+                    <div class="comment_hd">
+                        <p class="tit_detail">댓글</p><span class="count">2</span>
+                    </div>
+                    <div class="comment_input">
+                        <textarea class="textarea" placeholder="메세지를 입력하세요." onfocus="this.closestOne('.comment_input').classList.add('on');" onblur="this.closestOne('.comment_input').classList.remove('on');"></textarea>
+                        <button class="btn_comment_input" type="button"><i class="icon ic-write"></i><span class="btn_txt">등록</span></button>
+                    </div>
+                    <div class="list_comment">
+                        <ul>
+                            <li>
+                                <div class="comment_name">1096**</div>
+                                <div class="comment_contents">오오 귀엽</div>
+                            </li>
+                            <li class="my_comment">
+                                <div class="comment_name">sayu**</div>
+                                <div class="comment_contents">오오 귀엽</div>
+                                <button class="btn_my_comment" type="button">내 댓글삭제</button>
+                            </li>
+                            <li>
+                                <div class="comment_name">1096**</div>
+                                <div class="comment_contents">오오 귀엽aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+                            </li>
+                        </ul>
+                    </div>
+
+
                 </div>
             </div>
             
