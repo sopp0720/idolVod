@@ -854,6 +854,42 @@
 .list_comment li .btn_my_comment:hover { background-position: 0 100%; }
 
 
+.event_hd { margin-top: 60px; padding-bottom: 30px; border-bottom: 2px solid #000000; }
+.event_hd .title { position: relative; padding-right: 76px; }
+.event_hd .txt_tit { line-height: 49px; font-size: 34px; font-weight: bold; letter-spacing: -0.5px; color: #000000; text-overflow: ellipsis; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; word-break: break-all; word-wrap: break-word; }
+.event_hd .btn_wrap { position: absolute; top: 10px; right: 0; font-size: 0; text-align: right; }
+.event_hd .btn_vod_share { display: inline-block; vertical-align: top; position: relative; width: 28px; height: 28px; text-indent: -999em; font-size: 0; line-height: 0; overflow: hidden; background-image: url(../images/ic-vod-share.png); background-size: 100%; }
+.event_hd .btn_vod_share:hover { background-position: 0 50%; }
+.event_hd .btn_vod_comment { display: inline-block; vertical-align: top; position: relative; width: 28px; height: 28px; text-indent: -999em; font-size: 0; line-height: 0; overflow: hidden; background-image: url(../images/ic-vod-comment.png); background-size: 100%; }
+.event_hd .btn_vod_comment:hover { background-position: 0 50%; }
+.event_hd .btn_vod_share + .btn_vod_comment { margin-left: 10px; }
+.event_hd .period { margin-top: 14px; font-size: 0; }
+.event_hd .period .time { display: inline-block; line-height: 20px; font-family: 'Montserrat'; font-size: 16px; font-weight: 500; letter-spacing: -0.35px; color: rgba(0,0,0,0.8); }
+.event_hd .period .time > em { font-style: normal; font-family: 'Noto Sans KR'; }
+.event_hd .period .dday { display: inline-block; line-height: 20px; font-family: 'Montserrat'; font-size: 16px; font-weight: 500; letter-spacing: -0.35px; color: rgba(0,0,0,0.8); }
+.event_hd .period .dday > em { font-style: normal; font-family: 'Noto Sans KR'; }
+.event_hd .period .time + .dday { position: relative; margin-left: 14px; padding-left: 15px; }
+.event_hd .period .time + .dday:before { content: ''; position: absolute; top: 7px; left: 0; width: 1px; height: 12px; background-color: #b6b6b6; }
+.event_bd { padding-top: 30px; }
+.event_details img { width: 100%; margin-bottom: 30px; }
+.event_details .flex_from { margin-top: 60px; text-align: center; }
+.event_details .flex_from .btn_basic { width: 290px; display: inline-block; }
+.event_bd .comment_wrap { padding-top: 30px; border-top: 1px solid #dddddd; }
+.event_vote { margin-top: 30px; border-bottom: 1px solid #000000; }
+.event_vote .vote_status_wrap { position: relative; padding-bottom: 20px; height: 42px; }
+.event_vote .btn_status { position: absolute; top: 0; right: 0; }
+.event_vote .btn_status .btn_txt { position: relative; line-height: 22px; font-size: 16px; font-weight: bold; letter-spacing: -0.5px; text-align: right; padding-left: 26px; color: #000000; }
+.event_vote .btn_status .btn_txt:hover { color: #644bdf; }
+.event_vote .btn_status .btn_txt:before { content: ''; position: absolute; top: 2px; left: 0; width: 20px; height: 20px; background-image: url(../images/ic-status.png); background-size: 100%; }
+.event_vote .btn_status .btn_txt:hover:before { background-position: 0 50%; }
+.event_vote .btn_status.disabled .btn_txt { color: #b2b2b2; } 
+.event_vote .btn_status.disabled .btn_txt:before {  background-position: 0 100%; }
+
+
+
+
+
+
 
 
 /*******************************************************************************************/
