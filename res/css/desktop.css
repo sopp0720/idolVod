@@ -748,8 +748,12 @@
 .headline h2 { line-height: 40px; font-size: 33px; font-weight: bold; letter-spacing: -0.35px; text-align: center; color: #ffffff; }
 .headline h2 > em { font-style: normal; color: #52ffc4; font-weight: bold; }
 .headline ~ .list-wrapper { padding-top: 70px; }
+.program_wrap .img_program_bg { position: relative; width: 100%; height: 222px; overflow: hidden; }
+.program_wrap .img_program_bg:before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 100%; background-color: #ffffff;  }
+.program_wrap .img_program_bg:after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 100%; background-image: inherit; background-position: 50% 50%; background-size: cover; -webkit-filter: blur(20px); filter: blur(20px); }
+.program_wrap .img_program:before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 100%; background-color: rgba(0,0,0,0.2); }
 .program_wrap .img_program { position: relative; }
-.program_wrap .img_program img { height: 293px; margin: 0 auto; object-fit: cover; }
+.program_wrap .img_program img { position: relative; height: 222px; margin: 0 auto; object-fit: cover; z-index: 1; }
 .program_wrap .inner { padding: 50px 0 30px; border-bottom: 2px solid #000000; }
 .program_wrap h2 { line-height: 40px; font-size: 33px; font-weight: bold; letter-spacing: -0.35px; color: #000000; }
 .program_wrap p { margin-top: 8px; line-height: 24px; font-size: 16px; font-weight: normal; letter-spacing: -0.5px; color: #000000; }
