@@ -20,9 +20,10 @@
 	<button type="button" onclick="layerPopup.show('#popup_07');" style="border:1px solid #000;background-color:#fff;color:#000;">멤버별영상 안내 (Mobile Web)</button>
     <button type="button" onclick="layerPopup.show('#popup_08');" style="border:1px solid #000;background-color:#fff;color:#000;">멤버별영상 안내 (PC Web)</button>	
     <button type="button" onclick="layerPopup.show('#popup_09');" style="border:1px solid #000;background-color:#fff;color:#000;">멤버별영상 안내 (해외고객)</button>	
+	<button type="button" onclick="layerPopup.show('#popup_10');" style="border:1px solid #000;background-color:#fff;color:#000;">퍼가기</button>	
 </div>
 
-<div class="modal fadeIn visible" id="popup_01" style="display: block;">
+<div class="modal fadeIn" id="popup_01" style="display: none;">
 	<div class="dim"></div>
 	<div class="modal_inner">
 		<div class="modal_inner share">
@@ -31,33 +32,33 @@
 				<div class="modal_bd popup_share">
 					<ul class="list_sns_link">
 						<li>
-							<label class="label_radio ic_kakao">
-								<input type="radio" name="sns_link" checked>
-								<div class="txt_label">카카오톡</div>
-							</label>
+							<a href="#" class="ic_embed">
+								<div class="txt_sns">퍼가기</div>
+							</a>
 						</li>
 						<li>
-							<label class="label_radio ic_facebook">
-								<input type="radio" name="sns_link">
-								<div class="txt_label">페이스북</div>
-							</label>
+							<a href="#" class="ic_kakao">
+								<div class="txt_sns">카카오톡</div>
+							</a>
 						</li>
 						<li>
-							<label class="label_radio ic_line">
-								<input type="radio" name="sns_link">
-								<div class="txt_label">라인</div>
-							</label>
+							<a href="#" class="ic_facebook">
+								<div class="txt_sns">페이스북</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="ic_twitter">
+								<div class="txt_sns">카카오톡</div>
+							</a>
 						</li>
 					</ul>
 					<div class="url_link_wrap">
 						<div class="txt_url">https://play.google.com/sdfsdfsdfsdfs/sdfd</div><a href="#" class="btn_copy" onclick="toastPopup.show('#toast1');">복사</a>
 						<div class="toast" id="toast1" style="display: none;">
 							<div class="toast_inner">URL이 복사 되었습니다.</div>
+							<div class="toast_inner">일시적인 문제로 공유하기를 할 수 없습니다.<br>잠시 후 다시 시도 해 주세요.</div>
 						</div>
 					</div>
-				</div>
-				<div class="modal_ft">
-					<a href="#" class="btn usetap active" onclick="layerPopup.hide('#popup_01');"><span>확인</span></a>
 				</div>
 				<button type="button" class="btn_share_close" onclick="layerPopup.hide('#popup_01');"></button>				
 			</div>
@@ -180,6 +181,29 @@
 	</div>
 </div>
 
+<div class="modal fadeIn visible" id="popup_10" style="display: block;">
+	<div class="dim"></div>
+	<div class="modal_inner">
+		<div class="modal_inner">
+			<div class="madal_embed_content">
+				<div class="embed_image"><img src="res/images/img_concertinfo_detail_top.png" alt=""></div>
+				<div class="embed_content">
+					<div class="modal_hd">공유하기</div>
+					<div class="modal_bd">
+						<div class="embed_area">
+							<div class="embed_clip" contenteditable="true">&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/embed/embed/embed/embed/embed/embed/JRKzz3Q_Vso?start=1" title=“IdolLive  video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt</div>
+						</div>
+						<p class="txt_embed">내 사이트에 U+아이돌Live 동영상을 퍼가면 서비스 약관에 동의하는 것으로 간주됩니다.</p>
+					</div>
+					<div class="modal_ft">
+						<a href="#" class="btn usetap" onclick="layerPopup.hide('#popup_10');"><span>복사</span></a>
+					</div>
+				</div>
+				<button type="button" class="modal_close usetap" onclick="layerPopup.hide('#popup_10')">팝업닫기</button>
+			</div>
+		</div>
+	</div>
+</div>
 
 
 
