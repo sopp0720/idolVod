@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <link rel="shortcut icon" href="res/images/favicon.ico">
+    <title>아이돌live</title>
+	<link rel="stylesheet" type="text/css" href="res/css/ui.css">
+    <link rel="stylesheet" type="text/css" href="res/css/embed.css">
+</head>
+<body>
+<div id="wrap">
+    <div class="player_wrap extend vod_extend" onclick="if (document.querySelector('.player_wrap').classList.contains('extend')) { document.querySelector('.player_wrap').classList.remove('extend'); } else { document.querySelector('.ctrl_wrap').classList.toggle('active'); }">
+        <div class="main_video">
+            <video id="video1" width="100%" height="100%">
+                <source src="mov_bbb.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="ctrl_wrap" onclick="event.stopPropagation();document.querySelector('.ctrl_wrap').classList.toggle('active');">
+            <div class="top_area">
+                <p class="title"><span class="tg_live">Live</span>SBS 드림콘서트 2021</p>
+                <button class="btn_set" type="button" onclick="event.stopPropagation();this.classList.toggle('on');"><i class="ic_set">설정</i></button>
+                <ul class="set_wrap">
+                    <li>
+                        <a href="#" class="dropdown" onclick="event.stopPropagation();this.classList.toggle('unfold');"><span class="txt">화질 선택</span><span class="txt_current">초고화질</span></a>
+                        <div class="list_dropdown">
+                            <ul>
+                                <li><a href="#" class="current">초고화질</a></li>
+                                <li><a href="#">고화질</a></li>
+                                <li><a href="#">일반화질</a></li>
+                            </ul>
+                        </div>                                        
+                    </li>
+                </ul>
+            </div>
+            <div class="center_area">
+                <button class="btn_play" type="button" onclick="event.stopPropagation();this.classList.toggle('on');">play/pause</button>
+            </div>
+            <div class="bottom_area">
+                <div class="volume_wrap">
+                    <button class="btn_speaker active" type="button">
+                        <!-- 음소거시 "ic_mute" 추가 -->
+                        <i class="ic_speaker ic_mute"></i>
+                        <div class="volumebar_wrap">
+                            <div class="progressBar">
+                                <div class="timeBar" style="height:40%;"><div class="timeBar_handle"></div></div>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+                <div class="time_now">00:11:00</div>
+                <div class="playerbar_wrap">
+                    <div class="progressBar">
+                        <div class="timeBar" style="width:18%;"><div class="timeBar_handle"></div></div>
+                    </div>			
+                </div>
+                <div class="time_total">01:11:00</div>
+                <button class="btn_magnify" type="button" onclick="event.stopPropagation();document.getElementById('wrap').classList.toggle('fullplayer');changeDirection();if (!document.fullscreenElement) { document.querySelector('.player_wrap').requestFullscreen(); } else { if (document.exitFullscreen) { document.exitFullscreen(); }}">magnify</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="res/js/common.js"></script>
+
+
+</body>
+</html>
