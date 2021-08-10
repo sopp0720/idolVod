@@ -578,6 +578,32 @@
 
 /* vod 2차 */
 
+/* 멤버별 플레이어 2차 */
+
+.fullplayer .player_wrap .main_video  { -webkit-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; }
+.fullplayer .player_wrap .member_video_1  { -webkit-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; position: absolute; right: -35%; top: 0; width: 35%; height: 100%; }
+.fullplayer .player_wrap .member_video_2  { -webkit-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; position: absolute; right: -35%; top: 0; width: 35%; height: 100%; }
+.fullplayer .player_wrap .member_video_3  { -webkit-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; position: absolute; right: -35%; top: 0; width: 35%; height: 100%; }
+.fullplayer .player_wrap .member_video_1 .btn_close,
+.fullplayer .player_wrap .member_video_2 .btn_close,
+.fullplayer .player_wrap .member_video_3 .btn_close { position: absolute; top: 20px; left: 22px; width: 26px; height: 26px; background-image: url(../images/ic-member-exit.png); background-size: 100%; }
+.fullplayer .player_wrap .member_video_1 video,
+.fullplayer .player_wrap .member_video_2 video,
+.fullplayer .player_wrap .member_video_3 video { object-fit: cover; }
+/* double video */
+.fullplayer .player_wrap.double .main_video { right: 35%; }
+.fullplayer .player_wrap.double .member_video_1 { right: 0%; }
+/* triple video */
+.fullplayer .player_wrap.triple .main_video { right: 70%; }
+.fullplayer .player_wrap.triple .member_video_1 { right: 35%; }
+.fullplayer .player_wrap.triple .member_video_2 { right: 0%; }
+/* quadruple video */
+.fullplayer .player_wrap.quadruple .main_video { width: 15%; height: 15%; left: 0; top: auto; bottom: 60px; z-index: 1; }
+.fullplayer .player_wrap.quadruple .member_video_1 { right: 70%; }
+.fullplayer .player_wrap.quadruple .member_video_2 { right: 35%; }
+.fullplayer .player_wrap.quadruple .member_video_3 { right: 0%; }
+
+
 /* 팝업 */
 .modal .list_sns_link { margin-top: 14px; display: -webkit-box; display: -webkit-flex; display: flex; flex-wrap: wrap; justify-content: space-between; }
 .modal .list_sns_link li { width: 77px; text-align: center; }

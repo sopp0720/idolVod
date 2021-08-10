@@ -30,107 +30,124 @@
             <div class="vod_wrap">
                 <!-- 출연자 정보 활성화인 경우 'vod_extend' 클레스 추가 -->
                 <div class="player_wrap extend vod_extend" onclick="if (document.querySelector('.player_wrap').classList.contains('extend')) { document.querySelector('.player_wrap').classList.remove('extend'); } else { document.querySelector('.ctrl_wrap').classList.toggle('active'); }">
+                    <div style="position: fixed;top:130px; left: 30px;z-index:100;color:#fff;">
+                        <button style="display: inline-block;font-size:20px;" type="button" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('double');">멤버별_1명선택</button>
+                        <button style="display: inline-block;font-size:20px;margin-left:10px;" type="button" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('triple');">멤버별_2명선택</button>
+                        <button style="display: inline-block;font-size:20px;margin-left:10px;" type="button" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('quadruple');">멤버별_3명선택</button>
+                    </div>
                     <div class="main_video">
                         <video id="video1" width="100%" height="100%">
                             <source src="mov_bbb.mp4" type="video/mp4">
                         </video>
                     </div>
-                    <div class="member_video">
+                    <div class="member_video_1">
                         <video id="video1" width="100%" height="100%">
                             <source src="mov_bbb.mp4" type="video/mp4">
                         </video>
-                        <button class="btn_close" type="button" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.remove('multi');">닫기</button>
-                    </div>                        
+                        <button class="btn_close" type="button" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.remove('double');">닫기</button>
+                    </div>
+                    <div class="member_video_2">
+                        <video id="video1" width="100%" height="100%">
+                            <source src="mov_bbb.mp4" type="video/mp4">
+                        </video>
+                        <button class="btn_close" type="button" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.remove('triple');">닫기</button>
+                    </div>
+                    <div class="member_video_3">
+                        <video id="video1" width="100%" height="100%">
+                            <source src="mov_bbb.mp4" type="video/mp4">
+                        </video>
+                        <button class="btn_close" type="button" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.remove('quadruple');">닫기</button>
+                    </div>
                     <div class="member_wrap">
                         <div class="member_list">
                             <div class="swiper-container mySwiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
+                                        <a href="#" class="item" onclick="event.stopPropagation();this.classList.toggle('active')">
                                             <div class="cover"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
                                             <div class="name">화사</div>
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
+                                        <a href="#" class="item" onclick="event.stopPropagation();this.classList.toggle('active')">
                                             <div class="cover"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
                                             <div class="name">aaaaaaaaaaaaaaaaaaaaaaaaa</div>
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
+                                        <a href="#" class="item" onclick="event.stopPropagation();this.classList.toggle('active')">
                                             <div class="cover"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
                                             <div class="name">화사</div>
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
+                                        <a href="#" class="item" onclick="event.stopPropagation();this.classList.toggle('active')">
                                             <div class="cover"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
                                             <div class="name">화사</div>
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
+                                        <a href="#" class="item" onclick="event.stopPropagation();this.classList.toggle('active')">
                                             <div class="cover"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
                                             <div class="name">화사</div>
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
+                                        <a href="#" class="item" onclick="event.stopPropagation();this.classList.toggle('active')">
                                             <div class="cover"></div>
                                             <div class="name">화사</div>
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
+                                        <a href="#" class="item" onclick="event.stopPropagation();this.classList.toggle('active')">
                                             <div class="cover"></div>
                                             <div class="name">화사</div>
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
+                                        <a href="#" class="item" onclick="event.stopPropagation();this.classList.toggle('active')">
                                             <div class="cover"></div>
                                             <div class="name">화사</div>
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
+                                        <a href="#" class="item" onclick="event.stopPropagation();this.classList.toggle('active')">
                                             <div class="cover"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
                                             <div class="name">화사</div>
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
+                                        <a href="#" class="item" onclick="event.stopPropagation();this.classList.toggle('active')">
                                             <div class="cover"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
                                             <div class="name">화사</div>
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
+                                        <a href="#" class="item" onclick="event.stopPropagation();this.classList.toggle('active')">
                                             <div class="cover"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
                                             <div class="name">화사</div>
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
+                                        <a href="#" class="item" onclick="event.stopPropagation();this.classList.toggle('active')">
                                             <div class="cover"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
                                             <div class="name">화사</div>
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
+                                        <a href="#" class="item" onclick="event.stopPropagation();this.classList.toggle('active')">
                                             <div class="cover"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
                                             <div class="name">화사</div>
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
+                                        <a href="#" class="item" onclick="event.stopPropagation();this.classList.toggle('active')">
                                             <div class="cover"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
                                             <div class="name">화사</div>
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="#" class="item" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('multi');this.classList.toggle('active')">
+                                        <a href="#" class="item" onclick="event.stopPropagation();this.classList.toggle('active')">
                                             <div class="cover"><img src="res/images/con_cue_img3.jpg" alt="출연자"></div>
                                             <div class="name">화사</div>
                                         </a>
