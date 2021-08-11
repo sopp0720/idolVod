@@ -894,7 +894,7 @@
 .list_comment li .btn_my_comment { position: absolute; top: 23px; right: 10px; width: 16px; height: 16px; background-image: url(../images/btn_my_comment.png); background-size: 100%; text-indent: -999em; font-size: 0; line-height: 0; overflow: hidden; }
 .list_comment li .btn_my_comment:hover { background-position: 0 100%; }
 
-
+/* event */
 .event_hd { margin-top: 60px; padding-bottom: 30px; border-bottom: 2px solid #000000; }
 .event_hd .title { position: relative; padding-right: 76px; }
 .event_hd .txt_tit { line-height: 49px; font-size: 34px; font-weight: bold; letter-spacing: -0.5px; color: #000000; text-overflow: ellipsis; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; word-break: break-all; word-wrap: break-word; }
@@ -905,9 +905,9 @@
 .event_hd .btn_vod_comment:hover { background-position: 0 50%; }
 .event_hd .btn_vod_share + .btn_vod_comment { margin-left: 10px; }
 .event_hd .period { margin-top: 14px; font-size: 0; }
-.event_hd .period .time { display: inline-block; line-height: 20px; font-family: 'Montserrat'; font-size: 16px; font-weight: 500; letter-spacing: -0.35px; color: rgba(0,0,0,0.8); }
+.event_hd .period .time { display: inline-block; line-height: 20px; font-family: 'Montserrat'; font-size: 16px; font-weight: 500; letter-spacing: -0.35px; color: rgba(0, 0, 0, 0.8); }
 .event_hd .period .time > em { font-style: normal; font-family: 'Noto Sans KR'; }
-.event_hd .period .dday { display: inline-block; line-height: 20px; font-family: 'Montserrat'; font-size: 16px; font-weight: 500; letter-spacing: -0.35px; color: rgba(0,0,0,0.8); }
+.event_hd .period .dday { display: inline-block; line-height: 20px; font-family: 'Montserrat'; font-size: 16px; font-weight: 500; letter-spacing: -0.35px; color: rgba(0, 0, 0, 0.8); }
 .event_hd .period .dday > em { font-style: normal; font-family: 'Noto Sans KR'; }
 .event_hd .period .time + .dday { position: relative; margin-left: 14px; padding-left: 15px; }
 .event_hd .period .time + .dday:before { content: ''; position: absolute; top: 7px; left: 0; width: 1px; height: 12px; background-color: #b6b6b6; }
@@ -923,8 +923,8 @@
 .event_vote .btn_status .btn_txt:hover { color: #644bdf; }
 .event_vote .btn_status .btn_txt:before { content: ''; position: absolute; top: 2px; left: 0; width: 20px; height: 20px; background-image: url(../images/ic-status.png); background-size: 100%; }
 .event_vote .btn_status .btn_txt:hover:before { background-position: 0 50%; }
-.event_vote .btn_status.disabled .btn_txt { color: #b2b2b2; } 
-.event_vote .btn_status.disabled .btn_txt:before {  background-position: 0 100%; }
+.event_vote .btn_status.disabled .btn_txt { color: #b2b2b2; }
+.event_vote .btn_status.disabled .btn_txt:before { background-position: 0 100%; }
 .list_vote_wrap { padding-top: 30px; border-top: 1px solid #000000; }
 .list_vote_wrap > li { margin-top: 60px; }
 .list_vote_wrap > li:first-child { margin-top: 0; }
@@ -932,19 +932,19 @@
 .list_vote_wrap .tit_vote > em { font-style: normal; font-family: 'Montserrat'; font-weight: 800; color: #7e65ff; padding-right: 8px; }
 .list_vote_1 { display: -webkit-box; display: -webkit-flex; display: flex; flex-wrap: wrap; padding-left: 25px; padding-top: 10px; }
 .list_vote_1 li { margin-left: 15px; margin-top: 30px; }
-.list_vote_1 .label_radio  { position: relative; display: block; width: 225px; }
+.list_vote_1 .label_radio { position: relative; display: block; width: 225px; }
 .list_vote_1 .label_radio input[type="radio"] { position: absolute; visibility: hidden; opacity: 0; }
 .list_vote_1 .box { position: relative; }
 .list_vote_1 .box:after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; border: solid 1px #dddddd; }
 .list_vote_1 .label_radio input[type="radio"]:checked ~ .box:after { border: solid 2px #5f41f9; }
-.list_vote_1 .box .thumb { position: relative; width: 100%; padding-top: 100%; overflow: hidden;  }
+.list_vote_1 .box .thumb { position: relative; width: 100%; padding-top: 100%; overflow: hidden; }
 .list_vote_1 .box .thumb img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 .list_vote_1 .label_radio input[type="radio"]:checked ~ .box .thumb:before { content: ''; position: absolute; top: 0; left: 0; width: 36px; height: 36px; background-color: #5f41f9; z-index: 1; }
 .list_vote_1 .label_radio input[type="radio"]:checked ~ .box .thumb:after { content: ''; position: absolute; top: 11px; left: 10px; width: 16px; height: 14px; background-image: url(../images/ic-check-white.png); background-size: 100%; z-index: 1; }
 .list_vote_1 .name { position: relative; width: 100%; height: 70px; white-space: nowrap; font-size: 0; }
 .list_vote_1 .label_radio input[type="radio"]:checked ~ .box .name { background-color: #a293ff; }
 .list_vote_1 .label_radio input[type="radio"]:checked ~ .box .name:before { content: ''; position: absolute; position: absolute; top: 0; left: 0; bottom: 0; right: 0; border: solid 2px #5f41f9; }
-.list_vote_1 .name:after {content: '';position: relative; display: inline-block; height: 100%; vertical-align: middle; }
+.list_vote_1 .name:after { content: ''; position: relative; display: inline-block; height: 100%; vertical-align: middle; }
 .list_vote_1 .name .middle_inner { position: relative; width: 100%; padding: 0 27px; display: inline-block; vertical-align: middle; white-space: normal; line-height: 22px; font-size: 16px; font-weight: 500; letter-spacing: -0.5px; text-align: center; color: #000000; }
 .list_vote_1 .status_wrap { display: none; }
 .status_on .list_vote_1 .status_wrap { display: block; }
@@ -956,11 +956,10 @@
 .list_vote_1 .count { line-height: 14px; font-family: 'Montserrat'; font-size: 12px; font-weight: 600; letter-spacing: -0.38px; text-align: center; color: #999999; }
 .list_vote_1 .label_radio input[type="radio"]:checked ~ .status_wrap .count { color: #000000; }
 .list_vote_1 .count > em { font-style: normal; font-family: 'Noto Sans KR'; font-weight: 500; }
-
 .list_vote_2 { padding: 40px 40px 0; }
 .list_vote_2 li { margin-top: 14px; }
 .list_vote_2 li:first-child { margin-top: 0; }
-.list_vote_2 .label_radio  { position: relative; display: block; }
+.list_vote_2 .label_radio { position: relative; display: block; }
 .list_vote_2 .label_radio input[type="radio"] { position: absolute; visibility: hidden; opacity: 0; }
 .list_vote_2 .box { position: relative; height: 70px; padding-left: 70px; }
 .list_vote_2 .box:after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; border: solid 1px #dddddd; }
@@ -973,7 +972,7 @@
 .status_on .list_vote_2 .txt { background-color: transparent; }
 .list_vote_2 .label_radio input[type="radio"]:checked ~ .box .txt { background-color: #a293ff; }
 .status_on .list_vote_2 .label_radio input[type="radio"]:checked ~ .box .txt { background-color: transparent; }
-.list_vote_2 .txt:after {content: '';position: relative; display: inline-block; height: 100%; vertical-align: middle; }
+.list_vote_2 .txt:after { content: ''; position: relative; display: inline-block; height: 100%; vertical-align: middle; }
 .list_vote_2 .txt .middle_inner { position: relative; width: 100%; display: inline-block; vertical-align: middle; white-space: normal; line-height: 22px; font-size: 16px; font-weight: 500; letter-spacing: -0.5px; color: #000000; }
 .list_vote_2 .label_radio input[type="radio"]:checked ~ .box .txt .middle_inner { padding-left: 26px; font-weight: bold; }
 .list_vote_2 .label_radio input[type="radio"]:checked ~ .box .txt .middle_inner:before { content: ''; position: absolute; top: 0; bottom: 0; left: 0; margin: auto 0; width: 16px; height: 14px; background-image: url(../images/ic-check_black.png); background-size: 100%; }
@@ -991,7 +990,8 @@
 .vote_textarea .vote_textarea_count { position: absolute; bottom: 10px; right: 10px; line-height: 20px; font-family: 'Montserrat'; font-size: 14px; font-weight: 500; letter-spacing: -0.44px; text-align: right; color: #999999; }
 .vote_textarea .vote_textarea_count > em { font-style: normal; color: #000000; padding-left: 4px; }
 .vote_textarea .textarea { position: relative; width: 100%; height: 100px; -webkit-appearance: none; -webkit-border-radius: 0; border: 0 none; background-color: transparent; overflow: auto; outline: none; -webkit-box-shadow: none; box-shadow: none; resize: none; padding: 0; margin: 0; font-family: "Noto Sans KR"; line-height: 24px; font-size: 16px; font-weight: normal; letter-spacing: -0.5px; color: #000000; }
-.vote_textarea .textarea::-webkit-scrollbar {display:none;}
+.vote_textarea .textarea::-webkit-scrollbar { display: none; }
+
 
 
 
