@@ -870,16 +870,17 @@
 
 .banner_concert { margin-top: 60px; }
 
+/* comment */
 .comment_wrap { margin-top: 60px; }
 .comment_wrap .comment_hd { height: 24px; font-size: 0; }
 .comment_wrap .tit_detail { display: inline-block; line-height: 24px; font-size: 16px; font-weight: normal; letter-spacing: -1px; color: #000000; }
-.comment_wrap .count  { display: inline-block; margin-left: 8px; line-height: 24px; font-family: 'Montserrat'; font-size: 14px; font-weight: 500; letter-spacing: -0.94px; color: #999999; }
+.comment_wrap .count { display: inline-block; margin-left: 8px; line-height: 24px; font-family: 'Montserrat'; font-size: 14px; font-weight: 500; letter-spacing: -0.94px; color: #999999; }
 .comment_wrap .comment_input { position: relative; margin-top: 20px; height: 46px; padding: 12px 76px 12px 24px; border-radius: 23px; background-color: #fff; }
 .comment_wrap .comment_input:before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; border-radius: 23px; border: solid 2px #000000; }
 .comment_wrap .comment_input.on:before { border: solid 2px #644bdf; }
 .comment_wrap .textarea { position: relative; width: 100%; height: 22px; -webkit-appearance: none; -webkit-border-radius: 0; border: 0 none; background-color: transparent; overflow: auto; outline: none; -webkit-box-shadow: none; box-shadow: none; resize: none; padding: 0; margin: 0; font-family: "Noto Sans KR"; line-height: 22px; font-size: 14px; font-weight: normal; letter-spacing: -0.5px; color: #000000; }
 .comment_wrap .textarea::-webkit-input-placeholder { line-height: 22px; font-size: 14px; font-weight: normal; letter-spacing: -0.5px; color: #999999; }
-.comment_wrap .textarea::-webkit-scrollbar {display:none;}
+.comment_wrap .textarea::-webkit-scrollbar { display: none; }
 .comment_wrap .btn_comment_input { position: absolute; top: 12px; right: 25px; width: 51px; height: 22px; padding-left: 26px; }
 .comment_wrap .btn_comment_input .ic-write { position: absolute; left: 0; top: 1px; width: 20px; height: 20px; background-image: url(../images/ic-write.png); background-size: 100%; }
 .comment_wrap .btn_comment_input .btn_txt { line-height: 22px; font-size: 14px; font-weight: bold; letter-spacing: -0.5px; color: #000000; white-space: nowrap; }
