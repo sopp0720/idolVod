@@ -621,8 +621,8 @@
 
 /* 퍼가기 */
 .modal .madal_embed_content { position: relative; display: -webkit-box; display: -webkit-flex; display: flex; margin: 0 auto; flex-wrap: wrap; max-width: calc(100% - 30px); height: 372px; }
-.modal .embed_image { height: 100%; width: calc(100% - 334px); }
-.modal .embed_image img { height: 100%; object-fit: cover; }
+.modal .embed_image { height: 100%; max-width: calc(100% - 334px); }
+.modal .embed_image img { height: 100%; width: auto; object-fit: cover; }
 .modal .embed_content { position: relative; overflow: hidden; width: 334px; background-color: #ffffff; }
 .modal .embed_content .modal_hd { padding: 15px 30px; line-height: 30px; font-size: 21px; font-weight: bold; letter-spacing: -0.5px; text-align: center; color: #000; }
 .modal .embed_content .modal_bd { padding: 0; }
@@ -801,21 +801,21 @@
 .list-banner-1 .cover img { position: absolute; width: 100%; height: 100%; object-fit: cover; }
 
 /* vod 플레이어 */
-.vod_wrap { margin-top: 30px; }
 #wrap:not(.fullplayer) .vod_wrap .btn_member { display: none; }
-.vod_wrap .detail { position: relative; padding-top: 30px; }
-.vod_wrap .detail .title { padding-right: 100px; }
-.vod_wrap .player_wrap.extend ~ .detail:after { right: 0; }
 #wrap:not(.fullplayer) .vod_extend .player_wrap { margin-bottom: 117px; -webkit-transition: none; transition: none; }
 #wrap:not(.fullplayer) .vod_extend .player_wrap .member_list { -webkit-transform: translate3d(0, 100%, 0); transform: translate3d(0, 100%, 0); -webkit-transition: none; transition: none; }
 #wrap:not(.fullplayer) .vod_extend .player_wrap .btn_heart { -webkit-transform: translate3d(0, 117px, 0); transform: translate3d(0, 117px, 0); -webkit-transition: none; transition: none; }
 #wrap:not(.fullplayer) .vod_extend .player_wrap .heart_wrap .txt_hit { -webkit-transform: translate3d(0, 117px, 0); transform: translate3d(0, 117px, 0); -webkit-transition: none; transition: none; }
 #wrap:not(.fullplayer) .vod_extend .player_wrap .ani_heart_btn { -webkit-transform: translate3d(0, 117px, 0); transform: translate3d(0, 117px, 0); -webkit-transition: none; transition: none; }
 
+.vod_wrap { margin-top: 30px; }
+.vod_wrap .detail { position: relative; padding-top: 30px; }
+.vod_wrap .detail .title { position: relative; display: inline-block; }
+.vod_wrap .player_wrap.extend ~ .detail:after { right: 0; }
 .vod_wrap .detail .tag_wrap { display: inline-block; vertical-align: top; padding-top: 7px; padding-right: 6px; }
-.vod_wrap .detail .tag_wrap > img { position: relative; display: inline-block; z-index: 2; }
-.vod_wrap .detail .tag_wrap > img ~ img { margin-left: -8px; z-index: 1; }
-.vod_wrap .detail .txt_tit { display: inline-block; vertical-align: top; max-width: calc(100% - 250px); line-height: 35px; font-size: 24px; font-weight: bold; letter-spacing: -0.5px; color: #000000; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.vod_wrap .detail .tag_wrap > img { position: relative; display: inline-block; height: 22px; width: auto; z-index: 8; }
+.vod_wrap .detail .txt_tit { display: inline-block; vertical-align: top; max-width: 700px; line-height: 35px; font-size: 24px; font-weight: bold; letter-spacing: -0.5px; color: #000000; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.vod_wrap .detail .btn_wrap { display: inline-block; vertical-align: top; }
 .vod_wrap .detail .btn_vod_share { display: inline-block; vertical-align: top; margin: 7px 0 0 20px; position: relative; width: 28px; height: 28px; text-indent: -999em; font-size: 0; line-height: 0; overflow: hidden; background-image: url(../images/ic-vod-share.png); background-size: 100%; }
 .vod_wrap .detail .btn_vod_share:hover { background-position: 0 50%; }
 .vod_wrap .detail .btn_vod_comment { display: inline-block; vertical-align: top; margin: 7px 0 0 20px; position: relative; width: 28px; height: 28px; text-indent: -999em; font-size: 0; line-height: 0; overflow: hidden; background-image: url(../images/ic-vod-comment.png); background-size: 100%; }
