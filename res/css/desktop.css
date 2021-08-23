@@ -16,6 +16,13 @@
 .table tbody td .cell { position: relative; padding: 10px 20px; line-height: 19px; font-size: 13px; font-weight: normal; letter-spacing: -0.5px; color: rgba(0,0,0,0.5); text-align: left; word-break: break-all; word-wrap: break-word; }
 .table tbody td .detail_inner { position: relative; padding: 20px; line-height: 19px; font-size: 13px; font-weight: normal; letter-spacing: -0.5px; color: #666666; text-align: left; word-break: break-all; word-wrap: break-word; }
 
+/* checkbox */
+.label_checkbox { position: relative; display: inline-block; }
+.label_checkbox input[type="checkbox"] { position: absolute; visibility: hidden; opacity: 0; }
+.label_checkbox .check_txt { position: relative; padding-left: 43px; line-height: 24px; font-size: 16px; font-weight: bold; letter-spacing: -0.52px; color: #000; }
+.label_checkbox .check_txt:before { content: ''; position: absolute; top: -6px; left: 0; width: 38px; height: 38px; background-image: url(../images/btn-checkbox.png); background-size: 100%; }
+.label_checkbox input[type="checkbox"]:checked ~ .check_txt:before { background-position: 0 100%; }
+
 /* button */
 .flex_from [class*=btn_] { -webkit-box-flex:1;-webkit-flex:1;flex:1; margin: 0; }
 .flex_from [class*=btn_] + [class*=btn_] { margin-top: 11px; }
@@ -402,8 +409,37 @@
 .member_wrap .swiper-button-next:after { content: ''; position: absolute; top: 37px; right: 7px; width: 15px; height: 15px; background-image: url(../images/ic-arrow-member-next.png); background-size: 100%; } 
 .member_wrap .swiper-button-prev { position: absolute; top: 0; left: 0; height: 93px; width: 32px; margin: 0; border: solid 2px #000000; background-color: #ffffff; -webkit-transition: opacity 0.3s ease-in-out; transition: opacity 0.3s ease-in-out; }
 .member_wrap .swiper-button-prev:after { content: ''; position: absolute; top: 37px; right: 7px; width: 15px; height: 15px; background-image: url(../images/ic-arrow-member-prev.png); background-size: 100%; }
-.player_wrap .swiper-button-next.swiper-button-disabled,
-.player_wrap .swiper-button-prev.swiper-button-disabled { opacity: 0; }
+.member_wrap .swiper-button-next.swiper-button-disabled,
+.member_wrap .swiper-button-prev.swiper-button-disabled { opacity: 0; }
+
+/* 카메라별 멤버별 */
+.player_wrap.extend { margin-bottom: 117px; -webkit-transition: margin-bottom 0.3s ease-in-out; transition: margin-bottom 0.3s ease-in-out; }
+.player_wrap .btn_camera { position: absolute; bottom: 22px; left: 0; right: 0; margin: 0 auto; width: 75px; height: 36px; padding: 5px 23px 7px 10px; border-radius: 21px; border: solid 2px #000000; background-color: rgba(82, 255, 196, 0.95); line-height: 20px; font-size: 14px; font-weight: bold; letter-spacing: -0.5px; text-align: center; color: #000000; }
+.player_wrap .btn_camera:after { content: ''; position: absolute; top: 8px; right: 5px; width: 16px; height: 16px; background-image: url(../images/ic-arrow-member-select.png); background-size: 100%; }
+.player_wrap.extend .btn_camera:after { -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+.camera_wrap { position: absolute; overflow: hidden; bottom: -117px; width: 100%; left: 0; right: 0; height: 117px; }
+.camera_wrap .camera_list { position: absolute; left: 0; top: -100%; width: 100%; height: 100%; padding: 0 1px; }
+.camera_wrap .camera_list { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+.player_wrap.extend .camera_list { -webkit-transform: translate3d(0, 100%, 0); transform: translate3d(0, 100%, 0); -webkit-transition: transform 0.3s ease-in-out; transition: transform 0.3s ease-in-out; }
+
+.camera_wrap .swiper-container { overflow: visible; }
+.camera_wrap .swiper-slide { position: relative; display: block; width: 162px; height: 117px; }
+.camera_wrap .item { position: relative; display: block; }
+.camera_wrap .item.active:before { content: ''; position: absolute; top: 0; left: -1px; right: -1px; width: auto; height: 93px; background-color: #644bdf; border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000; border-right: 2px solid #000000; }
+.camera_wrap .cover { position: absolute; left: -1px; right: -1px; height: 93px; background-image: url(../images/img-nomoremember.png); background-size: 50px 50px; background-position: 50% 50%; background-repeat: no-repeat; background-color: #b5b5b5; }
+.camera_wrap .item.active .cover { position: absolute; top: 9px; left: -1px; right: -1px; width: auto; height: 93px; background-color: #917bff; background-image: none; }
+.camera_wrap .cover img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.camera_wrap .item.active .cover img { opacity: 0.25; }
+.camera_wrap .cover:after { content: ''; position: absolute; top: 0; left: 0; right:0; bottom: 0; border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000; border-right: 2px solid #000000; }
+.camera_wrap .item.active .cover:after { content: ''; position: absolute; top: 0; left: 0; right:0; bottom: 0; border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000; border-right: 2px solid #000000; background-image: url(../images/ic-checkbox.png); background-size: 30px 30px; background-position: 50% 20px; background-repeat: no-repeat; }
+.camera_wrap .name { position: absolute; top: 96px; left: 0; right: 0; line-height: 21px; padding: 0 6px; font-size: 15px; font-weight: normal; text-align: center; color: #000000; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.camera_wrap .item.active .name { position: absolute; top: 66px; left: 0; right: 0; }
+.camera_wrap .swiper-button-next { position: absolute; top: 0; right: 0; height: 93px; width: 32px; margin: 0; border: solid 2px #000000; background-color: #ffffff; -webkit-transition: opacity 0.3s ease-in-out; transition: opacity 0.3s ease-in-out; }
+.camera_wrap .swiper-button-next:after { content: ''; position: absolute; top: 37px; right: 7px; width: 15px; height: 15px; background-image: url(../images/ic-arrow-member-next.png); background-size: 100%; } 
+.camera_wrap .swiper-button-prev { position: absolute; top: 0; left: 0; height: 93px; width: 32px; margin: 0; border: solid 2px #000000; background-color: #ffffff; -webkit-transition: opacity 0.3s ease-in-out; transition: opacity 0.3s ease-in-out; }
+.camera_wrap .swiper-button-prev:after { content: ''; position: absolute; top: 37px; right: 7px; width: 15px; height: 15px; background-image: url(../images/ic-arrow-member-prev.png); background-size: 100%; }
+.camera_wrap .swiper-button-next.swiper-button-disabled,
+.camera_wrap .swiper-button-prev.swiper-button-disabled { opacity: 0; }
 
 
 
@@ -916,6 +952,8 @@
 .event_details img { width: 100%; margin-bottom: 30px; }
 .event_details .flex_from { margin-top: 60px; text-align: center; }
 .event_details .flex_from .btn_basic { width: 290px; display: inline-block; }
+.event_details .flex_from .label_checkbox ~ .btn_basic { display: block; margin: 26px auto 0; }
+
 .event_bd .comment_wrap { padding-top: 30px; border-top: 1px solid #dddddd; }
 .event_vote { margin-top: 30px; }
 .event_vote .vote_status_wrap { position: relative; padding-bottom: 20px; height: 42px; }

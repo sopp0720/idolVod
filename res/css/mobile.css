@@ -15,6 +15,13 @@
 .table tbody td .cell { position: relative; padding: 0.7826rem 1.5652rem; line-height: 1.487rem; font-size: 1.0174rem; font-weight: normal; letter-spacing: -0.0391rem; color: rgba(0, 0, 0, 0.5); text-align: left; word-break: break-all; word-wrap: break-word; }
 .table tbody td .detail_inner { position: relative; padding: 1.5652rem; line-height: 1.487rem; font-size: 1.0174rem; font-weight: normal; letter-spacing: -0.0391rem; color: #666666; text-align: left; word-break: break-all; word-wrap: break-word; }
 
+/* checkbox */
+.label_checkbox { position: relative; display: inline-block; }
+.label_checkbox input[type="checkbox"] { position: absolute; visibility: hidden; opacity: 0; left: 0; }
+.label_checkbox .check_txt { position: relative; padding-left: 3.3652rem; line-height: 1.8783rem; font-size: 1.2522rem; font-weight: bold; letter-spacing: -0.0407rem; color: #000; }
+.label_checkbox .check_txt:before { content: ''; position: absolute; top: -0.4696rem; left: 0; width: 2.9739rem; height: 2.9739rem; background-image: url(../images/btn-checkbox.png); background-size: 100%; }
+.label_checkbox input[type="checkbox"]:checked ~ .check_txt:before { background-position: 0 100%; }
+
 /* button */
 .flex_from [class*=btn_] { -webkit-box-flex: 1; -webkit-flex: 1; flex: 1; margin: 0; }
 .flex_from [class*=btn_] + [class*=btn_] { margin-top: 0.8609rem; }
@@ -871,6 +878,7 @@
 .event_details img { width: 100%; margin-bottom: 2.3478rem; }
 .event_details .flex_from { margin-top: 4.6957rem; text-align: center; }
 .event_details .flex_from .btn_basic { width: 22.6958rem; display: inline-block; }
+.event_details .flex_from .label_checkbox ~ .btn_basic { display: block; margin: 2.0348rem auto 0; }
 .event_bd .comment_wrap { padding-top: 2.3478rem; border-top: 1px solid #dddddd; }
 .event_vote { margin-top: 2.3478rem; }
 .event_vote .vote_status_wrap { position: relative; padding-bottom: 1.5652rem; height: 3.287rem; }
