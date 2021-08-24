@@ -159,6 +159,46 @@
                             <div class="swiper-button-prev" onclick="event.stopPropagation();"></div>
                         </div>                            
                     </div>
+                    <div class="camera_wrap current">
+                        <div class="camera_list">
+                            <div class="swiper-container mySwiper2">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="#" class="item" onclick="event.stopPropagation();this.classList.toggle('active')">
+                                            <div class="cover"><img src="res/images/img_concertinfo_detail_top.png" alt=""></div>
+                                            <div class="name"><span class="ic">본방송</span></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="item" onclick="event.stopPropagation();this.classList.toggle('active')">
+                                            <div class="cover"><img src="res/images/img_concertinfo_detail_top.png" alt=""></div>
+                                            <div class="name"><span class="ic">무대정면</span></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="item" onclick="event.stopPropagation();this.classList.toggle('active')">
+                                            <div class="cover"><img src="res/images/img_concertinfo_detail_top.png" alt=""></div>
+                                            <div class="name"><span class="ic">백스테이지</span></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="item" onclick="event.stopPropagation();this.classList.toggle('active')">
+                                            <div class="cover"><img src="res/images/img_concertinfo_detail_top.png" alt=""></div>
+                                            <div class="name"><span class="ic">무대좌측</span></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="item" onclick="event.stopPropagation();this.classList.toggle('active')">
+                                            <div class="cover"><img src="res/images/img_concertinfo_detail_top.png" alt=""></div>
+                                            <div class="name"><span class="ic">무대우측</span></div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next" onclick="event.stopPropagation();"></div>
+                            <div class="swiper-button-prev" onclick="event.stopPropagation();"></div>
+                        </div>                            
+                    </div>
                     <div class="ctrl_wrap" onclick="event.stopPropagation();document.querySelector('.ctrl_wrap').classList.toggle('active');">
                         <div class="top_area">
                             <p class="title"><span class="tg_live">Live</span>SBS 드림콘서트 2021</p>
@@ -200,7 +240,10 @@
                             <div class="time_total">01:11:00</div>
                             <button class="btn_magnify" type="button" onclick="event.stopPropagation();document.getElementById('wrap').classList.toggle('fullplayer');changeDirection();if (!document.fullscreenElement) { document.querySelector('.player_wrap').requestFullscreen(); } else { if (document.exitFullscreen) { document.exitFullscreen(); }}">magnify</button>
                         </div>
-                        <button class="btn_member" type="button" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('extend');">멤버별</button>
+                        <div class="vod_list_btn_wrap">
+                            <button class="btn_vod_member" type="button" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('extend');document.querySelector('.vod_list_btn_wrap .current').classList.remove('current');this.classList.add('current');document.querySelector('.camera_wrap').classList.remove('current');document.querySelector('.member_wrap').classList.add('current');">멤버별</button>
+                            <button class="btn_vod_camera current" type="button" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('extend');document.querySelector('.vod_list_btn_wrap .current').classList.remove('current');this.classList.add('current');document.querySelector('.member_wrap').classList.remove('current');document.querySelector('.camera_wrap').classList.add('current');">카메라별</button>
+                        </div>                        
                     </div>
                     <div class="heart_wrap">
                         <div class="ani_heart_btn" style="border: 1px solid #ff0000;"></div>
@@ -584,6 +627,7 @@ let isVertical = true,
     swiperHeight = null;
 
 let swiper = initSwiper(direction);
+let swiper2 = initSwiper2(direction);
 
 function initSwiper(direction, swiperHeight) {
   return new Swiper('.mySwiper', {
@@ -592,29 +636,50 @@ function initSwiper(direction, swiperHeight) {
     direction: direction,
     height: swiperHeight,
     navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".member_list .swiper-button-next",
+          prevEl: ".member_list .swiper-button-prev",
+        },
+  });
+}
+
+function initSwiper2(direction, swiperHeight) {
+  return new Swiper('.mySwiper2', {
+    slidesPerView: "auto",
+    spaceBetween: 0,
+    direction: direction,
+    height: swiperHeight,
+    navigation: {
+          nextEl: ".camera_wrap .swiper-button-next",
+          prevEl: ".camera_wrap .swiper-button-prev",
         },
   });
 }
 
 function changeDirection() {
-    swiperH = document.querySelector('.swiper-container').getBoundingClientRect().height;
+    swiperH = document.querySelector('.mySwiper').getBoundingClientRect().height;
     isVertical = !isVertical;
     direction = isVertical ? 'vertical' : 'horizontal';
     swiperHeight = isVertical ? swiperH : 'horizontal';
     let slideIndex = swiper.activeIndex;
+    let slideIndex2 = swiper2.activeIndex;
     swiper.destroy(true, true);
     swiper = initSwiper(direction, swiperHeight);
     swiper.slideTo(slideIndex,0);
+    swiper2.destroy(true, true);
+    swiper2 = initSwiper2(direction, swiperHeight);
+    swiper2.slideTo(slideIndex2,0);
 }
 function changeResize() {
-    swiperHeight = document.querySelector('.swiper-container').getBoundingClientRect().height;
+    swiperHeight = document.querySelector('.mySwiper').getBoundingClientRect().height;
     direction = 'vertical';
     let slideIndex = swiper.activeIndex;
+    let slideIndex2 = swiper2.activeIndex;
     swiper.destroy(true, true);
     swiper = initSwiper(direction, swiperHeight);
     swiper.slideTo(slideIndex,0);
+    swiper2.destroy(true, true);
+    swiper2 = initSwiper2(direction, swiperHeight);
+    swiper2.slideTo(slideIndex2,0);
 }
 changeDirection();
 
