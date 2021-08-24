@@ -59,7 +59,7 @@
                         </video>
                         <button class="btn_close" type="button" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.remove('quadruple');">닫기</button>
                     </div>
-                    <div class="member_wrap">
+                    <div class="member_wrap current">
                         <div class="member_list">
                             <div class="swiper-container mySwiper">
                                 <div class="swiper-wrapper">
@@ -200,7 +200,11 @@
                             <div class="time_total">01:11:00</div>
                             <button class="btn_magnify" type="button" onclick="event.stopPropagation();document.getElementById('wrap').classList.toggle('fullplayer');changeDirection();if (!document.fullscreenElement) { document.querySelector('.player_wrap').requestFullscreen(); } else { if (document.exitFullscreen) { document.exitFullscreen(); }}">magnify</button>
                         </div>
-                        <button class="btn_member" type="button" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('extend');">멤버별</button>
+                        <!-- 버튼 1개 시 미니플레이어 상에선 hidden 처리 -->
+                        <div class="vod_list_btn_wrap hidden">
+                            <button class="btn_vod_member" type="button" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('extend');document.querySelector('.vod_list_btn_wrap .current').classList.remove('current');this.classList.add('current');document.querySelector('.camera_wrap').classList.remove('current');document.querySelector('.member_wrap').classList.add('current');">멤버별</button>
+                        </div>
+                        <!-- 버튼 1개 시 미니플레이어 상에선 hidden 처리 -->
                     </div>
                     <div class="heart_wrap">
                         <div class="ani_heart_btn" style="border: 1px solid #ff0000;"></div>

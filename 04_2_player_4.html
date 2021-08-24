@@ -240,10 +240,12 @@
                             <div class="time_total">01:11:00</div>
                             <button class="btn_magnify" type="button" onclick="event.stopPropagation();document.getElementById('wrap').classList.toggle('fullplayer');changeDirection();if (!document.fullscreenElement) { document.querySelector('.player_wrap').requestFullscreen(); } else { if (document.exitFullscreen) { document.exitFullscreen(); }}">magnify</button>
                         </div>
+                        <!-- 멤버별, 카메라별 동시 노출시 사용 -->
                         <div class="vod_list_btn_wrap">
                             <button class="btn_vod_member" type="button" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('extend');document.querySelector('.vod_list_btn_wrap .current').classList.remove('current');this.classList.add('current');document.querySelector('.camera_wrap').classList.remove('current');document.querySelector('.member_wrap').classList.add('current');">멤버별</button>
                             <button class="btn_vod_camera current" type="button" onclick="event.stopPropagation();document.querySelector('.player_wrap').classList.toggle('extend');document.querySelector('.vod_list_btn_wrap .current').classList.remove('current');this.classList.add('current');document.querySelector('.member_wrap').classList.remove('current');document.querySelector('.camera_wrap').classList.add('current');">카메라별</button>
                         </div>                        
+                        <!-- 멤버별, 카메라별 동시 노출시 사용 -->
                     </div>
                     <div class="heart_wrap">
                         <div class="ani_heart_btn" style="border: 1px solid #ff0000;"></div>

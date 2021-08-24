@@ -877,6 +877,7 @@
 
 /* vod 카메라별 멤버별 */
 #wrap:not(.fullplayer) .vod_list_btn_wrap { position: absolute; bottom: 59px; left: 0; right: 0; width: 200px; margin: 0 auto; }
+#wrap:not(.fullplayer) .vod_list_btn_wrap.hidden { display: none; }
 #wrap:not(.fullplayer) .btn_vod_member { position: relative; margin: 0 6px; height: 36px; padding: 7px 11px 9px 12px; border-radius: 21px; background-color: rgba(155, 155, 155, 0.95); line-height: 20px; font-size: 14px; font-weight: bold; letter-spacing: -0.5px; text-align: center; color: #000; }
 #wrap:not(.fullplayer) .btn_vod_member:hover,
 #wrap:not(.fullplayer) .btn_vod_member.current { background-color: rgba(82, 255, 196, 0.95); }
