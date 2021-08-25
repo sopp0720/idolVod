@@ -653,7 +653,7 @@
 .fullplayer .player_wrap.extend .btn_vod_camera:after { -webkit-transform: rotate(0); transform: rotate(0); }
 .fullplayer .player_wrap.extend .btn_vod_camera { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
 
-.fullplayer .camera_wrap { opacity: 0; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -webkit-transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; position: absolute; top: 0; bottom: 0; width: 83px; left: -83px; right: auto; height: auto; overflow: visible; }
+.fullplayer .camera_wrap { opacity: 0; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -webkit-transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; position: absolute; top: 0; bottom: 0; width: 142px; left: -142px; right: auto; height: auto; overflow: visible; }
 .fullplayer .camera_wrap .camera_list { top: 0; bottom: 0; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -webkit-transition: none; transition: none; }
 .fullplayer .player_wrap.extend .camera_wrap { transform: translate3d(100%, 0, 0); opacity: 1; }
 
