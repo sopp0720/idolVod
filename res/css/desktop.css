@@ -387,8 +387,6 @@
 .member_wrap .member_list { position: absolute; left: 0; top: -100%; width: 100%; height: 100%; padding: 0 1px; }
 .member_wrap .member_list { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
 .player_wrap.extend .member_list { -webkit-transform: translate3d(0, 100%, 0); transform: translate3d(0, 100%, 0); -webkit-transition: transform 0.3s ease-in-out; transition: transform 0.3s ease-in-out; }
-
-
 .player_wrap.extend .btn_heart { -webkit-transform: translate3d(0, 117px, 0); transform: translate3d(0, 117px, 0); -webkit-transition: transform 0.3s ease-in-out; transition: transform 0.3s ease-in-out; }
 .player_wrap.extend .heart_wrap .txt_hit { -webkit-transform: translate3d(0, 117px, 0); transform: translate3d(0, 117px, 0); -webkit-transition: transform 0.3s ease-in-out; transition: transform 0.3s ease-in-out; }
 .player_wrap.extend .ani_heart_btn { -webkit-transform: translate3d(0, 117px, 0); transform: translate3d(0, 117px, 0); -webkit-transition: transform 0.3s ease-in-out; transition: transform 0.3s ease-in-out; }
@@ -419,6 +417,7 @@
 .camera_wrap .camera_list { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
 .player_wrap.extend .camera_list { -webkit-transform: translate3d(0, 100%, 0); transform: translate3d(0, 100%, 0); -webkit-transition: transform 0.3s ease-in-out; transition: transform 0.3s ease-in-out; }
 
+
 /* vod 2차 카메라 */
 .camera_wrap .swiper-container { overflow: visible; }
 .camera_wrap .swiper-slide { position: relative; display: block; width: 162px; height: 117px; }
@@ -428,18 +427,18 @@
 .camera_wrap .item.active .cover { position: absolute; top: 9px; left: -1px; right: -1px; width: auto; height: 93px; background-color: #917bff; background-image: none; }
 .camera_wrap .cover img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 .camera_wrap .item.active .cover img { opacity: 0; }
-.camera_wrap .cover:after { content: ''; position: absolute; top: 0; left: 0; right:0; bottom: 0; border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000; border-right: 2px solid #000000; }
-.camera_wrap .item.active .cover:after { content: ''; position: absolute; top: 0; left: 0; right:0; bottom: 0; border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000; border-right: 2px solid #000000; }
+.camera_wrap .cover:after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000; border-right: 2px solid #000000; }
+.camera_wrap .item.active .cover:after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000; border-right: 2px solid #000000; }
 .camera_wrap .name { position: absolute; top: 96px; left: 0; right: 0; line-height: 21px; padding: 0 6px; font-size: 15px; font-weight: normal; text-align: center; color: #000000; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .camera_wrap .item.active .name { position: absolute; top: 45px; left: 0; right: 0; }
 .camera_wrap .item.active .name .ic { position: relative; padding-left: 26px; }
 .camera_wrap .item.active .name .ic:before { content: ''; position: absolute; top: 0; left: 0; width: 20px; height: 20px; background-image: url(../images/ic-vod-play-01.png); background-size: 100%; }
 .camera_wrap .swiper-button-next { position: absolute; top: 0; right: 0; height: 93px; width: 32px; margin: 0; border: solid 2px #000000; background-color: #ffffff; -webkit-transition: opacity 0.3s ease-in-out; transition: opacity 0.3s ease-in-out; }
-.camera_wrap .swiper-button-next:after { content: ''; position: absolute; top: 37px; right: 7px; width: 15px; height: 15px; background-image: url(../images/ic-arrow-member-next.png); background-size: 100%; } 
+.camera_wrap .swiper-button-next:after { content: ''; position: absolute; top: 37px; right: 7px; width: 15px; height: 15px; background-image: url(../images/ic-arrow-member-next.png); background-size: 100%; }
 .camera_wrap .swiper-button-prev { position: absolute; top: 0; left: 0; height: 93px; width: 32px; margin: 0; border: solid 2px #000000; background-color: #ffffff; -webkit-transition: opacity 0.3s ease-in-out; transition: opacity 0.3s ease-in-out; }
 .camera_wrap .swiper-button-prev:after { content: ''; position: absolute; top: 37px; right: 7px; width: 15px; height: 15px; background-image: url(../images/ic-arrow-member-prev.png); background-size: 100%; }
-.camera_wrap .swiper-button-next.swiper-button-disabled,
-.camera_wrap .swiper-button-prev.swiper-button-disabled { opacity: 0; }
+.camera_wrap .swiper-button-next.swiper-button-disabled, .camera_wrap .swiper-button-prev.swiper-button-disabled { opacity: 0; }
+
 
 .col_player .detail { position: relative; height: 111px; padding-top: 23px; padding-right: 100px; }
 .col_player .detail:after { content: ''; position: absolute; left: 0; right: -20px; bottom: 0; height: 1px; background-color: #dddddd; }
