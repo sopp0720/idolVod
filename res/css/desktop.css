@@ -740,13 +740,13 @@
 
 
 .home_banner {}
-.home_banner .bn_bg { position: absolute; width: 100%; height: 379px; }
+.home_banner .bn_bg { position: absolute; width: 100%; height: 289px; }
 .home_banner .bn_bg li { position: absolute; width: 100%; height: 100%; background-position: 50% 50%; background-size: auto 100%; background-repeat: no-repeat; opacity: 0; transition: opacity 2s; }
 .home_banner .bn_bg li.current { opacity: 1; }
 .home_banner .bn_img { position: relative; width: 1024px; margin: 0 auto; }
 
 #slides-wrap { position: relative; overflow: hidden; }
-#slides-main { position: relative; width: 924px; height: 379px; margin: 29px auto 0; overflow: hidden; }
+#slides-main { position: relative; width: 850px; height: 300px; margin: 29px auto 0; overflow: hidden; }
 #slides-main:before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; border: 3px solid #000000; z-index: 11; pointer-events: none; touch-action: none; }
 #slides-main .slide-image,
 #slides-main .abs-mask, 
@@ -765,21 +765,21 @@
 #slides-wrap.prev .prev .abs-mask { transform: translate3d(0, 0, 0); }
 #slides-wrap.prev #slides-main .slide:not(.prev):not(.active) { transform: translate3d(-100%, 0, 0); }
 #slides-wrap.prev #slides-main .slide:not(.prev):not(.active) .abs-mask { transform: translate3d(100%, 0, 0); }
-#slides-aux { position: absolute; bottom: 0; left: 0; right: 0; margin: 0 auto; width: 924px; height: 174px; pointer-events: none; touch-action: none; z-index: 20; }
+#slides-aux { position: absolute; bottom: 0; left: 0; right: 0; margin: 0 auto; width: 850px; height: 174px; pointer-events: none; touch-action: none; z-index: 20; }
 #slides-aux:before { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; opacity: 0.7; background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(18, 18, 18, 0.8) 200%); }
-#slides-aux .slide-title { position: absolute; width: 100%; bottom: 0; padding: 0 32px 28px; }
+#slides-aux .slide-title { position: absolute; width: 100%; bottom: 0; padding: 0 32px 18px; }
 #slides-aux .slide-title .title { line-height: 48px; font-size: 33px; font-weight: bold; letter-spacing: -0.5px; color: #ffffff; }
 #slides-aux .slide-title .time { line-height: 34px; margin-top: 8px; font-family: Montserrat; font-size: 23px; font-weight: 500; letter-spacing: -0.5px; color: rgba(255,255,255,0.9); }
 #slides-aux .slide-title .time > em { font-style: normal; font-weight: normal; font-family: 'Noto Sans KR'; }
 #slides-aux .slide-title .time .tg_live { vertical-align: top; display: inline-block; margin: 6px 11px 0 0; width: 50px; height: 24px; background-image: url(../images/img-tag-live.png); background-size: 100%; background-repeat: no-repeat; overflow: hidden; text-indent: -9999em; }
 #slides-aux .slide:not(.active) { opacity: 0; }
 #slides-aux .slide.active { transition: opacity 0.6s 0.8s; }
-#slider-nav { position: absolute; bottom: 25px; right: 74px; z-index: 21; }
+#slider-nav { position: absolute; bottom: 15px; right: 111px; z-index: 21; }
 #slider-nav > span { line-height: 24px; font-family: Montserrat; font-size: 20px; font-weight: 500; letter-spacing: -0.5px; color: #ffffff; opacity: 0; transition: opacity 0.4s 1.3s; }
 #slides-wrap.ready #slider-nav > span { opacity: 1; }
-.bn_prev { position: absolute; top: 196px; left: 0; width: 46px; height: 46px; text-indent: -999em; font-size: 0; line-height: 0; overflow: hidden; background-image: url(../images/ic-arrow-home-banner.png); background-size: 100%; -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+.bn_prev { position: absolute; top: 156px; left: 0; width: 46px; height: 46px; text-indent: -999em; font-size: 0; line-height: 0; overflow: hidden; background-image: url(../images/ic-arrow-home-banner.png); background-size: 100%; -webkit-transform: rotate(180deg); transform: rotate(180deg); }
 .bn_prev:hover { background-position: 0 100%; }
-.bn_next { position: absolute; top: 196px; right: 0; width: 46px; height: 46px; text-indent: -999em; font-size: 0; line-height: 0; overflow: hidden; background-image: url(../images/ic-arrow-home-banner.png); background-size: 100%; }
+.bn_next { position: absolute; top: 156px; right: 0; width: 46px; height: 46px; text-indent: -999em; font-size: 0; line-height: 0; overflow: hidden; background-image: url(../images/ic-arrow-home-banner.png); background-size: 100%; }
 .bn_next:hover { background-position: 0 100%; }
 
 .list-wrapper { position: relative; width: 1024px; margin: 0 auto; }
