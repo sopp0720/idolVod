@@ -999,6 +999,11 @@
 .event_hd .period .time + .dday { position: relative; margin-left: 14px; padding-left: 15px; }
 .event_hd .period .time + .dday:before { content: ''; position: absolute; top: 7px; left: 0; width: 1px; height: 12px; background-color: #b6b6b6; }
 .event_bd { padding-top: 30px; }
+.event_details .box_end { position: relative; width: 100%; height: 109px; white-space: nowrap; font-size: 0; background-color: #f5f5f5; }
+.event_details .box_end:before { content: ''; position: absolute; top: 0; left: 28px; width: 100px; height: 100px; background-image: url(../images/ic-vote-end@3x.png); background-size: 100%; }
+.event_details .box_end:after { content: ''; position: relative; display: inline-block; height: 100%; vertical-align: middle; }
+.event_details .box_end .middle_inner { position: relative; width: 100%; padding: 0 28px 0 138px; display: inline-block; vertical-align: middle; white-space: normal; line-height: 29px; font-size: 18px; font-weight: bold; letter-spacing: -0.5px; color: #000; }
+.event_details .box_end + img { margin-top: 20px; }
 .event_details img { width: 100%; margin-bottom: 30px; }
 .event_details .flex_from { margin-top: 60px; text-align: center; }
 .event_details .flex_from .btn_basic { width: 290px; display: inline-block; }

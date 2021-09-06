@@ -961,6 +961,11 @@
 .event_hd .period .time + .dday { position: relative; margin-left: 1.0957rem; padding-left: 1.1739rem; }
 .event_hd .period .time + .dday:before { content: ''; position: absolute; top: 0.5478rem; left: 0; width: 0.0783rem; height: 0.9391rem; background-color: #b6b6b6; }
 .event_bd { padding-top: 2.3478rem; }
+.event_details .box_end { position: relative; width: 100%; height: 9.3914rem; white-space: nowrap; font-size: 0; background-color: #f5f5f5; }
+.event_details .box_end:before { content: ''; position: absolute; top: 0.7044rem; left: 0; width: 7.8261rem; height: 7.8261rem; background-image: url(../images/ic-vote-end@3x.png); background-size: 100%; }
+.event_details .box_end:after { content: ''; position: relative; display: inline-block; height: 100%; vertical-align: middle; }
+.event_details .box_end .middle_inner { position: relative; width: 100%; padding: 0 1.5652rem 0 8.6087rem; display: inline-block; vertical-align: middle; white-space: normal; line-height: 2.0348rem; font-size: 1.4087rem; font-weight: bold; letter-spacing: -0.0391rem; color: #000; }
+.event_details .box_end + img { margin-top: 1.5652rem; }
 .event_details img { width: 100%; margin-bottom: 2.3478rem; }
 .event_details .flex_from { margin-top: 4.6957rem; text-align: center; }
 .event_details .flex_from .btn_basic { width: 22.6958rem; display: inline-block; }
