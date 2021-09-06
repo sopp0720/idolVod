@@ -189,7 +189,7 @@
 .modal .type_pur_total .list_desc_s { margin-top: 1.487rem; }
 
 
-#wrap {  }
+#wrap { overflow-x: auto; }
 #header { height: 4.6957rem; background-color: #f5f5f5; }
 .header_inner { position: relative; height: 4.6957rem; }
 .header_inner .logo { position: absolute; top: 1.4087rem; left: 2.3478rem; }
@@ -702,8 +702,8 @@
 
 
 
-.home_banner {}
-.home_banner .bn_bg { position: absolute; width: 100%; height: 289px; }
+.home_banner { width: 1024px; }
+.home_banner .bn_bg { position: absolute; width: 1024px; height: 289px; }
 .home_banner .bn_bg li { position: absolute; width: 100%; height: 100%; background-position: 50% 50%; background-size: auto 100%; background-repeat: no-repeat; opacity: 0; transition: opacity 2s; }
 .home_banner .bn_bg li.current { opacity: 1; }
 .home_banner .bn_img { position: relative; width: 1024px; margin: 0 auto; }
@@ -861,9 +861,9 @@
 .vod_wrap .detail { position: relative; padding-top: 2.3478rem; }
 .vod_wrap .detail .title { position: relative; display: inline-block; }
 .vod_wrap .player_wrap.extend ~ .detail:after { right: 0; }
-.vod_wrap .detail .tag_wrap { padding-top: 0.5478rem; padding-right: 0.4696rem; }
+.vod_wrap .detail .tag_wrap { padding-top: 0.5478rem; padding-right: 0.4696rem; display: inline-block; vertical-align: top; }
 .vod_wrap .detail .tag_wrap > img { position: relative; display: inline-block; height: 1.7217rem; width: auto; z-index: 8; }
-.vod_wrap .detail .txt_tit { max-width: 54.7829rem; line-height: 2.7391rem; font-size: 1.8783rem; font-weight: bold; letter-spacing: -0.0391rem; color: #000000; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.vod_wrap .detail .txt_tit { max-width: 21.8349rem; line-height: 2.7391rem; font-size: 1.8783rem; font-weight: bold; letter-spacing: -0.0391rem; color: #000000; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block; vertical-align: top; }
 .vod_wrap .detail .btn_wrap { margin-top: 20px; }
 .vod_wrap .detail .btn_vod_share { display: inline-block; vertical-align: top; position: relative; width: 2.1913rem; height: 2.1913rem; text-indent: -999em; font-size: 0; line-height: 0; overflow: hidden; background-image: url(../images/ic-vod-share.png); background-size: 100%; }
 .vod_wrap .detail .btn_vod_share:hover { background-position: 0 50%; }
