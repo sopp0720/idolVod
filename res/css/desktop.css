@@ -1011,7 +1011,7 @@
 .event_details .box_end:after { content: ''; position: relative; display: inline-block; height: 100%; vertical-align: middle; }
 .event_details .box_end .middle_inner { position: relative; width: 100%; padding: 0 28px 0 138px; display: inline-block; vertical-align: middle; white-space: normal; line-height: 29px; font-size: 18px; font-weight: bold; letter-spacing: -0.5px; color: #000; }
 .event_details .box_end + img { margin-top: 20px; }
-.event_details img { width: 100%; margin-bottom: 30px; }
+.event_details > img { width: 100%; margin-bottom: 30px; }
 .event_details .flex_from { margin-top: 60px; text-align: center; }
 .event_details .flex_from .btn_basic { width: 290px; display: inline-block; }
 .event_details .flex_from .label_checkbox ~ .btn_basic { display: block; margin: 26px auto 0; }
@@ -1031,60 +1031,62 @@
 .list_vote_wrap > li:first-child { margin-top: 0; }
 .list_vote_wrap .tit_vote { line-height: 24px; font-size: 20px; font-weight: bold; letter-spacing: -0.56px; color: #000000; }
 .list_vote_wrap .tit_vote > em { font-style: normal; font-family: 'Montserrat'; font-weight: 800; color: #7e65ff; padding-right: 8px; }
-.list_vote_1 { display: -webkit-box; display: -webkit-flex; display: flex; flex-wrap: wrap; padding-left: 25px; padding-top: 10px; }
-.list_vote_1 li { margin-left: 15px; margin-top: 30px; }
-.list_vote_1 .label_radio { position: relative; display: block; width: 225px; }
+.list_vote_1 { display: -webkit-box; display: -webkit-flex; display: flex; flex-wrap: wrap; padding-left: 22px; padding-top: 3px; }
+.list_vote_1 li { position: relative; width: 483px; margin-left: 18px; margin-top: 18px; }
+.list_vote_1 .label_radio { position: relative; display: block; }
 .list_vote_1 .label_radio input[type="radio"] { position: absolute; visibility: hidden; opacity: 0; }
-.list_vote_1 .box { position: relative; }
+.list_vote_1 .box { position: relative; padding-left: 90px; height: 90px; z-index: 2; }
 .list_vote_1 .box:after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; border: solid 1px #dddddd; }
 .list_vote_1 .label_radio input[type="radio"]:checked ~ .box:after { border: solid 2px #5f41f9; }
-.list_vote_1 .box .thumb { position: relative; width: 100%; padding-top: 100%; overflow: hidden; }
+.status_on .list_vote_1 .label_radio input[type="radio"]:checked ~ .box:after { border: 0 none; }
+.list_vote_1 .box .thumb { position: absolute; left: 0; top: 0; width: 90px; height: 90px; overflow: hidden; }
 .list_vote_1 .box .thumb img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-.list_vote_1 .label_radio input[type="radio"]:checked ~ .box .thumb:before { content: ''; position: absolute; top: 0; left: 0; width: 36px; height: 36px; background-color: #5f41f9; z-index: 1; }
-.list_vote_1 .label_radio input[type="radio"]:checked ~ .box .thumb:after { content: ''; position: absolute; top: 11px; left: 10px; width: 16px; height: 14px; background-image: url(../images/ic-check-white.png); background-size: 100%; z-index: 1; }
-.list_vote_1 .name { position: relative; width: 100%; height: 70px; white-space: nowrap; font-size: 0; }
+
+.list_vote_1 .name { position: relative; width: 100%; padding: 0 20px; height: 90px; white-space: nowrap; font-size: 0; }
 .list_vote_1 .label_radio input[type="radio"]:checked ~ .box .name { background-color: #a293ff; }
-.list_vote_1 .label_radio input[type="radio"]:checked ~ .box .name:before { content: ''; position: absolute; position: absolute; top: 0; left: 0; bottom: 0; right: 0; border: solid 2px #5f41f9; }
+.status_on .list_vote_1 .label_radio input[type="radio"]:checked ~ .box .name { background-color: transparent; }
+.status_on .list_vote_1 .label_radio input[type="radio"]:checked ~ .box .name .middle_inner { position: relative; padding-left: 26px; }
+.status_on .list_vote_1 .label_radio input[type="radio"]:checked ~ .box .name .middle_inner:before { content: ''; position: absolute; top: 0; bottom: 0; left: 0; margin: auto 0; width: 16px; height: 14px; background-image: url(../images/ic-check_black.png); background-size: 100%; }
+
 .list_vote_1 .name:after { content: ''; position: relative; display: inline-block; height: 100%; vertical-align: middle; }
-.list_vote_1 .name .middle_inner { position: relative; width: 100%; padding: 0 27px; display: inline-block; vertical-align: middle; white-space: normal; line-height: 22px; font-size: 16px; font-weight: 500; letter-spacing: -0.5px; text-align: center; color: #000000; }
+.list_vote_1 .name .middle_inner { position: relative; width: 262px; display: inline-block; vertical-align: middle; white-space: normal; line-height: 22px; font-size: 16px; font-weight: 500; letter-spacing: -0.5px; text-align: left; color: #000000; }
 .list_vote_1 .status_wrap { display: none; }
-.status_on .list_vote_1 .status_wrap { display: block; }
-.list_vote_1 .graph { position: relative; height: 17px; background-color: #eeeeee; }
+.status_on .list_vote_1 .status_wrap { position: absolute; top: 0; left: 90px; right: 0; height: 90px; display: block; }
+.list_vote_1 .graph { position: relative; height: 100%; background-color: #eeeeee; }
 .list_vote_1 .graph_bar { position: absolute; top: 0; left: 0; height: 100%; background-color: #e1e1e1; }
-.list_vote_1 .label_radio input[type="radio"]:checked ~ .status_wrap .graph_bar { background-color: #5f41f9; }
-.list_vote_1 .percent { margin-top: 9px; line-height: 22px; font-family: 'Montserrat'; font-size: 18px; font-weight: 600; letter-spacing: -0.56px; text-align: center; color: #888888; }
+.list_vote_1 .label_radio input[type="radio"]:checked ~ .status_wrap .graph_bar { background-color: #a293ff; }
+.list_vote_1 .percent { position: absolute; top: 28px; right: 12px; width: 60px; line-height: 22px; font-family: 'Montserrat'; font-size: 18px; font-weight: 600; letter-spacing: -0.56px; text-align: center; color: #888888; }
 .list_vote_1 .label_radio input[type="radio"]:checked ~ .status_wrap .percent { font-weight: bold; color: #000000; }
-.list_vote_1 .count { line-height: 14px; font-family: 'Montserrat'; font-size: 12px; font-weight: 600; letter-spacing: -0.38px; text-align: center; color: #999999; }
+.list_vote_1 .count { position: absolute; bottom: 26px; right: 12px; width: 60px; line-height: 14px; font-family: 'Montserrat'; font-size: 12px; font-weight: 600; letter-spacing: -0.38px; text-align: center; color: #999999; }
 .list_vote_1 .label_radio input[type="radio"]:checked ~ .status_wrap .count { color: #000000; }
 .list_vote_1 .count > em { font-style: normal; font-family: 'Noto Sans KR'; font-weight: 500; }
-.list_vote_2 { padding: 40px 40px 0; }
-.list_vote_2 li { margin-top: 14px; }
-.list_vote_2 li:first-child { margin-top: 0; }
+.list_vote_2 { display: -webkit-box; display: -webkit-flex; display: flex; flex-wrap: wrap; padding-left: 22px; padding-top: 3px; }
+.list_vote_2 li { width: 483px; margin-top: 18px; margin-left: 18px; }
 .list_vote_2 .label_radio { position: relative; display: block; }
 .list_vote_2 .label_radio input[type="radio"] { position: absolute; visibility: hidden; opacity: 0; }
-.list_vote_2 .box { position: relative; height: 70px; padding-left: 70px; }
+.list_vote_2 .box { position: relative; height: 90px; padding-left: 90px; }
 .list_vote_2 .box:after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; border: solid 1px #dddddd; }
 .status_on .list_vote_2 .box:after { border: 0 none; }
 .list_vote_2 .label_radio input[type="radio"]:checked ~ .box:after { border: solid 2px #5f41f9; }
 .status_on .list_vote_2 .label_radio input[type="radio"]:checked ~ .box:after { border: 0 none; }
-.list_vote_2 .box .rum { position: absolute; left: 0; top: 0; width: 70px; height: 70px; padding: 23px 0; line-height: 24px; font-family: 'Montserrat'; font-size: 20px; font-weight: 600; letter-spacing: -0.56px; text-align: center; color: #bababa; background-color: #f5f5f5; }
+.list_vote_2 .box .rum { position: absolute; left: 0; top: 0; width: 90px; height: 90px; padding: 33px 0; line-height: 24px; font-family: 'Montserrat'; font-size: 20px; font-weight: 600; letter-spacing: -0.56px; text-align: center; color: #bababa; background-color: #f5f5f5; }
 .list_vote_2 .label_radio input[type="radio"]:checked ~ .box .rum { background-color: #5f41f9; color: #fff; }
-.list_vote_2 .txt { position: relative; width: 100%; height: 70px; white-space: nowrap; font-size: 0; padding: 0 116px 0 20px; }
+.list_vote_2 .txt { position: relative; width: 100%; height: 90px; white-space: nowrap; font-size: 0; padding: 0 116px 0 20px; }
 .status_on .list_vote_2 .txt { background-color: transparent; }
 .list_vote_2 .label_radio input[type="radio"]:checked ~ .box .txt { background-color: #a293ff; }
 .status_on .list_vote_2 .label_radio input[type="radio"]:checked ~ .box .txt { background-color: transparent; }
 .list_vote_2 .txt:after { content: ''; position: relative; display: inline-block; height: 100%; vertical-align: middle; }
 .list_vote_2 .txt .middle_inner { position: relative; width: 100%; display: inline-block; vertical-align: middle; white-space: normal; line-height: 22px; font-size: 16px; font-weight: 500; letter-spacing: -0.5px; color: #000000; }
-.list_vote_2 .label_radio input[type="radio"]:checked ~ .box .txt .middle_inner { padding-left: 26px; font-weight: bold; }
-.list_vote_2 .label_radio input[type="radio"]:checked ~ .box .txt .middle_inner:before { content: ''; position: absolute; top: 0; bottom: 0; left: 0; margin: auto 0; width: 16px; height: 14px; background-image: url(../images/ic-check_black.png); background-size: 100%; }
-.list_vote_2 .status_wrap { display: none; position: absolute; top: 0; left: 70px; height: 100%; right: 0; }
+.status_on .list_vote_2 .label_radio input[type="radio"]:checked ~ .box .txt .middle_inner { padding-left: 26px; }
+.status_on .list_vote_2 .label_radio input[type="radio"]:checked ~ .box .txt .middle_inner:before { content: ''; position: absolute; top: 0; bottom: 0; left: 0; margin: auto 0; width: 16px; height: 14px; background-image: url(../images/ic-check_black.png); background-size: 100%; }
+.list_vote_2 .status_wrap { display: none; position: absolute; top: 0; left: 90px; height: 100%; right: 0; }
 .status_on .list_vote_2 .status_wrap { display: block; }
 .list_vote_2 .graph { position: relative; height: 100%; background-color: #fafafa; }
 .list_vote_2 .graph_bar { position: absolute; top: 0; left: 0; height: 100%; background-color: #eeeeee; }
 .list_vote_2 .label_radio input[type="radio"]:checked ~ .box .graph_bar { background-color: #a293ff; }
-.list_vote_2 .percent { position: absolute; top: 17px; right: 15px; width: 60px; line-height: 22px; font-family: 'Montserrat'; font-size: 18px; font-weight: 600; letter-spacing: -0.56px; text-align: center; color: #888888; }
+.list_vote_2 .percent { position: absolute; top: 28px; right: 12px; width: 60px; line-height: 22px; font-family: 'Montserrat'; font-size: 18px; font-weight: 600; letter-spacing: -0.56px; text-align: center; color: #888888; }
 .list_vote_2 .label_radio input[type="radio"]:checked ~ .box .percent { color: #000; font-weight: bold; }
-.list_vote_2 .count { position: absolute; bottom: 17px; right: 15px; width: 60px; line-height: 14px; font-family: 'Montserrat'; font-size: 12px; font-weight: 600; letter-spacing: -0.38px; text-align: center; color: #999999; }
+.list_vote_2 .count { position: absolute; bottom: 26px; right: 12px; width: 60px; line-height: 14px; font-family: 'Montserrat'; font-size: 12px; font-weight: 600; letter-spacing: -0.38px; text-align: center; color: #999999; }
 .list_vote_2 .label_radio input[type="radio"]:checked ~ .box .count { color: #000000; }
 .list_vote_2 .count > em { font-style: normal; font-family: 'Noto Sans KR'; font-weight: 500; }
 .vote_textarea { position: relative; margin: 40px auto 0; width: 944px; height: 156px; padding: 16px 16px 40px; border: solid 1px #dddddd; }
