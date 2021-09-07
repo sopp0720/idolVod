@@ -402,7 +402,7 @@
 .member_wrap .cover:after { content: ''; position: absolute; top: 0; left: 0; right:0; bottom: 0; border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000; border-right: 2px solid #000000; }
 .member_wrap .item.active .cover:after { content: ''; position: absolute; top: 0; left: 0; right:0; bottom: 0; border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000; border-right: 2px solid #000000; background-image: url(../images/ic-checkbox.png); background-size: 30px 30px; background-position: 50% 20px; background-repeat: no-repeat; }
 .member_wrap .name { position: absolute; top: 96px; left: 0; right: 0; line-height: 21px; padding: 0 6px; font-size: 15px; font-weight: normal; text-align: center; color: #000000; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.member_wrap .item.active .name { position: absolute; top: 66px; left: 0; right: 0; }
+.member_wrap .item.active .name { position: absolute; top: 66px; left: 0; right: 0; font-weight: bold; }
 .member_wrap .swiper-button-next { position: absolute; top: 0; right: 0; height: 93px; width: 32px; margin: 0; border: solid 2px #000000; background-color: #ffffff; -webkit-transition: opacity 0.3s ease-in-out; transition: opacity 0.3s ease-in-out; }
 .member_wrap .swiper-button-next:after { content: ''; position: absolute; top: 37px; right: 7px; width: 15px; height: 15px; background-image: url(../images/ic-arrow-member-next.png); background-size: 100%; } 
 .member_wrap .swiper-button-prev { position: absolute; top: 0; left: 0; height: 93px; width: 32px; margin: 0; border: solid 2px #000000; background-color: #ffffff; -webkit-transition: opacity 0.3s ease-in-out; transition: opacity 0.3s ease-in-out; }
@@ -686,6 +686,7 @@
 .modal .url_link_wrap:before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; border: solid 2px #000000; }
 .modal .url_link_wrap .txt_url { line-height: 22px; font-size: 15px; font-weight: bold; color: #000000; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
 .modal .url_link_wrap .btn_copy { position: absolute; top: 0; right: 0; width: 66px; height: 53px; padding: 15px 0 17px; line-height: 22px; font-size: 15px; font-weight: bold; color: #000000; text-align: center; }
+.modal .url_link_wrap .btn_copy:hover { color: #644bdf; }
 
 /* 퍼가기 */
 .modal .madal_embed_content { position: relative; display: -webkit-box; display: -webkit-flex; display: flex; margin: 0 auto; flex-wrap: wrap; max-width: calc(100% - 30px); height: 372px; }
@@ -791,6 +792,7 @@
 .list-wrapper .list-hd .title { line-height: 34px; font-size: 23px; font-weight: bold; letter-spacing: -0.5px; color: #000000; }
 .list-wrapper .list-hd .more { position: absolute; top: 2px; right: 0; padding-right: 38px; }
 .list-wrapper .list-hd .more .txt { display: block; padding-top: 2px; line-height: 24px; font-size: 16px; font-weight: bold; letter-spacing: -0.57px; text-align: right; color: #000000; }
+.list-wrapper .list-hd .more:hover .txt { color: #644bdf; }
 .list-vod-1 { position: relative; margin: 0 -4px; }
 .list-vod-1 .swiper-slide { padding: 4px; width: 336px; display: inline-block; margin-right: 12px; }
 .list-vod-1 .thumb { position: relative; width: 328px; height: 185px; }
@@ -802,6 +804,8 @@
 .list-vod-1 .detail { margin-top: 14px; height: 71px; }
 .list-vod-1 .detail .title { line-height: 22px; font-size: 16px; font-weight: 500; color: #000000; text-overflow: ellipsis; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
 .list-vod-1 .detail .date { margin-top: 8px; line-height: 19px; font-family: Montserrat; font-size: 15px; font-weight: normal; letter-spacing: -0.47px; color: rgba(0,0,0,0.8); }
+.list-vod-1 a:hover .detail .title { color: #644BDF; }
+.list-vod-1 a:hover .detail .date { color: #644BDF; }
 .list-vod-1 .prev { position: absolute; cursor: pointer; bottom: 163px; left: -30px; width: 21px; height: 27px; text-indent: -999em; font-size: 0; line-height: 0; overflow: hidden; background-image: url(../images/ic-arrow-thumbnail.png); background-size: 100%; -webkit-transform: rotate(180deg); transform: rotate(180deg); }
 .list-vod-1 .prev:hover { background-position: 0 100%; }
 .list-vod-1 .next { position: absolute; cursor: pointer; bottom: 163px; right: -30px; width: 21px; height: 27px; text-indent: -999em; font-size: 0; line-height: 0; overflow: hidden; background-image: url(../images/ic-arrow-thumbnail.png); background-size: 100%; }
@@ -821,7 +825,8 @@
 .list-vod-2 .detail { padding: 0 0 0 20px; position: relative; vertical-align: middle; white-space: normal; display: inline-block; width: 100%; }
 .list-vod-2 .detail .title { line-height: 22px; font-size: 16px; font-weight: 500; color: #000000; text-overflow: ellipsis; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
 .list-vod-2 .detail .date { margin-top: 8px; line-height: 19px; font-family: Montserrat; font-size: 15px; font-weight: normal; letter-spacing: -0.47px; color: rgba(0,0,0,0.8); }
-
+.list-vod-2 a:hover .detail .title { color: #644BDF; }
+.list-vod-2 a:hover .detail .date { color: #644BDF; }
 .list-content-1 { position: relative; }
 .list-content-1 ul { margin-top: -41px; }
 .list-content-1 ul:after { clear: both; content: ""; display: block; }
@@ -838,6 +843,8 @@
 .list-content-1 .detail { padding: 0 0 0 20px; position: relative; vertical-align: middle; white-space: normal; display: inline-block; width: 100%; }
 .list-content-1 .detail .title { line-height: 22px; font-size: 16px; font-weight: 500; color: #000000; text-overflow: ellipsis; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
 .list-content-1 .detail .date { margin-top: 8px; line-height: 19px; font-family: Montserrat; font-size: 15px; font-weight: normal; letter-spacing: -0.47px; color: rgba(0,0,0,0.8); }
+.list-content-1 a:hover .detail .title { color: #644BDF; }
+.list-content-1 a:hover .detail .date { color: #644BDF; }
 .list-content-1 .btn_share { position: absolute; top: 51px; right: 0; width: 28px; height: 28px; overflow: hidden; text-indent: -9999em; background-repeat: no-repeat; background-image: url(../images/ic-vod-share.png); background-size: 100%; text-indent: -999em; }
 .list-content-1 .btn_share:hover { background-position: 0 50%; }
 .list-content-1 .btn_share.disabled { background-position: 0 100%; }
