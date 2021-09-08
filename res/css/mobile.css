@@ -765,7 +765,7 @@
 .list-wrapper .list-hd .more:hover .txt { color: #644bdf; }
 .list-vod-1 { position: relative; margin: 0 -4px; }
 .list-vod-1 .swiper-slide { padding: 4px; width: 336px; display: inline-block; margin-right: 12px; }
-.list-vod-1 .thumb { position: relative; width: 328px; height: 185px; }
+.list-vod-1 .thumb { position: relative; width: 328px; height: 218px; }
 .list-vod-1 .thumb:after { content: ''; position: absolute; bottom: 0; right: 0; width: 167px; height: 82px; opacity: 0.8; background-image: linear-gradient(152deg, rgba(0, 0, 0, 0) 55%, #121212 100%); }
 .list-vod-1 .thumb > img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
 .list-vod-1 .thumb .tag_wrap { position: absolute; top: -4px; left: -4px; font-size: 0; }
@@ -781,11 +781,11 @@
 .list-vod-1 .next { position: absolute; cursor: pointer; bottom: 163px; right: -30px; width: 21px; height: 27px; text-indent: -999em; font-size: 0; line-height: 0; overflow: hidden; background-image: url(../images/ic-arrow-thumbnail.png); background-size: 100%; }
 .list-vod-1 .next:hover { background-position: 0 100%; }
 .list-vod-2 { position: relative; }
-.list-vod-2 ul { margin-top: -18px; }
+.list-vod-2 ul { margin-top: -19px; }
 .list-vod-2 ul:after { clear: both; content: ""; display: block; }
-.list-vod-2 li { width: 50%; float: left; margin-top: 18px; position: relative; height: 130px; padding: 0 20px 0 230px; white-space: nowrap; }
+.list-vod-2 li { width: 50%; float: left; margin-top: 19px; position: relative; height: 152px; padding: 0 24px 0 229px; white-space: nowrap; }
 .list-vod-2 li:after { content: ""; position: relative; display: inline-block; height: 100%; vertical-align: middle; }
-.list-vod-2 .thumb { position: absolute; left: 0; top: 0; width: 230px; height: 130px; }
+.list-vod-2 .thumb { position: absolute; left: 0; top: 0; width: 229px; height: 152px; }
 .list-vod-2 .thumb:after { content: ''; position: absolute; bottom: 0; right: 0; width: 167px; height: 82px; opacity: 0.8; background-image: linear-gradient(152deg, rgba(0, 0, 0, 0) 55%, #121212 100%); }
 .list-vod-2 .thumb > img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
 .list-vod-2 .thumb .tag_wrap { position: absolute; top: -4px; left: -4px; font-size: 0; }
@@ -800,11 +800,11 @@
 .list-content-1 { position: relative; }
 .list-content-1 ul { margin-top: -41px; }
 .list-content-1 ul:after { clear: both; content: ""; display: block; }
-.list-content-1 li { width: 500px; float: left; margin-top: 41px; position: relative; height: 130px; padding: 0 48px 0 230px; white-space: nowrap; }
+.list-content-1 li { width: 500px; float: left; margin-top: 41px; position: relative; height: 152px; padding: 0 56px 0 229px; white-space: nowrap; }
 .list-content-1 li:nth-child(even) { margin-left: 24px; }
 .list-content-1 li:nth-child(2n+3):before { content: ''; position: absolute; top: -21px; left: 0; width: 1024px; height: 1px; background-color: #dddddd; }
 .list-content-1 li:after { content: ""; position: relative; display: inline-block; height: 100%; vertical-align: middle; }
-.list-content-1 .thumb { position: absolute; left: 0; top: 0; width: 230px; height: 130px; }
+.list-content-1 .thumb { position: absolute; left: 0; top: 0; width: 229px; height: 152px; }
 .list-content-1 .thumb:after { content: ''; position: absolute; bottom: 0; right: 0; width: 167px; height: 82px; opacity: 0.8; background-image: linear-gradient(152deg, rgba(0, 0, 0, 0) 55%, #121212 100%); }
 .list-content-1 .thumb > img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
 .list-content-1 .thumb .tag_wrap { position: absolute; top: -4px; left: -4px; font-size: 0; }
@@ -815,7 +815,7 @@
 .list-content-1 .detail .date { margin-top: 8px; line-height: 19px; font-family: Montserrat; font-size: 15px; font-weight: normal; letter-spacing: -0.47px; color: rgba(0,0,0,0.8); }
 .list-content-1 a:hover .detail .title { color: #644BDF; }
 .list-content-1 a:hover .detail .date { color: #644BDF; }
-.list-content-1 .btn_share { position: absolute; top: 51px; right: 0; width: 28px; height: 28px; overflow: hidden; text-indent: -9999em; background-repeat: no-repeat; background-image: url(../images/ic-vod-share.png); background-size: 100%; text-indent: -999em; }
+.list-content-1 .btn_share { position: absolute; top: 62px; right: 0; width: 28px; height: 28px; overflow: hidden; text-indent: -9999em; background-repeat: no-repeat; background-image: url(../images/ic-vod-share.png); background-size: 100%; text-indent: -999em; }
 .list-content-1 .btn_share:hover { background-position: 0 50%; }
 .list-content-1 .btn_share.disabled { background-position: 0 100%; }
 
