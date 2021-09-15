@@ -494,7 +494,7 @@
 .fullplayer .player_wrap .btn_play { width: 140px; height: 140px; background-image: url(../images/ic_play_pause_full.png); }
 .fullplayer .player_wrap .btn_speaker .ic_speaker { width: 30px; height: 30px; background-image: url(../images/ic_speaker_full.png); }
 .fullplayer .player_wrap .btn_speaker .ic_mute { width: 30px; height: 30px; background-image: url(../images/ic_mute_full.png); }
-.fullplayer .player_wrap .playerbar_wrap { bottom: 35px; left: 151px; right: 136px; }
+.fullplayer .player_wrap .playerbar_wrap { bottom: 35px; left: 155px; right: 140px; }
 .fullplayer .player_wrap .time_now { bottom: 36px; left: 86px; }
 .fullplayer .player_wrap .time_total { bottom: 36px; right: 76px; }
 
