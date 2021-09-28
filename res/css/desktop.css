@@ -876,6 +876,8 @@
 #wrap:not(.fullplayer) .vod_wrap .btn_member { display: none; }
 #wrap:not(.fullplayer) .vod_extend.player_wrap { margin-bottom: 117px; -webkit-transition: none; transition: none; }
 #wrap:not(.fullplayer) .vod_extend.player_wrap .member_list { -webkit-transform: translate3d(0, 100%, 0); transform: translate3d(0, 100%, 0); -webkit-transition: none; transition: none; }
+#wrap:not(.fullplayer) .vod_extend.player_wrap .member_list:before { content: ''; position: absolute; left: 0px; right: 0px; height: 93px; border: solid 2px #000; background-image: url(../images/img-member-bg@3x.png); background-size: auto 93px; background-position: 50% 0; background-repeat: no-repeat; }
+
 #wrap:not(.fullplayer) .vod_extend.player_wrap .camera_list { -webkit-transform: translate3d(0, 100%, 0); transform: translate3d(0, 100%, 0); -webkit-transition: none; transition: none; }
 #wrap:not(.fullplayer) .vod_extend.player_wrap .btn_heart { -webkit-transform: translate3d(0, 117px, 0); transform: translate3d(0, 117px, 0); -webkit-transition: none; transition: none; }
 #wrap:not(.fullplayer) .vod_extend.player_wrap .heart_wrap .txt_hit { -webkit-transform: translate3d(0, 117px, 0); transform: translate3d(0, 117px, 0); -webkit-transition: none; transition: none; }
