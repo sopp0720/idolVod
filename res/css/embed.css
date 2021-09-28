@@ -196,4 +196,10 @@
 .fullplayer .player_wrap.extend .btn_heart { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -webkit-transition: transform 0.3s ease-in-out; transition: transform 0.3s ease-in-out; }
 .fullplayer .player_wrap.extend .ani_heart_btn { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -webkit-transition: transform 0.3s ease-in-out; transition: transform 0.3s ease-in-out; }
 
+#wrap:not(.fullplayer) .vod_appLink_warp { display: none; }
+.fullplayer .vod_appLink_warp { position: absolute; bottom: 5rem; left: 1.5652rem; text-align: left; }
+.fullplayer .vod_appLink_warp .btn_appLink { display: inline-block; position: relative; padding-right: 1.0174rem; padding-bottom: 0.1565rem; line-height: 1.4087rem; font-size: 1.0957rem; font-weight: bold; letter-spacing: -0.036rem; color: #e6d304; }
+.fullplayer .vod_appLink_warp .btn_appLink:after { content: ''; position: absolute; top: 0.2348rem; right: 0.0783rem; width: 0.7044rem; height: 1.0957rem; background-image: url(../images/ic-arrow-purplevod.png); background-size: 100%; }
+.fullplayer .vod_appLink_warp .btn_appLink:before { content: ''; position: absolute; left: 0; bottom: 0; right: 0; height: 1px; background-color: #e6d304; }
+.fullplayer .vod_appLink_warp .txt { margin-top: 0.313rem; line-height: 1.8783rem; font-size: 1.0957rem; font-weight: normal; letter-spacing: -0.0391rem; color: #fff; }
 
