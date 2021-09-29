@@ -800,6 +800,7 @@
 .list-vod-1 .thumb > img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
 .list-vod-1 .thumb .tag_wrap { position: absolute; top: -4px; left: -4px; font-size: 0; }
 .list-vod-1 .thumb .tag_wrap > img { position: relative; display: inline-block; height: 22px; width: auto; z-index: 2; }
+.list-vod-1 .thumb .tag_paid { position: absolute; bottom: 9px; left: 9px; width: 32px; height: 20px; background-image: url(../images/img-tag-paid@3x.png); background-size: 100%; text-indent: -999em; font-size: 0; line-height: 0; overflow: hidden; }
 .list-vod-1 .thumb .time { position: absolute; bottom: 10px; right: 10px; line-height: 16px; font-family: Montserrat; font-size: 16px; font-weight: normal; letter-spacing: -0.47px; text-align: right; color: #ffffff; z-index: 1; }
 .list-vod-1 .detail { margin-top: 14px; height: 71px; }
 .list-vod-1 .detail .title { line-height: 22px; font-size: 16px; font-weight: 500; color: #000000; text-overflow: ellipsis; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
@@ -820,6 +821,7 @@
 .list-vod-2 .thumb > img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
 .list-vod-2 .thumb .tag_wrap { position: absolute; top: -4px; left: -4px; font-size: 0; }
 .list-vod-2 .thumb .tag_wrap > img { position: relative; display: inline-block; height: 22px; width: auto; z-index: 2; }
+.list-vod-2 .thumb .tag_paid { position: absolute; bottom: 9px; left: 9px; width: 32px; height: 20px; background-image: url(../images/img-tag-paid@3x.png); background-size: 100%; text-indent: -999em; font-size: 0; line-height: 0; overflow: hidden; }
 
 .list-vod-2 .thumb .time { position: absolute; bottom: 10px; right: 10px; line-height: 16px; font-family: Montserrat; font-size: 16px; font-weight: normal; letter-spacing: -0.47px; text-align: right; color: #ffffff; z-index: 1; }
 .list-vod-2 .detail { padding: 0 0 0 20px; position: relative; vertical-align: middle; white-space: normal; display: inline-block; width: 100%; }
@@ -839,6 +841,7 @@
 .list-content-1 .thumb > img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
 .list-content-1 .thumb .tag_wrap { position: absolute; top: -4px; left: -4px; font-size: 0; }
 .list-content-1 .thumb .tag_wrap > img { position: relative; display: inline-block; height: 22px; width: auto; z-index: 2; }
+.list-content-1 .thumb .tag_paid { position: absolute; bottom: 9px; left: 9px; width: 32px; height: 20px; background-image: url(../images/img-tag-paid@3x.png); background-size: 100%; text-indent: -999em; font-size: 0; line-height: 0; overflow: hidden; }
 .list-content-1 .thumb .time { position: absolute; bottom: 10px; right: 10px; line-height: 16px; font-family: Montserrat; font-size: 16px; font-weight: normal; letter-spacing: -0.47px; text-align: right; color: #ffffff; z-index: 1; }
 .list-content-1 .detail { padding: 0 0 0 20px; position: relative; vertical-align: middle; white-space: normal; display: inline-block; width: 100%; }
 .list-content-1 .detail .title { line-height: 22px; font-size: 16px; font-weight: 500; color: #000000; text-overflow: ellipsis; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
