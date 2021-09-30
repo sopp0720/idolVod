@@ -287,7 +287,7 @@
 /* Mini Player */
 .live_wrap { margin-top: 2.3478rem; padding: 0 2.7391rem; display: inline-block; display: -webkit-box; display: -webkit-flex; display: flex; flex-wrap: wrap; }
 .col_player { width: 100%; }
-.player_wrap { position: relative; width: 100%; padding-top: 56.25%; font-size: 0; background-color: #000000; }
+.player_wrap { position: relative; width: 100%; padding-top: 56.25%; font-size: 0; background-color: #000000; z-index: 1; }
 .player_wrap video { position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: contain; }
 .player_wrap .non_video { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: #644bdf; text-align: center; }
 .player_wrap .non_video:after { content: ''; position: relative; display: inline-block; height: 100%; vertical-align: middle; }
@@ -874,9 +874,9 @@
 #wrap:not(.fullplayer) .vod_extend.player_wrap .member_list { -webkit-transform: translate3d(0, 100%, 0); transform: translate3d(0, 100%, 0); -webkit-transition: none; transition: none; }
 #wrap:not(.fullplayer) .vod_extend.player_wrap .member_list:before { content: ''; position: absolute; left: 0px; right: 0px; height: 6.1826rem; border: solid 0.1565rem #000; background-image: url(../images/img-member-bg@3x.png); background-size: auto 6.1826rem; background-position: 50% 0; background-repeat: no-repeat; }
 #wrap:not(.fullplayer) .vod_extend.player_wrap .camera_list { -webkit-transform: translate3d(0, 100%, 0); transform: translate3d(0, 100%, 0); -webkit-transition: none; transition: none; }
-#wrap:not(.fullplayer) .vod_extend.player_wrap .btn_heart { -webkit-transform: translate3d(0, 9.1566rem, 0); transform: translate3d(0, 117px, 0); -webkit-transition: none; transition: none; }
-#wrap:not(.fullplayer) .vod_extend.player_wrap .heart_wrap .txt_hit { -webkit-transform: translate3d(0, 9.1566rem, 0); transform: translate3d(0, 117px, 0); -webkit-transition: none; transition: none; }
-#wrap:not(.fullplayer) .vod_extend.player_wrap .ani_heart_btn { -webkit-transform: translate3d(0, 9.1566rem, 0); transform: translate3d(0, 117px, 0); -webkit-transition: none; transition: none; }
+#wrap:not(.fullplayer) .vod_extend.player_wrap .btn_heart { -webkit-transform: translate3d(0, 9.1566rem, 0); transform: translate3d(0, 9.1566rem, 0); -webkit-transition: none; transition: none; }
+#wrap:not(.fullplayer) .vod_extend.player_wrap .heart_wrap .txt_hit { -webkit-transform: translate3d(0, 9.1566rem, 0); transform: translate3d(0, 9.1566rem, 0); -webkit-transition: none; transition: none; }
+#wrap:not(.fullplayer) .vod_extend.player_wrap .ani_heart_btn { -webkit-transform: translate3d(0, 9.1566rem, 0); transform: translate3d(0, 9.1566rem, 0); -webkit-transition: none; transition: none; }
 
 /* vod 카메라별 멤버별 */
 #wrap:not(.fullplayer) .vod_list_btn_wrap { position: absolute; bottom: 4.6174rem; left: 0; right: 0; width: 15.6523rem; margin: 0 auto; }
